@@ -1,0 +1,20 @@
+{
+  "name": "@bp1222/stats-api",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts"
+  },
+  "keywords": ["mlb", "stats-api"],
+  "author": "Dave Walker",
+  "license": "ISC",
+  "description": "Library for Typescript Client to query MLB StatsAPI",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.13.5",
+    "@redocly/cli": "^1.22.1",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.3"
+  }
+}
