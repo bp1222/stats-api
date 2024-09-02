@@ -3,3 +3,4 @@ dist/
 node_modules/
 
 /bundle.yaml
+/package-lock.json
