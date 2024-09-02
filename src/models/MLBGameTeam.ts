@@ -13,18 +13,18 @@
  */
 
 import { mapValues } from '../runtime';
-import type { MLBTeamRecord } from './MLBTeamRecord';
-import {
-    MLBTeamRecordFromJSON,
-    MLBTeamRecordFromJSONTyped,
-    MLBTeamRecordToJSON,
-} from './MLBTeamRecord';
 import type { MLBTeam } from './MLBTeam';
 import {
     MLBTeamFromJSON,
     MLBTeamFromJSONTyped,
     MLBTeamToJSON,
 } from './MLBTeam';
+import type { MLBLeagueRecord } from './MLBLeagueRecord';
+import {
+    MLBLeagueRecordFromJSON,
+    MLBLeagueRecordFromJSONTyped,
+    MLBLeagueRecordToJSON,
+} from './MLBLeagueRecord';
 
 /**
  * Game Team
@@ -35,10 +35,10 @@ import {
 export interface MLBGameTeam {
     /**
      * 
-     * @type {MLBTeamRecord}
+     * @type {MLBLeagueRecord}
      * @memberof MLBGameTeam
      */
-    leagueRecord?: MLBTeamRecord;
+    leagueRecord?: MLBLeagueRecord;
     /**
      * 
      * @type {number}
@@ -91,7 +91,7 @@ export function MLBGameTeamFromJSONTyped(json: any, ignoreDiscriminator: boolean
     }
     return {
         
-        'leagueRecord': json['leagueRecord'] == null ? undefined : MLBTeamRecordFromJSON(json['leagueRecord']),
+        'leagueRecord': json['leagueRecord'] == null ? undefined : MLBLeagueRecordFromJSON(json['leagueRecord']),
         'score': json['score'],
         'team': MLBTeamFromJSON(json['team']),
         'isWinner': json['isWinner'],
@@ -106,7 +106,7 @@ export function MLBGameTeamToJSON(value?: MLBGameTeam | null): any {
     }
     return {
         
-        'leagueRecord': MLBTeamRecordToJSON(value['leagueRecord']),
+        'leagueRecord': MLBLeagueRecordToJSON(value['leagueRecord']),
         'score': value['score'],
         'team': MLBTeamToJSON(value['team']),
         'isWinner': value['isWinner'],

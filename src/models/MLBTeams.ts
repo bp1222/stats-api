@@ -13,12 +13,12 @@
  */
 
 import { mapValues } from '../runtime';
-import type { Team } from './Team';
+import type { MLBTeam } from './MLBTeam';
 import {
-    TeamFromJSON,
-    TeamFromJSONTyped,
-    TeamToJSON,
-} from './Team';
+    MLBTeamFromJSON,
+    MLBTeamFromJSONTyped,
+    MLBTeamToJSON,
+} from './MLBTeam';
 
 /**
  * 
@@ -28,10 +28,10 @@ import {
 export interface MLBTeams {
     /**
      * 
-     * @type {Array<Team>}
+     * @type {Array<MLBTeam>}
      * @memberof MLBTeams
      */
-    teams?: Array<Team>;
+    teams?: Array<MLBTeam>;
 }
 
 /**
@@ -51,7 +51,7 @@ export function MLBTeamsFromJSONTyped(json: any, ignoreDiscriminator: boolean): 
     }
     return {
         
-        'teams': json['teams'] == null ? undefined : ((json['teams'] as Array<any>).map(TeamFromJSON)),
+        'teams': json['teams'] == null ? undefined : ((json['teams'] as Array<any>).map(MLBTeamFromJSON)),
     };
 }
 
@@ -61,7 +61,7 @@ export function MLBTeamsToJSON(value?: MLBTeams | null): any {
     }
     return {
         
-        'teams': value['teams'] == null ? undefined : ((value['teams'] as Array<any>).map(TeamToJSON)),
+        'teams': value['teams'] == null ? undefined : ((value['teams'] as Array<any>).map(MLBTeamToJSON)),
     };
 }
 

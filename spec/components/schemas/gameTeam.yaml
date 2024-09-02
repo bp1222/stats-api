@@ -9,15 +9,7 @@ required:
   - team
 properties:
   leagueRecord:
-    title: MLBTeamRecord
-    type: object
-    properties:
-      wins:
-        type: number
-      losses:
-        type: number
-      pct:
-        type: string
+    $ref: ./schemas.yaml#/MLBLeagueRecord
   score:
     type: number
   team:

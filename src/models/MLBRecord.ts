@@ -25,12 +25,12 @@ import {
     MLBTeamFromJSONTyped,
     MLBTeamToJSON,
 } from './MLBTeam';
-import type { MLBTeamRecord1 } from './MLBTeamRecord1';
+import type { MLBLeagueRecord } from './MLBLeagueRecord';
 import {
-    MLBTeamRecord1FromJSON,
-    MLBTeamRecord1FromJSONTyped,
-    MLBTeamRecord1ToJSON,
-} from './MLBTeamRecord1';
+    MLBLeagueRecordFromJSON,
+    MLBLeagueRecordFromJSONTyped,
+    MLBLeagueRecordToJSON,
+} from './MLBLeagueRecord';
 
 /**
  * Record
@@ -119,10 +119,10 @@ export interface MLBRecord {
     conferenceGamesBack?: string;
     /**
      * 
-     * @type {MLBTeamRecord1}
+     * @type {MLBLeagueRecord}
      * @memberof MLBRecord
      */
-    leagueRecord: MLBTeamRecord1;
+    leagueRecord: MLBLeagueRecord;
     /**
      * 
      * @type {string}
@@ -272,7 +272,7 @@ export function MLBRecordFromJSONTyped(json: any, ignoreDiscriminator: boolean):
         'sportGamesBack': json['sportGamesBack'] == null ? undefined : json['sportGamesBack'],
         'divisionGamesBack': json['divisionGamesBack'] == null ? undefined : json['divisionGamesBack'],
         'conferenceGamesBack': json['conferenceGamesBack'] == null ? undefined : json['conferenceGamesBack'],
-        'leagueRecord': MLBTeamRecord1FromJSON(json['leagueRecord']),
+        'leagueRecord': MLBLeagueRecordFromJSON(json['leagueRecord']),
         'lastUpdated': json['lastUpdated'] == null ? undefined : json['lastUpdated'],
         'runsAllowed': json['runsAllowed'] == null ? undefined : json['runsAllowed'],
         'runsScored': json['runsScored'] == null ? undefined : json['runsScored'],
@@ -313,7 +313,7 @@ export function MLBRecordToJSON(value?: MLBRecord | null): any {
         'sportGamesBack': value['sportGamesBack'],
         'divisionGamesBack': value['divisionGamesBack'],
         'conferenceGamesBack': value['conferenceGamesBack'],
-        'leagueRecord': MLBTeamRecord1ToJSON(value['leagueRecord']),
+        'leagueRecord': MLBLeagueRecordToJSON(value['leagueRecord']),
         'lastUpdated': value['lastUpdated'],
         'runsAllowed': value['runsAllowed'],
         'runsScored': value['runsScored'],

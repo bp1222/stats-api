@@ -15,23 +15,23 @@
 
 import * as runtime from '../runtime';
 import type {
+  MLBSchedule,
+  MLBSeason,
   MLBSeasons,
   MLBStandingsList,
   MLBTeams,
-  Schedule,
-  Season,
 } from '../models/index';
 import {
+    MLBScheduleFromJSON,
+    MLBScheduleToJSON,
+    MLBSeasonFromJSON,
+    MLBSeasonToJSON,
     MLBSeasonsFromJSON,
     MLBSeasonsToJSON,
     MLBStandingsListFromJSON,
     MLBStandingsListToJSON,
     MLBTeamsFromJSON,
     MLBTeamsToJSON,
-    ScheduleFromJSON,
-    ScheduleToJSON,
-    SeasonFromJSON,
-    SeasonToJSON,
 } from '../models/index';
 
 export interface GetAllSeasonsRequest {
@@ -65,9 +65,108 @@ export interface GetTeamsRequest {
 }
 
 /**
+ * MlbApi - interface
+ * 
+ * @export
+ * @interface MlbApiInterface
+ */
+export interface MlbApiInterface {
+    /**
+     * Returns All Seasons 
+     * @summary Retrieves All Seasons over time
+     * @param {number} sportId 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MlbApiInterface
+     */
+    getAllSeasonsRaw(requestParameters: GetAllSeasonsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MLBSeasons>>;
+
+    /**
+     * Returns All Seasons 
+     * Retrieves All Seasons over time
+     */
+    getAllSeasons(requestParameters: GetAllSeasonsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MLBSeasons>;
+
+    /**
+     * Returns Schedule 
+     * @summary Retrieves schedule
+     * @param {number} sportId 
+     * @param {number} [teamId] 
+     * @param {string} [startDate] 
+     * @param {string} [endDate] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MlbApiInterface
+     */
+    getScheduleRaw(requestParameters: GetScheduleRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MLBSchedule>>;
+
+    /**
+     * Returns Schedule 
+     * Retrieves schedule
+     */
+    getSchedule(requestParameters: GetScheduleRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MLBSchedule>;
+
+    /**
+     * Returns Season 
+     * @summary Retrieves season
+     * @param {number} sportId 
+     * @param {string} season 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MlbApiInterface
+     */
+    getSeasonRaw(requestParameters: GetSeasonRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MLBSeason>>;
+
+    /**
+     * Returns Season 
+     * Retrieves season
+     */
+    getSeason(requestParameters: GetSeasonRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MLBSeason>;
+
+    /**
+     * Returns Standing 
+     * @summary Retrieves Standings
+     * @param {number} leagueId 
+     * @param {string} season 
+     * @param {string} [date] 
+     * @param {Array<string>} [fields] 
+     * @param {string} [hydrate] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MlbApiInterface
+     */
+    getStandingsRaw(requestParameters: GetStandingsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MLBStandingsList>>;
+
+    /**
+     * Returns Standing 
+     * Retrieves Standings
+     */
+    getStandings(requestParameters: GetStandingsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MLBStandingsList>;
+
+    /**
+     * Returns Teams 
+     * @summary Retrieves Teams
+     * @param {number} sportId 
+     * @param {string} season 
+     * @param {Array<number>} [leagueIds] 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof MlbApiInterface
+     */
+    getTeamsRaw(requestParameters: GetTeamsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MLBTeams>>;
+
+    /**
+     * Returns Teams 
+     * Retrieves Teams
+     */
+    getTeams(requestParameters: GetTeamsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MLBTeams>;
+
+}
+
+/**
  * 
  */
-export class MlbApi extends runtime.BaseAPI {
+export class MlbApi extends runtime.BaseAPI implements MlbApiInterface {
 
     /**
      * Returns All Seasons 
@@ -112,7 +211,7 @@ export class MlbApi extends runtime.BaseAPI {
      * Returns Schedule 
      * Retrieves schedule
      */
-    async getScheduleRaw(requestParameters: GetScheduleRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Schedule>> {
+    async getScheduleRaw(requestParameters: GetScheduleRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MLBSchedule>> {
         if (requestParameters['sportId'] == null) {
             throw new runtime.RequiredError(
                 'sportId',
@@ -147,14 +246,14 @@ export class MlbApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => ScheduleFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => MLBScheduleFromJSON(jsonValue));
     }
 
     /**
      * Returns Schedule 
      * Retrieves schedule
      */
-    async getSchedule(requestParameters: GetScheduleRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<Schedule> {
+    async getSchedule(requestParameters: GetScheduleRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MLBSchedule> {
         const response = await this.getScheduleRaw(requestParameters, initOverrides);
         return await response.value();
     }
@@ -163,7 +262,7 @@ export class MlbApi extends runtime.BaseAPI {
      * Returns Season 
      * Retrieves season
      */
-    async getSeasonRaw(requestParameters: GetSeasonRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Season>> {
+    async getSeasonRaw(requestParameters: GetSeasonRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MLBSeason>> {
         if (requestParameters['sportId'] == null) {
             throw new runtime.RequiredError(
                 'sportId',
@@ -197,14 +296,14 @@ export class MlbApi extends runtime.BaseAPI {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => SeasonFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => MLBSeasonFromJSON(jsonValue));
     }
 
     /**
      * Returns Season 
      * Retrieves season
      */
-    async getSeason(requestParameters: GetSeasonRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<Season> {
+    async getSeason(requestParameters: GetSeasonRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MLBSeason> {
         const response = await this.getSeasonRaw(requestParameters, initOverrides);
         return await response.value();
     }

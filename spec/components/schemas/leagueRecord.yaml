@@ -1,0 +1,15 @@
+title: MLBLeagueRecord
+type: object
+required:
+  - wins
+  - losses
+  - pct
+properties:
+  wins:
+    type: number
+  losses:
+    type: number
+  ties:
+    type: number
+  pct:
+    type: string

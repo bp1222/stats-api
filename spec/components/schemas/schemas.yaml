@@ -6,6 +6,8 @@ MLBGameTeam:
   $ref: ./gameTeam.yaml
 MLBLeague:
   $ref: ./league.yaml
+MLBLeagueRecord:
+  $ref: ./leagueRecord.yaml
 MLBSeason:
   $ref: ./season.yaml
 MLBSchedule:

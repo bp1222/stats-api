@@ -13,12 +13,12 @@
  */
 
 import { mapValues } from '../runtime';
-import type { Standings } from './Standings';
+import type { MLBStandings } from './MLBStandings';
 import {
-    StandingsFromJSON,
-    StandingsFromJSONTyped,
-    StandingsToJSON,
-} from './Standings';
+    MLBStandingsFromJSON,
+    MLBStandingsFromJSONTyped,
+    MLBStandingsToJSON,
+} from './MLBStandings';
 
 /**
  * 
@@ -28,10 +28,10 @@ import {
 export interface MLBStandingsList {
     /**
      * 
-     * @type {Array<Standings>}
+     * @type {Array<MLBStandings>}
      * @memberof MLBStandingsList
      */
-    records?: Array<Standings>;
+    records?: Array<MLBStandings>;
 }
 
 /**
@@ -51,7 +51,7 @@ export function MLBStandingsListFromJSONTyped(json: any, ignoreDiscriminator: bo
     }
     return {
         
-        'records': json['records'] == null ? undefined : ((json['records'] as Array<any>).map(StandingsFromJSON)),
+        'records': json['records'] == null ? undefined : ((json['records'] as Array<any>).map(MLBStandingsFromJSON)),
     };
 }
 
@@ -61,7 +61,7 @@ export function MLBStandingsListToJSON(value?: MLBStandingsList | null): any {
     }
     return {
         
-        'records': value['records'] == null ? undefined : ((value['records'] as Array<any>).map(StandingsToJSON)),
+        'records': value['records'] == null ? undefined : ((value['records'] as Array<any>).map(MLBStandingsToJSON)),
     };
 }
 

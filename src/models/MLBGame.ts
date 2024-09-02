@@ -19,12 +19,6 @@ import {
     MLBVenueFromJSONTyped,
     MLBVenueToJSON,
 } from './MLBVenue';
-import type { MLBGameContent } from './MLBGameContent';
-import {
-    MLBGameContentFromJSON,
-    MLBGameContentFromJSONTyped,
-    MLBGameContentToJSON,
-} from './MLBGameContent';
 import type { MLBGameStatus } from './MLBGameStatus';
 import {
     MLBGameStatusFromJSON,
@@ -39,7 +33,7 @@ import {
 } from './MLBGameTeams';
 
 /**
- * Game
+ * Game Thing
  * 
  * @export
  * @interface MLBGame
@@ -137,12 +131,6 @@ export interface MLBGame {
      * @memberof MLBGame
      */
     venue?: MLBVenue;
-    /**
-     * 
-     * @type {MLBGameContent}
-     * @memberof MLBGame
-     */
-    content?: MLBGameContent;
     /**
      * 
      * @type {boolean}
@@ -317,7 +305,6 @@ export function MLBGameFromJSONTyped(json: any, ignoreDiscriminator: boolean): M
         'status': MLBGameStatusFromJSON(json['status']),
         'teams': MLBGameTeamsFromJSON(json['teams']),
         'venue': json['venue'] == null ? undefined : MLBVenueFromJSON(json['venue']),
-        'content': json['content'] == null ? undefined : MLBGameContentFromJSON(json['content']),
         'isTie': json['isTie'] == null ? undefined : json['isTie'],
         'gameNumber': json['gameNumber'],
         'publicFacing': json['publicFacing'] == null ? undefined : json['publicFacing'],
@@ -360,7 +347,6 @@ export function MLBGameToJSON(value?: MLBGame | null): any {
         'status': MLBGameStatusToJSON(value['status']),
         'teams': MLBGameTeamsToJSON(value['teams']),
         'venue': MLBVenueToJSON(value['venue']),
-        'content': MLBGameContentToJSON(value['content']),
         'isTie': value['isTie'],
         'gameNumber': value['gameNumber'],
         'publicFacing': value['publicFacing'],

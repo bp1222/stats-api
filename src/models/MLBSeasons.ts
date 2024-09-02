@@ -13,12 +13,12 @@
  */
 
 import { mapValues } from '../runtime';
-import type { Season } from './Season';
+import type { MLBSeason } from './MLBSeason';
 import {
-    SeasonFromJSON,
-    SeasonFromJSONTyped,
-    SeasonToJSON,
-} from './Season';
+    MLBSeasonFromJSON,
+    MLBSeasonFromJSONTyped,
+    MLBSeasonToJSON,
+} from './MLBSeason';
 
 /**
  * 
@@ -28,10 +28,10 @@ import {
 export interface MLBSeasons {
     /**
      * 
-     * @type {Array<Season>}
+     * @type {Array<MLBSeason>}
      * @memberof MLBSeasons
      */
-    seasons?: Array<Season>;
+    seasons?: Array<MLBSeason>;
 }
 
 /**
@@ -51,7 +51,7 @@ export function MLBSeasonsFromJSONTyped(json: any, ignoreDiscriminator: boolean)
     }
     return {
         
-        'seasons': json['seasons'] == null ? undefined : ((json['seasons'] as Array<any>).map(SeasonFromJSON)),
+        'seasons': json['seasons'] == null ? undefined : ((json['seasons'] as Array<any>).map(MLBSeasonFromJSON)),
     };
 }
 
@@ -61,7 +61,7 @@ export function MLBSeasonsToJSON(value?: MLBSeasons | null): any {
     }
     return {
         
-        'seasons': value['seasons'] == null ? undefined : ((value['seasons'] as Array<any>).map(SeasonToJSON)),
+        'seasons': value['seasons'] == null ? undefined : ((value['seasons'] as Array<any>).map(MLBSeasonToJSON)),
     };
 }
 

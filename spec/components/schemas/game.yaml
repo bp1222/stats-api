@@ -1,6 +1,6 @@
 title: MLBGame
 description: >
-  Game
+  Game Thing
 type: object
 required:
   - gamePk
@@ -101,6 +101,7 @@ properties:
       abstractGameCode:
         type: string
   teams:
+    title: MLBGameTeams
     type: object
     required:
       - away
@@ -112,11 +113,6 @@ properties:
         $ref: ./schemas.yaml#/MLBGameTeam
   venue:
     $ref: ./schemas.yaml#/MLBVenue
-  content: # What is this!?
-    type: object 
-    properties:
-      link:
-        type: string
   isTie:
     type: boolean
   gameNumber:

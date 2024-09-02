@@ -16,51 +16,50 @@ import { mapValues } from '../runtime';
 /**
  * 
  * @export
- * @interface MLBTeamRecord1
+ * @interface MLBLeagueRecord
  */
-export interface MLBTeamRecord1 {
+export interface MLBLeagueRecord {
     /**
      * 
      * @type {number}
-     * @memberof MLBTeamRecord1
+     * @memberof MLBLeagueRecord
      */
     wins: number;
     /**
      * 
      * @type {number}
-     * @memberof MLBTeamRecord1
+     * @memberof MLBLeagueRecord
      */
     losses: number;
     /**
      * 
      * @type {number}
-     * @memberof MLBTeamRecord1
+     * @memberof MLBLeagueRecord
      */
-    ties: number;
+    ties?: number;
     /**
      * 
      * @type {string}
-     * @memberof MLBTeamRecord1
+     * @memberof MLBLeagueRecord
      */
     pct: string;
 }
 
 /**
- * Check if a given object implements the MLBTeamRecord1 interface.
+ * Check if a given object implements the MLBLeagueRecord interface.
  */
-export function instanceOfMLBTeamRecord1(value: object): value is MLBTeamRecord1 {
+export function instanceOfMLBLeagueRecord(value: object): value is MLBLeagueRecord {
     if (!('wins' in value) || value['wins'] === undefined) return false;
     if (!('losses' in value) || value['losses'] === undefined) return false;
-    if (!('ties' in value) || value['ties'] === undefined) return false;
     if (!('pct' in value) || value['pct'] === undefined) return false;
     return true;
 }
 
-export function MLBTeamRecord1FromJSON(json: any): MLBTeamRecord1 {
-    return MLBTeamRecord1FromJSONTyped(json, false);
+export function MLBLeagueRecordFromJSON(json: any): MLBLeagueRecord {
+    return MLBLeagueRecordFromJSONTyped(json, false);
 }
 
-export function MLBTeamRecord1FromJSONTyped(json: any, ignoreDiscriminator: boolean): MLBTeamRecord1 {
+export function MLBLeagueRecordFromJSONTyped(json: any, ignoreDiscriminator: boolean): MLBLeagueRecord {
     if (json == null) {
         return json;
     }
@@ -68,12 +67,12 @@ export function MLBTeamRecord1FromJSONTyped(json: any, ignoreDiscriminator: bool
         
         'wins': json['wins'],
         'losses': json['losses'],
-        'ties': json['ties'],
+        'ties': json['ties'] == null ? undefined : json['ties'],
         'pct': json['pct'],
     };
 }
 
-export function MLBTeamRecord1ToJSON(value?: MLBTeamRecord1 | null): any {
+export function MLBLeagueRecordToJSON(value?: MLBLeagueRecord | null): any {
     if (value == null) {
         return value;
     }

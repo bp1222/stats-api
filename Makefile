@@ -19,8 +19,9 @@ help: ## Display this help page
 
 .PHONY: bundle
 bundle: ## Builds the yaml bundle
-	npx --yes @redocly/cli bundle -o bundle.yaml spec/openapi.yaml
+	npx --yes @redocly/cli bundle -d --remove-unused-components -o bundle.yaml spec/openapi.yaml
 
-gen:
+.PHONY: gen
+gen: bundle
 	npx --yes @openapitools/openapi-generator-cli generate --generator-key v0-client
 

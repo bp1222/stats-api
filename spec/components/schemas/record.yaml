@@ -54,22 +54,7 @@ properties:
   conferenceGamesBack:
     type: string
   leagueRecord:
-    title: MLBTeamRecord
-    type: object
-    required:
-      - wins
-      - losses
-      - ties
-      - pct
-    properties:
-      wins:
-        type: number
-      losses:
-        type: number
-      ties:
-        type: number
-      pct:
-        type: string
+    $ref: ./schemas.yaml#/MLBLeagueRecord
   lastUpdated:
     type: string
   # records:  NEED TO FILL OUT MORE
