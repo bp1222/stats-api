@@ -20,7 +20,7 @@ properties:
   dates:
     type: array
     items:
-      title: MLBScheduleDays
+      title: MLBScheduleDay
       type: object
       required:
         - games

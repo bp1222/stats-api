@@ -10,7 +10,7 @@ export * from './MLBLeagueDates';
 export * from './MLBLeagueRecord';
 export * from './MLBRecord';
 export * from './MLBSchedule';
-export * from './MLBScheduleDays';
+export * from './MLBScheduleDay';
 export * from './MLBSeason';
 export * from './MLBSeasons';
 export * from './MLBSport';

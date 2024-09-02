@@ -11,7 +11,7 @@ models/MLBLeagueDates.ts
 models/MLBLeagueRecord.ts
 models/MLBRecord.ts
 models/MLBSchedule.ts
-models/MLBScheduleDays.ts
+models/MLBScheduleDay.ts
 models/MLBSeason.ts
 models/MLBSeasons.ts
 models/MLBSport.ts

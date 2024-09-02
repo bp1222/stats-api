@@ -13,12 +13,12 @@
  */
 
 import { mapValues } from '../runtime';
-import type { MLBScheduleDays } from './MLBScheduleDays';
+import type { MLBScheduleDay } from './MLBScheduleDay';
 import {
-    MLBScheduleDaysFromJSON,
-    MLBScheduleDaysFromJSONTyped,
-    MLBScheduleDaysToJSON,
-} from './MLBScheduleDays';
+    MLBScheduleDayFromJSON,
+    MLBScheduleDayFromJSONTyped,
+    MLBScheduleDayToJSON,
+} from './MLBScheduleDay';
 
 /**
  * Schedule
@@ -53,10 +53,10 @@ export interface MLBSchedule {
     totalGamesInProgress: number;
     /**
      * 
-     * @type {Array<MLBScheduleDays>}
+     * @type {Array<MLBScheduleDay>}
      * @memberof MLBSchedule
      */
-    dates: Array<MLBScheduleDays>;
+    dates: Array<MLBScheduleDay>;
 }
 
 /**
@@ -85,7 +85,7 @@ export function MLBScheduleFromJSONTyped(json: any, ignoreDiscriminator: boolean
         'totalEvents': json['totalEvents'],
         'totalGames': json['totalGames'],
         'totalGamesInProgress': json['totalGamesInProgress'],
-        'dates': ((json['dates'] as Array<any>).map(MLBScheduleDaysFromJSON)),
+        'dates': ((json['dates'] as Array<any>).map(MLBScheduleDayFromJSON)),
     };
 }
 
@@ -99,7 +99,7 @@ export function MLBScheduleToJSON(value?: MLBSchedule | null): any {
         'totalEvents': value['totalEvents'],
         'totalGames': value['totalGames'],
         'totalGamesInProgress': value['totalGamesInProgress'],
-        'dates': ((value['dates'] as Array<any>).map(MLBScheduleDaysToJSON)),
+        'dates': ((value['dates'] as Array<any>).map(MLBScheduleDayToJSON)),
     };
 }
 
