@@ -16,7 +16,6 @@
 import * as runtime from '../runtime';
 import type {
   MLBSchedule,
-  MLBSeason,
   MLBSeasons,
   MLBStandingsList,
   MLBTeams,
@@ -24,8 +23,6 @@ import type {
 import {
     MLBScheduleFromJSON,
     MLBScheduleToJSON,
-    MLBSeasonFromJSON,
-    MLBSeasonToJSON,
     MLBSeasonsFromJSON,
     MLBSeasonsToJSON,
     MLBStandingsListFromJSON,
@@ -115,13 +112,13 @@ export interface MlbApiInterface {
      * @throws {RequiredError}
      * @memberof MlbApiInterface
      */
-    getSeasonRaw(requestParameters: GetSeasonRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MLBSeason>>;
+    getSeasonRaw(requestParameters: GetSeasonRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MLBSeasons>>;
 
     /**
      * Returns Season 
      * Retrieves season
      */
-    getSeason(requestParameters: GetSeasonRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MLBSeason>;
+    getSeason(requestParameters: GetSeasonRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MLBSeasons>;
 
     /**
      * Returns Standing 
@@ -262,7 +259,7 @@ export class MlbApi extends runtime.BaseAPI implements MlbApiInterface {
      * Returns Season 
      * Retrieves season
      */
-    async getSeasonRaw(requestParameters: GetSeasonRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MLBSeason>> {
+    async getSeasonRaw(requestParameters: GetSeasonRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<MLBSeasons>> {
         if (requestParameters['sportId'] == null) {
             throw new runtime.RequiredError(
                 'sportId',
@@ -296,14 +293,14 @@ export class MlbApi extends runtime.BaseAPI implements MlbApiInterface {
             query: queryParameters,
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => MLBSeasonFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => MLBSeasonsFromJSON(jsonValue));
     }
 
     /**
      * Returns Season 
      * Retrieves season
      */
-    async getSeason(requestParameters: GetSeasonRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MLBSeason> {
+    async getSeason(requestParameters: GetSeasonRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<MLBSeasons> {
         const response = await this.getSeasonRaw(requestParameters, initOverrides);
         return await response.value();
     }

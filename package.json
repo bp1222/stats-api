@@ -1,18 +1,19 @@
 {
   "name": "@bp1222/stats-api",
-  "version": "0.0.7",
+  "version": "0.0.8",
+  "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/bp1222/stats-api.git"
   },
-  "exports": {
-    ".": "./src/index.ts"
-  },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts"
   },
+  "files": [
+    "dist/**"
+  ],
   "keywords": ["mlb", "stats-api"],
   "author": "Dave Walker",
   "license": "ISC",

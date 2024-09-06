@@ -14,10 +14,4 @@ get:
       content:
         application/json:
           schema:
-            title: MLBSeasons
-            type: object
-            properties:
-              seasons:
-                type: array
-                items:
-                  $ref: ../components/schemas/schemas.yaml#/MLBSeason
+            $ref: ../components/schemas/schemas.yaml#/MLBSeasons

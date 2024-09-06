@@ -1476,7 +1476,7 @@ var MlbApi = class extends BaseAPI {
         headers: headerParameters,
         query: queryParameters
       }, initOverrides);
-      return new JSONApiResponse(response, (jsonValue) => MLBSeasonFromJSON(jsonValue));
+      return new JSONApiResponse(response, (jsonValue) => MLBSeasonsFromJSON(jsonValue));
     });
   }
   /**

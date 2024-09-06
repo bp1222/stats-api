@@ -8,6 +8,8 @@ MLBLeague:
   $ref: ./league.yaml
 MLBLeagueRecord:
   $ref: ./leagueRecord.yaml
+MLBSeasons:
+  $ref: ./seasons.yaml
 MLBSeason:
   $ref: ./season.yaml
 MLBSchedule:
