@@ -22,13 +22,5 @@ bundle: ## Builds the yaml bundle
 	npx --yes @redocly/cli bundle -d --remove-unused-components -o bundle.yaml spec/openapi.yaml
 
 .PHONY: gen-ts
-gen-ts: bundle ## Bundle the spec into a single file
-	npx --yes @openapitools/openapi-generator-cli generate --generator-key v0-ts-client
-
-.PHONY: gen-go
-gen-go: bundle ## Bundle the spec into a single file
-	npx --yes @openapitools/openapi-generator-cli generate --generator-key v0-go-client
-
-.PHONY: ts-build
-ts-build: ## Build the typescript bindings
-	cd typescript && npm run build
+gen-ts: ## Bundle the spec into a single file
+	npx --yes @openapitools/openapi-generator-cli generate -g typescript-fetch -i bundle.yaml -o src --additional-properties with-interfaces=true
