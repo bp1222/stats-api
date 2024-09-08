@@ -51,5 +51,5 @@ $(BUMP_TARGETS):
 	@sed 's/version: .*/version: $(V)/' spec/openapi.yaml > tmp && mv tmp spec/openapi.yaml
 	@sed 's/"version": .*/"version": "$(V)",/' package.json > tmp && mv tmp package.json
 	@git add .; git commit -m 'Bumping Version: $(V)'
-#	@git tag $(V)
-#	@git push; git push --tags
+	@git tag $(V)
+	@git push; git push --tags
