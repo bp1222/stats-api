@@ -24,3 +24,32 @@ bundle: ## Builds the yaml bundle
 .PHONY: gen-ts
 gen-ts: ## Bundle the spec into a single file
 	npx --yes @openapitools/openapi-generator-cli generate -g typescript-fetch -i bundle.yaml -o src --additional-properties with-interfaces=true
+
+
+SED := 
+
+VERSION := $(shell git describe --tags --abbrev=0 | sed -Ee 's/^v|-.*//')
+.PHONY: version
+version:
+	@echo v$(VERSION)
+
+SEMVER_TYPES := major minor patch
+BUMP_TARGETS := $(addprefix bump-,$(SEMVER_TYPES))
+.PHONY: $(BUMP_TARGETS)
+$(BUMP_TARGETS):
+	$(eval bump_type := $(strip $(word 2,$(subst -, ,$@))))
+	$(eval V := $(shell if [[ "$(bump_type)" == "major" ]]; then \
+		echo $(VERSION) | awk -F. -v OFS=. -v f=1 -v ff=2 -v fff=3 '{ $$f++; $$ff=0; $$fff=0 } 1'; \
+	fi; \
+	if [[ "$(bump_type)" == "minor" ]]; then \
+		echo $(VERSION) | awk -F. -v OFS=. -v f=2 -v ff=3 '{ $$f++; $$ff=0; } 1'; \
+	fi; \
+	if [[ "$(bump_type)" == "patch" ]]; then \
+		echo $(VERSION) | awk -F. -v OFS=. -v f=3 '{ $$f++; } 1'; \
+	fi))
+	@echo "Version: $(V)"
+	@sed 's/version: .*/version: $(V)/' spec/openapi.yaml > tmp && mv tmp spec/openapi.yaml
+	@sed 's/"version": .*/"version": "$(V)",/' package.json > tmp && mv tmp package.json
+	@git add .; git commit -m 'Bumping Version: $(V)'
+#	@git tag $(V)
+#	@git push; git push --tags
