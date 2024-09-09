@@ -10,7 +10,7 @@ all: help
 # Cite: https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
 .PHONY: help
 help: ## Display this help page
-	@grep -E '^[a-zA-Z0-9/_-]+:.*?## .*$$' $(MAKEFILE_LIST) | 		\
+	@grep -E '^[$$()a-zA-Z0-9/_-]+:.*?## .*$$' $(MAKEFILE_LIST) | 		\
 	sort | 															\
 	awk ' 															\
 		BEGIN {FS = ":.*?## "; print "${GREEN}mlb-season help:\n"} \
@@ -25,12 +25,9 @@ bundle: ## Builds the yaml bundle
 gen-ts: ## Bundle the spec into a single file
 	npx --yes @openapitools/openapi-generator-cli generate -g typescript-fetch -i bundle.yaml -o src --additional-properties with-interfaces=true
 
-
-SED := 
-
 VERSION := $(shell git describe --tags --abbrev=0 | sed -Ee 's/^v|-.*//')
 .PHONY: version
-version:
+version: ## Current Version
 	@echo v$(VERSION)
 
 SEMVER_TYPES := major minor patch
