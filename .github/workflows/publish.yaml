@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Generate Library
-        run: make bundle && make gen-ts
+        run: make bundle && make gen-ts && npm run build
 
       - run: npm publish --provenance --access public
         env:
