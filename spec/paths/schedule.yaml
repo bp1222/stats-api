@@ -9,6 +9,7 @@ get:
     - $ref: ../components/parameters/parameters.yaml#/TeamId
     - $ref: ../components/parameters/parameters.yaml#/StartDate
     - $ref: ../components/parameters/parameters.yaml#/EndDate
+    - $ref: ../components/parameters/parameters.yaml#/Fields
   tags:
     - mlb
   responses:

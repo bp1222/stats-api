@@ -3,7 +3,7 @@ info:
   title: MLB StatAPI
   description: >
     An spec API to consume the MLB Stat API
-  version: 0.1.6
+  version: 0.1.7
   contact:
     name: "dave@mudsite.com"
 
