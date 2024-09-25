@@ -1,6 +1,9 @@
 
 .idea/
 node_modules/
+dist/
+src/
 
 /bundle.yaml
 /package-lock.json
+/openapitools.json
