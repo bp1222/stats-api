@@ -1,4 +1,4 @@
-title: MLBLeague
+title: League
 description: >
   League 
 type: object
@@ -25,7 +25,7 @@ properties:
   hasPlayoffPoints:
     type: boolean 
   seasonDateInfo:
-    title: MLBLeagueDates
+    title: LeagueDates
     type: object
     properties:
       seasonId:

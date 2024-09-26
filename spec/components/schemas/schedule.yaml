@@ -1,4 +1,4 @@
-title: MLBSchedule
+title: Schedule
 description: >
   Schedule
 type: object
@@ -20,7 +20,7 @@ properties:
   dates:
     type: array
     items:
-      title: MLBScheduleDay
+      title: ScheduleDay
       type: object
       required:
         - games
@@ -38,4 +38,4 @@ properties:
         games:
           type: array
           items:
-            $ref: ./schemas.yaml#/MLBGame
+            $ref: ./schemas.yaml#/Game

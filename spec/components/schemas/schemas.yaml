@@ -1,26 +1,30 @@
-MLBDivision:
+Division:
   $ref: ./division.yaml
-MLBGame:
+DivisionStandings:
+  $ref: ./divisionStandings.yaml
+Game:
   $ref: ./game.yaml
-MLBGameTeam:
+GameTeam:
   $ref: ./gameTeam.yaml
-MLBLeague:
+GameStatusCode:
+  $ref: ./gameStatusCode.yaml
+GameType:
+  $ref: ./gameType.yaml
+League:
   $ref: ./league.yaml
-MLBLeagueRecord:
+LeagueRecord:
   $ref: ./leagueRecord.yaml
-MLBSeasons:
+Seasons:
   $ref: ./seasons.yaml
-MLBSeason:
+Season:
   $ref: ./season.yaml
-MLBSchedule:
+Schedule:
   $ref: ./schedule.yaml
-MLBSport:
+Sport:
   $ref: ./sport.yaml
-MLBStandings:
-  $ref: ./standings.yaml
-MLBRecord:
-  $ref: ./record.yaml
-MLBTeam:
+Team:
   $ref: ./team.yaml
-MLBVenue:
+TeamRecord:
+  $ref: ./teamRecord.yaml
+Venue:
   $ref: ./venue.yaml

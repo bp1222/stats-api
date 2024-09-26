@@ -1,4 +1,4 @@
-title: MLBDivision
+title: Division
 description: >
   Division 
 type: object
@@ -19,9 +19,9 @@ properties:
   abbreviation:
     type: string
   league:
-    $ref: ./schemas.yaml#/MLBLeague
+    $ref: ./schemas.yaml#/League
   sport:
-    $ref: ./schemas.yaml#/MLBSport
+    $ref: ./schemas.yaml#/Sport
   hasWildcard:
     type: boolean 
   sortOrder:

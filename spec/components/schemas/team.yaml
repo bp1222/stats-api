@@ -1,4 +1,4 @@
-title: MLBTeam
+title: Team
 description: >
   Team
 type: object
@@ -17,9 +17,9 @@ properties:
   season:
     type: number
   venue:
-    $ref: ./schemas.yaml#/MLBVenue
+    $ref: ./schemas.yaml#/Venue
   springVenue:
-    $ref: ./schemas.yaml#/MLBVenue
+    $ref: ./schemas.yaml#/Venue
   teamCode:
     type: string
   fileCode:
@@ -33,13 +33,13 @@ properties:
   firstYearOfPlay:
     type: string
   league:
-    $ref: ./schemas.yaml#/MLBLeague
+    $ref: ./schemas.yaml#/League
   springLeague:
-    $ref: ./schemas.yaml#/MLBLeague
+    $ref: ./schemas.yaml#/League
   division:
-    $ref: ./schemas.yaml#/MLBDivision
+    $ref: ./schemas.yaml#/Division
   sport:
-    $ref: ./schemas.yaml#/MLBSport
+    $ref: ./schemas.yaml#/Sport
   shortName:
     type: string
   franchiseName:

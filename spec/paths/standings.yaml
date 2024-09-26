@@ -18,10 +18,10 @@ get:
       content:
         application/json:
           schema:
-            title: MLBStandingsList
+            title: DivisionStandingsList
             type: object
             properties:
               records:
                 type: array
                 items:
-                  $ref: ../components/schemas/schemas.yaml#/MLBStandings
+                  $ref: ../components/schemas/schemas.yaml#/DivisionStandings

@@ -1,4 +1,4 @@
-title: MLBLeagueRecord
+title: LeagueRecord
 type: object
 required:
   - wins

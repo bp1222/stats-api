@@ -1,23 +1,23 @@
 # ./query
 Date:
-  $ref: "./query/date.yaml"
+  $ref: ./query/date.yaml
 EndDate:
-  $ref: "./query/endDate.yaml"
+  $ref: ./query/endDate.yaml
 Fields:
-  $ref: "./query/fields.yaml"
+  $ref: ./query/fields.yaml
 GameTypes:
-  $ref: "./query/gameTypes.yaml"
+  $ref: ./query/gameTypes.yaml
 Hydrate:
-  $ref: "./query/hydrate.yaml"
+  $ref: ./query/hydrate.yaml
 LeagueId:
-  $ref: "./query/leagueId.yaml"
+  $ref: ./query/leagueId.yaml
 LeagueIds:
-  $ref: "./query/leagueIds.yaml"
+  $ref: ./query/leagueIds.yaml
 Season:
-  $ref: "./query/season.yaml"
+  $ref: ./query/season.yaml
 SportId:
-  $ref: "./query/sportId.yaml"
+  $ref: ./query/sportId.yaml
 StartDate:
-  $ref: "./query/startDate.yaml"
+  $ref: ./query/startDate.yaml
 TeamId:
-  $ref: "./query/teamId.yaml"
+  $ref: ./query/teamId.yaml

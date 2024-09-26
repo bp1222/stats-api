@@ -5,5 +5,4 @@ explode: true
 schema:
   type: array
   items:
-    $ref: ../../../components/schemas/schemas.yaml#/GameType
-
+    $ref: ../../schemas/schemas.yaml#/GameType

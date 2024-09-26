@@ -19,7 +19,7 @@ help: ## Display this help page
 
 .PHONY: bundle
 bundle: ## Builds the yaml bundle
-	npx --yes @redocly/cli bundle -d --remove-unused-components -o bundle.yaml spec/openapi.yaml
+	npx --yes @redocly/cli bundle --remove-unused-components -o bundle.yaml spec/openapi.yaml
 
 .PHONY: gen-ts
 gen-ts: ## Bundle the spec into a single file

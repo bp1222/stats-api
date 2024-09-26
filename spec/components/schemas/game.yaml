@@ -1,4 +1,4 @@
-title: MLBGame
+title: Game
 description: >
   Game Thing
 type: object
@@ -22,32 +22,7 @@ properties:
   link:
     type: string
   gameType:
-    type: string
-    enum:
-      - "E"
-      - "S"
-      - "R"
-      - "F"
-      - "D"
-      - "L"
-      - "W"
-    x-enum-varnames:
-      - Exhibition
-      - SpringTraining
-      - Regular
-      - WildCardSeries
-      - DivisionSeries
-      - LeagueChampionshipSeries
-      - WorldSeries
-    description: >
-      Game Type:
-        * `E` - Exhibition
-        * `S` - Spring Training
-        * `R` - Regular Season
-        * `F` - Wild Card Series
-        * `D` - Division Series
-        * `L` - League Championship Series
-        * `W` - World Series
+    $ref: ./schemas.yaml#/GameType
   season:
     type: number
   gameDate:
@@ -63,35 +38,13 @@ properties:
   rescheduledFromDate:
     type: string
   status:
-    title: MLBGameStatus
+    title: GameStatus
     type: object
     properties:
       abstractGameState:
         type: string
       codedGameState:
-        type: string 
-        enum:
-          - "F"
-          - "D"
-          - "S"
-          - "I"
-          - "P"
-          - "O"
-        x-enum-varnames:
-          - Final
-          - Postponed
-          - Scheduled
-          - InProgress
-          - Pregame
-          - GameOver
-        description: >
-          Coded Game State
-            * `F` - Final
-            * `D` - Delayed/Postponed
-            * `S` - Scheduled
-            * `I` - In Progress
-            * `P` - Pregame
-            * `O` - Game Over
+        $ref: ./schemas.yaml#/GameStatusCode
       detailedState:
         type: string
       statusCode:
@@ -101,18 +54,18 @@ properties:
       abstractGameCode:
         type: string
   teams:
-    title: MLBGameTeams
+    title: GameTeams
     type: object
     required:
       - away
       - home
     properties:
       away:
-        $ref: ./schemas.yaml#/MLBGameTeam
+        $ref: ./schemas.yaml#/GameTeam
       home:
-        $ref: ./schemas.yaml#/MLBGameTeam
+        $ref: ./schemas.yaml#/GameTeam
   venue:
-    $ref: ./schemas.yaml#/MLBVenue
+    $ref: ./schemas.yaml#/Venue
   isTie:
     type: boolean
   gameNumber:

@@ -1,4 +1,4 @@
-title: MLBRecord
+title: Record
 description: >
   Record
 type: object
@@ -14,11 +14,11 @@ required:
   - losses
 properties:
   team:
-    $ref: ./schemas.yaml#/MLBTeam
+    $ref: ./schemas.yaml#/Team
   season:
     type: string
   streak:
-    title: MLBStreak
+    title: Streak
     type: object
     properties:
       streakType:
@@ -54,7 +54,7 @@ properties:
   conferenceGamesBack:
     type: string
   leagueRecord:
-    $ref: ./schemas.yaml#/MLBLeagueRecord
+    $ref: ./schemas.yaml#/LeagueRecord
   lastUpdated:
     type: string
   # records:  NEED TO FILL OUT MORE

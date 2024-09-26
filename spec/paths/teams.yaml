@@ -24,10 +24,10 @@ get:
       content:
         application/json:
           schema:
-            title: MLBTeams
+            title: Teams
             type: object
             properties:
               teams:
                 type: array
                 items:
-                  $ref: ../components/schemas/schemas.yaml#/MLBTeam
+                  $ref: ../components/schemas/schemas.yaml#/Team
