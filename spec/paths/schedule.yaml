@@ -11,6 +11,7 @@ get:
     - $ref: ../components/parameters/parameters.yaml#/StartDate
     - $ref: ../components/parameters/parameters.yaml#/EndDate
     - $ref: ../components/parameters/parameters.yaml#/Fields
+    - $ref: ../components/parameters/parameters.yaml#/Hydrate
   tags:
     - mlb
   responses:
