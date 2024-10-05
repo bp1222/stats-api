@@ -8,6 +8,6 @@ properties:
   ordinalNum:
     type: string
   home:
-    $ref: ./schemas.yaml#/InningTeam
+    $ref: ./schemas.yaml#/LinescoreTeam
   away:
-    $ref: ./schemas.yaml#/InningTeam
+    $ref: ./schemas.yaml#/LinescoreTeam

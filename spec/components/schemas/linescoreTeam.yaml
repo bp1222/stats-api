@@ -1,8 +1,10 @@
-title: InningTeam
+title: LinescoreTeam
 description: >
   InningTeam
 type: object
 properties:
+  runs:
+    type: number
   hits:
     type: number
   errors:

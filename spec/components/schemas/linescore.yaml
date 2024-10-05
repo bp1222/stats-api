@@ -19,15 +19,14 @@ properties:
     type: list
     items:
       $ref: ./schemas.yaml#/Inning
-
-  #teams:
-  #  title: LinescoreTeams
-  #  type: object
-  #  properties:
-  #    away:
-  #      $ref: ./schemas.yaml#/LinescoreTeam
-  #    home:
-  #      $ref: ./schemas.yaml#/LinescoreTeam
+  teams:
+    title: LinescoreTeams
+    type: object
+    properties:
+      away:
+        $ref: ./schemas.yaml#/LinescoreTeam
+      home:
+        $ref: ./schemas.yaml#/LinescoreTeam
 
   # defense:
     #   title: Defense
