@@ -1,0 +1,13 @@
+title: Inning
+description: >
+  Inning
+type: object
+properties:
+  num:
+    type: number
+  ordinalNum:
+    type: string
+  home:
+    $ref: ./schemas.yaml#/InningTeam
+  away:
+    $ref: ./schemas.yaml#/InningTeam

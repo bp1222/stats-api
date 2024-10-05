@@ -10,6 +10,12 @@ GameStatusCode:
   $ref: ./gameStatusCode.yaml
 GameType:
   $ref: ./gameType.yaml
+Inning:
+  $ref: ./inning.yaml
+InningTeam:
+  $ref: ./inningTeam.yaml
+Linescore:
+  $ref: ./linescore.yaml
 League:
   $ref: ./league.yaml
 LeagueRecord:

@@ -1,3 +1,7 @@
+# ./path
+GamePk:
+  $ref: ./path/gamePk.yaml
+
 # ./query
 Date:
   $ref: ./query/date.yaml

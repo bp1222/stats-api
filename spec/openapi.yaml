@@ -3,7 +3,7 @@ info:
   title: MLB StatAPI
   description: >
     An spec API to consume the MLB Stat API
-  version: 0.2.2
+  version: 0.2.3
   contact:
     name: "dave@mudsite.com"
 
@@ -14,6 +14,8 @@ tags:
   - name: mlb
 
 paths:
+  /v1/game/{gamePk}/linescore:
+    $ref: ./paths/linescore.yaml
   /v1/schedule:
     $ref: ./paths/schedule.yaml
   /v1/seasons:

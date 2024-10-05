@@ -1,0 +1,47 @@
+title: Linescore
+description: >
+  Linescore
+type: object
+properties:
+  currentInning:
+    type: number
+  currentInningOrdinal:
+    type: string
+  inningState:
+    type: string
+  inningHalf:
+    type: string
+  isTopInning:
+    type: boolean
+  scheduledInnings:
+    type: number
+  innings:
+    type: list
+    items:
+      $ref: ./schemas.yaml#/Inning
+
+  #teams:
+  #  title: LinescoreTeams
+  #  type: object
+  #  properties:
+  #    away:
+  #      $ref: ./schemas.yaml#/LinescoreTeam
+  #    home:
+  #      $ref: ./schemas.yaml#/LinescoreTeam
+
+  # defense:
+    #   title: Defense
+    #   type: object
+    #   properties:
+
+  # offense:
+    #   title: Offense
+    #   type: object
+    #   properties:
+
+  balls:
+    type: number
+  strikes:
+    type: number
+  outs:
+    type: number

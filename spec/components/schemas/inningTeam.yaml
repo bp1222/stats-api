@@ -1,0 +1,11 @@
+title: InningTeam
+description: >
+  InningTeam
+type: object
+properties:
+  hits:
+    type: number
+  errors:
+    type: number
+  leftOnBase:
+    type: number
