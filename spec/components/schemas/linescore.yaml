@@ -16,7 +16,7 @@ properties:
   scheduledInnings:
     type: number
   innings:
-    type: list
+    type: array
     items:
       $ref: ./schemas.yaml#/Inning
   teams:

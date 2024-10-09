@@ -1,9 +1,11 @@
 openapi: 3.0.2
 info:
   title: MLB StatAPI
+  license:
+    name: Public Domain
   description: >
     An spec API to consume the MLB Stat API
-  version: 0.2.4
+  version: 0.2.5
   contact:
     name: "dave@mudsite.com"
 
@@ -12,8 +14,11 @@ servers:
 
 tags:
   - name: mlb
+    description: MLB API
 
 paths:
+  /v1/game/{gamePk}/boxscore:
+    $ref: ./paths/boxscore.yaml
   /v1/game/{gamePk}/linescore:
     $ref: ./paths/linescore.yaml
   /v1/schedule:

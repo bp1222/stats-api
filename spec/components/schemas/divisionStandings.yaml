@@ -21,4 +21,4 @@ properties:
   teamRecords:
     type: array
     items:
-      $ref: ./schemas.yaml#/TeamRecord
+      $ref: ./schemas.yaml#/Record

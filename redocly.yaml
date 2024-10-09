@@ -1,0 +1,12 @@
+extends:
+  - recommended
+
+rules:
+  no-unused-components: error
+  operation-singular-tag: warn
+  operation-4xx-response: off
+  security-defined: off
+  info-license-strict: off
+  boolean-parameter-prefixes:
+    severity: error
+    prefixes: ['can', 'is', 'has']

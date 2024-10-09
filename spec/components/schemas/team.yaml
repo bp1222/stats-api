@@ -40,6 +40,8 @@ properties:
     $ref: ./schemas.yaml#/Division
   sport:
     $ref: ./schemas.yaml#/Sport
+  record:
+    $ref: ./schemas.yaml#/Record
   shortName:
     type: string
   franchiseName:

@@ -1,9 +1,9 @@
-# /v1/game/{gamePk}/linescore
+# /v1/game/{gamePk}/boxscore
 get:
-  operationId: getLinescore
-  summary: Retrieves linescore
+  operationId: getBoxscore
+  summary: Retrieves boxscore
   description: >
-    Returns Linescore
+    Returns Boxscore
   parameters:
     - $ref: ../components/parameters/parameters.yaml#/GamePk
     - $ref: ../components/parameters/parameters.yaml#/Fields
@@ -15,4 +15,4 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/schemas.yaml#/Linescore
+            $ref: ../components/schemas/schemas.yaml#/Boxscore

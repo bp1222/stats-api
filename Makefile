@@ -17,13 +17,17 @@ help: ## Display this help page
 		{printf "${CYAN}%-30s${RESET} %s\n", $$1, $$2} 				\
 	  	END {print "\n${YELLOW}See README.md for more information${RESET}\n"}'
 
+.PHONY: lint
+lint: ## Lint the spec
+	npx --yes @redocly/cli lint --lint-config error spec/openapi.yaml
+
 .PHONY: bundle
 bundle: ## Builds the yaml bundle
 	npx --yes @redocly/cli bundle --remove-unused-components -o bundle.yaml spec/openapi.yaml
 
 .PHONY: gen-ts
 gen-ts: ## Bundle the spec into a single file
-	npx --yes @openapitools/openapi-generator-cli generate -g typescript-fetch -i bundle.yaml -o src --additional-properties with-interfaces=true
+	npx --yes @openapitools/openapi-generator-cli generate -g typescript-fetch -i bundle.yaml -o src --additional-properties with-interfaces=true,stringEnums=true
 
 VERSION := $(shell git describe --tags --abbrev=0 | sed -Ee 's/^v|-.*//')
 .PHONY: version

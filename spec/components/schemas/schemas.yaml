@@ -1,9 +1,13 @@
+Boxscore:
+  $ref: ./boxscore.yaml
 Division:
   $ref: ./division.yaml
 DivisionStandings:
   $ref: ./divisionStandings.yaml
 Game:
   $ref: ./game.yaml
+GameOfficial:
+  $ref: ./gameOfficial.yaml
 GameTeam:
   $ref: ./gameTeam.yaml
 GameStatusCode:
@@ -20,6 +24,10 @@ League:
   $ref: ./league.yaml
 LeagueRecord:
   $ref: ./leagueRecord.yaml
+Official:
+  $ref: ./official.yaml
+Record:
+  $ref: ./record.yaml
 Seasons:
   $ref: ./seasons.yaml
 Season:
@@ -30,7 +38,5 @@ Sport:
   $ref: ./sport.yaml
 Team:
   $ref: ./team.yaml
-TeamRecord:
-  $ref: ./teamRecord.yaml
 Venue:
   $ref: ./venue.yaml

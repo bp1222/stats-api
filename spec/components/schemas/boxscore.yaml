@@ -1,0 +1,17 @@
+title: Boxscore
+description: >
+  Boxscore
+type: object
+properties:
+  teams:
+    title: BoxscoreTeams
+    type: object
+    properties:
+      away:
+        $ref: ./schemas.yaml#/Team
+      home:
+        $ref: ./schemas.yaml#/Team
+  officials:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/GameOfficial
