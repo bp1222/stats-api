@@ -2,15 +2,21 @@ title: Boxscore
 description: >
   Boxscore
 type: object
+required:
+  - teams
+  - officials
 properties:
   teams:
     title: BoxscoreTeams
     type: object
+    required:
+      - away
+      - home
     properties:
       away:
-        $ref: ./schemas.yaml#/Team
+        $ref: ./schemas.yaml#/BoxscoreTeam
       home:
-        $ref: ./schemas.yaml#/Team
+        $ref: ./schemas.yaml#/BoxscoreTeam
   officials:
     type: array
     items:

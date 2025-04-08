@@ -1,0 +1,30 @@
+title: BoxscoreTeam
+description: >
+  Boxscore Team
+type: object
+required:
+  - team
+  - teamStats
+  - players
+properties:
+  team:
+    $ref: ./schemas.yaml#/Team
+  teamStats:
+    title: TeamStats
+    type: object
+    required:
+      - batting
+      - pitching
+      - fielding
+    properties:
+      batting:
+        $ref: ./schemas.yaml#/BattingStats
+      pitching:
+        $ref: ./schemas.yaml#/PitchingStats
+      fielding:
+        $ref: ./schemas.yaml#/FieldingStats
+  players:
+    title: BoxscoreTeamPlayers
+    type: object
+    additionalProperties:
+      $ref: ./schemas.yaml#/Player

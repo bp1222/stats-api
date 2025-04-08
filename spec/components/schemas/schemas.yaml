@@ -1,9 +1,15 @@
+BattingStats:
+  $ref: ./battingStats.yaml
 Boxscore:
   $ref: ./boxscore.yaml
+BoxscoreTeam:
+  $ref: ./boxscoreTeam.yaml
 Division:
   $ref: ./division.yaml
 DivisionStandings:
   $ref: ./divisionStandings.yaml
+FieldingStats:
+  $ref: ./fieldingStats.yaml
 Game:
   $ref: ./game.yaml
 GameOfficial:
@@ -26,6 +32,10 @@ LeagueRecord:
   $ref: ./leagueRecord.yaml
 Official:
   $ref: ./official.yaml
+PitchingStats:
+  $ref: ./pitchingStats.yaml
+Player:
+  $ref: ./player.yaml
 Record:
   $ref: ./record.yaml
 Seasons:
