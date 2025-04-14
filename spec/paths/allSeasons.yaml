@@ -15,5 +15,3 @@ get:
         application/json:
           schema:
             $ref: ../components/schemas/schemas.yaml#/Seasons
-          example:
-            - examples/allSeasons.json

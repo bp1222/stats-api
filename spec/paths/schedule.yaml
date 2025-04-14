@@ -12,6 +12,7 @@ get:
     - $ref: ../components/parameters/parameters.yaml#/EndDate
     - $ref: ../components/parameters/parameters.yaml#/Fields
     - $ref: ../components/parameters/parameters.yaml#/Hydrate
+    - $ref: ../components/parameters/parameters.yaml#/LeagueIds
   tags:
     - mlb
   responses:
