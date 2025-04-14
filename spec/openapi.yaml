@@ -5,7 +5,7 @@ info:
     name: Public Domain
   description: >
     An spec API to consume the MLB Stat API
-  version: 0.3.1
+  version: 0.3.2
   contact:
     name: "dave@mudsite.com"
 
