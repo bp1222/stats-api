@@ -37,7 +37,7 @@ version: ## Current Version
 SEMVER_TYPES := major minor patch
 BUMP_TARGETS := $(addprefix bump-,$(SEMVER_TYPES))
 .PHONY: $(BUMP_TARGETS)
-$(BUMP_TARGETS):
+$(BUMP_TARGETS): ## Bump version: e.g. `make bump-minor` or `make bump-patch`
 	$(eval bump_type := $(strip $(word 2,$(subst -, ,$@))))
 	$(eval V := $(shell if [[ "$(bump_type)" == "major" ]]; then \
 		echo $(VERSION) | awk -F. -v OFS=. -v f=1 -v ff=2 -v fff=3 '{ $$f++; $$ff=0; $$fff=0 } 1'; \
