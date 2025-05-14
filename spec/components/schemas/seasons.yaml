@@ -1,5 +1,7 @@
 title: Seasons
 type: object
+required:
+  - seasons
 properties:
   seasons:
     type: array

@@ -2,6 +2,11 @@ title: Linescore
 description: >
   Linescore
 type: object
+required:
+  - teams
+  - balls
+  - strikes
+  - outs
 properties:
   currentInning:
     type: number
@@ -15,6 +20,7 @@ properties:
     type: boolean
   scheduledInnings:
     type: number
+    default: 9
   innings:
     type: array
     items:
@@ -22,6 +28,9 @@ properties:
   teams:
     title: LinescoreTeams
     type: object
+    required:
+      - away
+      - home
     properties:
       away:
         $ref: ./schemas.yaml#/LinescoreTeam
@@ -40,7 +49,10 @@ properties:
 
   balls:
     type: number
+    default: 0
   strikes:
     type: number
+    default: 0
   outs:
     type: number
+    default: 0

@@ -5,7 +5,7 @@ get:
   description: >
     Returns Boxscore
   parameters:
-    - $ref: ../components/parameters/parameters.yaml#/GamePk
+    - $ref: ../components/parameters/parameters.yaml#/PathGamePk
     - $ref: ../components/parameters/parameters.yaml#/Fields
   tags:
     - mlb

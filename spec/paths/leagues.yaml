@@ -1,15 +1,12 @@
 # /v1/teams
 get:
-  operationId: getTeams
-  summary: Retrieves Teams
+  operationId: getLeagues
+  summary: Retrieves Leagues
   description: >
-    Returns Teams
+    Returns Leagues
   parameters:
     - $ref: ../components/parameters/parameters.yaml#/SportId
     - $ref: ../components/parameters/parameters.yaml#/Season
-    - $ref: ../components/parameters/parameters.yaml#/LeagueIds
-    - $ref: ../components/parameters/parameters.yaml#/Fields
-    - $ref: ../components/parameters/parameters.yaml#/Hydrate
   tags:
     - mlb
   responses:
@@ -18,12 +15,12 @@ get:
       content:
         application/json:
           schema:
-            title: Teams
+            title: Leagues
             type: object
             required:
-              - teams
+              - leagues
             properties:
-              teams:
+              leagues:
                 type: array
                 items:
-                  $ref: ../components/schemas/schemas.yaml#/Team
+                  $ref: ../components/schemas/schemas.yaml#/League

@@ -1,5 +1,5 @@
 # ./path
-GamePk:
+PathGamePk:
   $ref: ./path/gamePk.yaml
 
 # ./query
@@ -11,6 +11,8 @@ Fields:
   $ref: ./query/fields.yaml
 GameTypes:
   $ref: ./query/gameTypes.yaml
+QueryGamePk:
+  $ref: ./query/gamePk.yaml
 Hydrate:
   $ref: ./query/hydrate.yaml
 LeagueId:

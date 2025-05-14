@@ -6,5 +6,3 @@ schema:
   items:
     type: string
 style: form
-explode: false
-

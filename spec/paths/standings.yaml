@@ -20,6 +20,8 @@ get:
           schema:
             title: DivisionStandingsList
             type: object
+            required:
+              - records
             properties:
               records:
                 type: array
