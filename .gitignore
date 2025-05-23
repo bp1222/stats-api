@@ -6,4 +6,5 @@ src/
 
 /bundle.yaml
 /package-lock.json
+/pnpm-lock.yaml
 /openapitools.json

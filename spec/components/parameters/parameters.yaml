@@ -27,3 +27,5 @@ StartDate:
   $ref: ./query/startDate.yaml
 TeamId:
   $ref: ./query/teamId.yaml
+Teams:
+  $ref: ./query/teams.yaml

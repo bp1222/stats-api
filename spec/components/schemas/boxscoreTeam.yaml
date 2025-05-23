@@ -6,6 +6,10 @@ required:
   - team
   - teamStats
   - players
+  - batters
+  - pitchers
+  - bullpen
+  - bench
 properties:
   team:
     $ref: ./schemas.yaml#/Team
@@ -23,6 +27,26 @@ properties:
         $ref: ./schemas.yaml#/PitchingStats
       fielding:
         $ref: ./schemas.yaml#/FieldingStats
+  batters:
+    title: BoxscoreTeamBatters
+    type: array
+    items:
+      type: number
+  pitchers:
+    title: BoxscoreTeamPitchers
+    type: array
+    items:
+      type: number
+  bullpen:
+    title: BoxscoreTeamBullpen
+    type: array
+    items:
+      type: number
+  bench:
+    title: BoxscoreTeamBench
+    type: array
+    items:
+      type: number
   players:
     title: BoxscoreTeamPlayers
     type: object
