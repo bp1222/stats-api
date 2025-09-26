@@ -3,7 +3,5 @@ name: fields
 required: false
 schema:
   type: array
-  style: form
-  explode: false
   items:
     type: string

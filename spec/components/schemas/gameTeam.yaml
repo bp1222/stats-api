@@ -3,7 +3,7 @@ description: >
   Game Team
 type: object
 required:
-  - leagueReccord
+  - leagueRecord
   - score
   - isWinner
   - team
