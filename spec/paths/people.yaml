@@ -1,0 +1,143 @@
+# /v1/people/{personId}
+get:
+  operationId: getPerson
+  summary: Retrieves a person (player)
+  description: >
+    Returns a single person by ID. Use the hydrate query parameter to expand
+    related resources (e.g. hydrate=currentTeam,team,stats(group=[hitting],type=[yearByYear],...) includes
+    currentTeam, team on stats, and hitting stats by year).
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathPersonId
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+    - $ref: ../components/parameters/parameters.yaml#/Hydrate
+  tags:
+    - People
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/PeopleResponse
+          example:
+            people:
+              - id: 680776
+                fullName: Jarren Duran
+                link: /api/v1/people/680776
+                firstName: Jarren
+                lastName: Duran
+                primaryNumber: "16"
+                birthDate: "1996-09-05"
+                currentAge: 29
+                birthCity: Corona
+                birthStateProvince: CA
+                birthCountry: USA
+                height: "6' 1\""
+                weight: 205
+                active: true
+                currentTeam:
+                  springLeague:
+                    id: 115
+                    name: Grapefruit League
+                    link: /api/v1/league/115
+                    abbreviation: GL
+                  allStarStatus: "N"
+                  id: 111
+                  name: Boston Red Sox
+                  link: /api/v1/teams/111
+                  season: 2026
+                  venue:
+                    id: 3
+                    name: Fenway Park
+                    link: /api/v1/venues/3
+                  springVenue:
+                    id: 4309
+                    link: /api/v1/venues/4309
+                  teamCode: bos
+                  fileCode: bos
+                  abbreviation: BOS
+                  teamName: Red Sox
+                  locationName: Boston
+                  firstYearOfPlay: "1901"
+                  league:
+                    id: 103
+                    name: American League
+                    link: /api/v1/league/103
+                  division:
+                    id: 201
+                    name: American League East
+                    link: /api/v1/divisions/201
+                  sport:
+                    id: 1
+                    link: /api/v1/sports/1
+                    name: Major League Baseball
+                  shortName: Boston
+                  franchiseName: Boston
+                  clubName: Red Sox
+                  active: true
+                primaryPosition:
+                  code: "7"
+                  name: Outfielder
+                  type: Outfielder
+                  abbreviation: LF
+                useName: Jarren
+                useLastName: Duran
+                middleName: William
+                boxscoreName: "Duran, Ja"
+                gender: M
+                isPlayer: true
+                isVerified: false
+                draftYear: 2018
+                pronunciation: duh-RAN
+                mlbDebutDate: "2021-07-17"
+                batSide:
+                  code: L
+                  description: Left
+                pitchHand:
+                  code: R
+                  description: Right
+                nameFirstLast: Jarren Duran
+                nameSlug: jarren-duran-680776
+                firstLastName: Jarren Duran
+                lastFirstName: "Duran, Jarren"
+                lastInitName: "Duran, J"
+                initLastName: J Duran
+                fullFMLName: Jarren William Duran
+                fullLFMName: "Duran, Jarren William"
+                strikeZoneTop: 3.23
+                strikeZoneBottom: 1.63
+                stats:
+                  - type:
+                      displayName: yearByYear
+                    group:
+                      displayName: hitting
+                    exemptions: []
+                    splits:
+                      - season: "2025"
+                        stat:
+                          age: 28
+                          gamesPlayed: 157
+                          avg: ".256"
+                          atBats: 620
+                          hits: 159
+                          homeRuns: 16
+                          rbi: 84
+                          stolenBases: 24
+                        team:
+                          id: 111
+                          name: Boston Red Sox
+                          link: /api/v1/teams/111
+                          abbreviation: BOS
+                        player:
+                          id: 680776
+                          fullName: Jarren Duran
+                          link: /api/v1/people/680776
+                        league:
+                          id: 103
+                          name: American League
+                          link: /api/v1/league/103
+                        sport:
+                          id: 1
+                          link: /api/v1/sports/1
+                          abbreviation: MLB
+                        gameType: R

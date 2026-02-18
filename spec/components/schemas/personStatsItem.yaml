@@ -1,0 +1,22 @@
+title: PersonStatsItem
+description: >
+  One stats block for a person (e.g. yearByYear hitting, careerAdvanced hitting). Contains type, optional group, exemptions, and splits.
+type: object
+properties:
+  type:
+    type: object
+    properties:
+      displayName:
+        type: string
+  group:
+    type: object
+    properties:
+      displayName:
+        type: string
+  exemptions:
+    type: array
+    items: {}
+  splits:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/PersonStatSplit

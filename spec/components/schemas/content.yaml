@@ -1,0 +1,8 @@
+title: Content
+description: >
+  Links to game-related content (highlights, editorials, etc.). Present on schedule games.
+type: object
+properties:
+  link:
+    type: string
+    description: API path for this game's content

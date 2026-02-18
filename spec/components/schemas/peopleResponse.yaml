@@ -1,0 +1,11 @@
+title: PeopleResponse
+description: >
+  Response for GET /v1/people/{personId}. Contains copyright and a people array (one item when requesting a single person).
+type: object
+required:
+  - people
+properties:
+  people:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/Person

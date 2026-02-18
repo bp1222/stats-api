@@ -1,5 +1,6 @@
 in: query
-name: hydrate 
+name: hydrate
 required: false
+description: Comma-separated list of related resources to expand (MLB API–specific).
 schema:
   type: string

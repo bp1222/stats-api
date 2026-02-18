@@ -1,0 +1,13 @@
+title: Position
+description: >
+  Position (e.g. primaryPosition on a person).
+type: object
+properties:
+  code:
+    type: string
+  name:
+    type: string
+  type:
+    type: string
+  abbreviation:
+    type: string

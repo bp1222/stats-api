@@ -7,7 +7,7 @@ get:
   parameters:
     - $ref: ../components/parameters/parameters.yaml#/SportId
   tags:
-    - mlb
+    - Reference
   responses:
     "200":
       description: OK
@@ -15,3 +15,47 @@ get:
         application/json:
           schema:
             $ref: ../components/schemas/schemas.yaml#/Seasons
+          example:
+            seasons:
+              - seasonId: "2025"
+                hasWildcard: true
+                preSeasonStartDate: "2025-01-01"
+                preSeasonEndDate: "2025-02-19"
+                seasonStartDate: "2025-02-20"
+                springStartDate: "2025-02-20"
+                springEndDate: "2025-03-25"
+                regularSeasonStartDate: "2025-03-18"
+                lastDate1stHalf: "2025-07-14"
+                allStarDate: "2025-07-15"
+                firstDate2ndHalf: "2025-07-18"
+                regularSeasonEndDate: "2025-09-28"
+                postSeasonStartDate: "2025-09-30"
+                postSeasonEndDate: "2025-11-01"
+                seasonEndDate: "2025-11-01"
+                offseasonStartDate: "2025-11-02"
+                offSeasonEndDate: "2025-12-31"
+                seasonLevelGamedayType: "P"
+                gameLevelGamedayType: "P"
+                qualifierPlateAppearances: 3.1
+                qualifierOutsPitched: 3
+              - seasonId: "2026"
+                hasWildcard: true
+                preSeasonStartDate: "2026-01-01"
+                preSeasonEndDate: "2026-02-19"
+                seasonStartDate: "2026-02-20"
+                springStartDate: "2026-02-20"
+                springEndDate: "2026-03-24"
+                regularSeasonStartDate: "2026-03-25"
+                lastDate1stHalf: "2026-07-14"
+                allStarDate: "2026-07-14"
+                firstDate2ndHalf: "2026-07-19"
+                regularSeasonEndDate: "2026-09-27"
+                postSeasonStartDate: "2026-09-28"
+                postSeasonEndDate: "2026-10-31"
+                seasonEndDate: "2026-10-31"
+                offseasonStartDate: "2026-11-01"
+                offSeasonEndDate: "2026-12-31"
+                seasonLevelGamedayType: "P"
+                gameLevelGamedayType: "P"
+                qualifierPlateAppearances: 3.1
+                qualifierOutsPitched: 3

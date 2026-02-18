@@ -8,7 +8,7 @@ get:
     - $ref: ../components/parameters/parameters.yaml#/PathGamePk
     - $ref: ../components/parameters/parameters.yaml#/Fields
   tags:
-    - mlb
+    - Games
   responses:
     "200":
       description: OK
@@ -16,3 +16,48 @@ get:
         application/json:
           schema:
             $ref: ../components/schemas/schemas.yaml#/Linescore
+          example:
+            currentInning: 9
+            currentInningOrdinal: "9th"
+            inningState: End
+            isTopInning: false
+            scheduledInnings: 9
+            innings:
+              - num: 1
+                ordinalNum: "1st"
+                away:
+                  runs: 0
+                  hits: 1
+                  errors: 0
+                  leftOnBase: 1
+                home:
+                  runs: 1
+                  hits: 2
+                  errors: 0
+                  leftOnBase: 0
+              - num: 9
+                ordinalNum: "9th"
+                away:
+                  runs: 0
+                  hits: 0
+                  errors: 0
+                  leftOnBase: 0
+                home:
+                  runs: 0
+                  hits: 0
+                  errors: 0
+                  leftOnBase: 0
+            teams:
+              away:
+                runs: 5
+                hits: 9
+                errors: 0
+                leftOnBase: 6
+              home:
+                runs: 3
+                hits: 8
+                errors: 1
+                leftOnBase: 5
+            balls: 0
+            strikes: 0
+            outs: 0

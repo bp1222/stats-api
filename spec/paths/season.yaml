@@ -8,7 +8,7 @@ get:
     - $ref: ../components/parameters/parameters.yaml#/SportId
     - $ref: ../components/parameters/parameters.yaml#/Season
   tags:
-    - mlb
+    - Reference
   responses:
     "200":
       description: OK
@@ -16,3 +16,10 @@ get:
         application/json:
           schema:
             $ref: ../components/schemas/schemas.yaml#/Seasons
+          example:
+            seasons:
+              - seasonId: "2024"
+                seasonStartDate: "2024-03-20"
+                seasonEndDate: "2024-09-29"
+                regularSeasonStartDate: "2024-03-28"
+                regularSeasonEndDate: "2024-09-29"

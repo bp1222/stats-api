@@ -11,7 +11,7 @@ get:
     - $ref: ../components/parameters/parameters.yaml#/Fields
     - $ref: ../components/parameters/parameters.yaml#/Hydrate
   tags:
-    - mlb
+    - Standings
   responses:
     "200":
       description: OK
@@ -27,3 +27,31 @@ get:
                 type: array
                 items:
                   $ref: ../components/schemas/schemas.yaml#/DivisionStandings
+          example:
+            records:
+              - standingsType: regularSeason
+                league:
+                  id: 103
+                  name: American League
+                division:
+                  id: 201
+                  name: American League East
+                sport:
+                  id: 1
+                  name: Major League Baseball
+                teamRecords:
+                  - team:
+                      id: 147
+                      name: New York Yankees
+                    season: "2024"
+                    streak:
+                      streakType: wins
+                    divisionRank: "1"
+                    leagueRank: "1"
+                    gamesBack: "-"
+                    leagueRecord:
+                      wins: 99
+                      losses: 63
+                      pct: ".611"
+                    wins: 99
+                    losses: 63

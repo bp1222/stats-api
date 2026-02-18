@@ -1,15 +1,14 @@
 title: League
 description: >
-  League 
+  League. When embedded (e.g. in division), may contain only id and link.
 type: object
 required:
   - id
-  - name
 properties:
-  id:
-    type: number
   name:
     type: string
+  id:
+    type: number
   link:
     type: string
   abbreviation:
@@ -24,6 +23,12 @@ properties:
     type: boolean
   hasPlayoffPoints:
     type: boolean 
+  numGames:
+    type: number
+  numTeams:
+    type: number
+  numWildcardTeams:
+    type: number
   seasonDateInfo:
     title: LeagueDates
     type: object
@@ -40,10 +45,30 @@ properties:
         type: string 
       springEndDate:
         type: string 
+      regularSeasonStartDate:
+        type: string
+      lastDate1stHalf:
+        type: string
+      allStarDate:
+        type: string
+      firstDate2ndHalf:
+        type: string
+      regularSeasonEndDate:
+        type: string
+      postSeasonStartDate:
+        type: string
+      postSeasonEndDate:
+        type: string
+      seasonEndDate:
+        type: string
       offseasonStartDate:
         type: string 
-      offseasonEndDate:
+      offSeasonEndDate:
         type: string 
+      qualifierPlateAppearances:
+        type: number
+      qualifierOutsPitched:
+        type: number
       seasonLevelGamedayType:
         type: string 
       gameLevelGamedayType:

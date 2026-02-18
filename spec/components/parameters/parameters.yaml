@@ -1,6 +1,8 @@
 # ./path
 PathGamePk:
   $ref: ./path/gamePk.yaml
+PathPersonId:
+  $ref: ./path/personId.yaml
 
 # ./query
 Date:
@@ -27,5 +29,5 @@ StartDate:
   $ref: ./query/startDate.yaml
 TeamId:
   $ref: ./query/teamId.yaml
-Teams:
+TeamIds:
   $ref: ./query/teams.yaml

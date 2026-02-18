@@ -8,7 +8,7 @@ get:
     - $ref: ../components/parameters/parameters.yaml#/PathGamePk
     - $ref: ../components/parameters/parameters.yaml#/Fields
   tags:
-    - mlb
+    - Games
   responses:
     "200":
       description: OK
@@ -16,3 +16,37 @@ get:
         application/json:
           schema:
             $ref: ../components/schemas/schemas.yaml#/Boxscore
+          example:
+            teams:
+              away:
+                team:
+                  id: 147
+                  name: New York Yankees
+                teamStats:
+                  batting: {}
+                  pitching: {}
+                  fielding: {}
+                players: {}
+                batters: []
+                pitchers: []
+                bullpen: []
+                bench: []
+              home:
+                team:
+                  id: 121
+                  name: New York Mets
+                teamStats:
+                  batting: {}
+                  pitching: {}
+                  fielding: {}
+                players: {}
+                batters: []
+                pitchers: []
+                bullpen: []
+                bench: []
+            officials:
+              - officialType: Home Plate
+                official:
+                  id: 123
+                  fullName: John Smith
+                  link: /api/v1/people/123

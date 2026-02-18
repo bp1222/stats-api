@@ -23,6 +23,9 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Lint spec
+        run: make lint
+
       - name: Generate Library
         run: make bundle && make gen-ts && npm run build
 

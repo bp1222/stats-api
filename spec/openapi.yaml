@@ -5,7 +5,7 @@ info:
     name: "Public Domain"
     identifier: "Public Domain"
   description: >
-    An spec API to consume the MLB Stat API
+    OpenAPI spec for the MLB Stats API (upstream API is undocumented).
   version: 0.6.0
   contact:
     name: "dave@mudsite.com"
@@ -14,8 +14,16 @@ servers:
   - url: https://statsapi.mlb.com/api
 
 tags:
-  - name: mlb
-    description: MLB API
+  - name: Reference
+    description: Reference data (divisions, leagues, seasons, teams)
+  - name: People
+    description: Person (player) information and stats
+  - name: Schedule
+    description: Schedule and games list
+  - name: Games
+    description: Game detail (boxscore, linescore)
+  - name: Standings
+    description: Division and league standings
 
 paths:
   /v1/divisions:
@@ -26,6 +34,8 @@ paths:
     $ref: ./paths/linescore.yaml
   /v1/leagues:
     $ref: ./paths/leagues.yaml
+  /v1/people/{personId}:
+    $ref: ./paths/people.yaml
   /v1/schedule:
     $ref: ./paths/schedule.yaml
   /v1/seasons:

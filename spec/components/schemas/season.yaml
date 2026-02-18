@@ -29,8 +29,9 @@ properties:
     type: string
   lastDate1stHalf:
     type: string
-  allStartDate:
+  allStarDate:
     type: string
+    description: All-Star Game date
   firstDate2ndHalf:
     type: string
   regularSeasonEndDate:
@@ -39,10 +40,12 @@ properties:
     type: string
   postSeasonEndDate:
     type: string
-  offSeasonStartDate:
+  offseasonStartDate:
     type: string
+    description: Alternative spelling returned by API (offseason, one word, lowercase)
   offSeasonEndDate:
     type: string
+    description: Alternative spelling returned by API (offSeason, one word, camelCase)
   seasonLevelGamedayType:
     type: string
   gameLevelGamedayType:

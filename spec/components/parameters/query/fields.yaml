@@ -1,6 +1,7 @@
 in: query
 name: fields
 required: false
+description: Limit response to these fields (MLB API–specific).
 schema:
   type: array
   items:

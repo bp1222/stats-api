@@ -1,4 +1,4 @@
-# /v1/teams
+# /v1/divisions
 get:
   operationId: getDivisions
   summary: Retrieves Divisions
@@ -8,7 +8,7 @@ get:
     - $ref: ../components/parameters/parameters.yaml#/SportId
     - $ref: ../components/parameters/parameters.yaml#/Season
   tags:
-    - mlb
+    - Reference
   responses:
     "200":
       description: OK
@@ -24,3 +24,13 @@ get:
                 type: array
                 items:
                   $ref: ../components/schemas/schemas.yaml#/Division
+          example:
+            divisions:
+              - id: 200
+                name: American League West
+                abbreviation: ALW
+                link: /api/v1/divisions/200
+              - id: 201
+                name: American League East
+                abbreviation: ALE
+                link: /api/v1/divisions/201

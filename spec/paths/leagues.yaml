@@ -1,4 +1,4 @@
-# /v1/teams
+# /v1/leagues
 get:
   operationId: getLeagues
   summary: Retrieves Leagues
@@ -8,7 +8,7 @@ get:
     - $ref: ../components/parameters/parameters.yaml#/SportId
     - $ref: ../components/parameters/parameters.yaml#/Season
   tags:
-    - mlb
+    - Reference
   responses:
     "200":
       description: OK
@@ -24,3 +24,13 @@ get:
                 type: array
                 items:
                   $ref: ../components/schemas/schemas.yaml#/League
+          example:
+            leagues:
+              - id: 103
+                name: American League
+                abbreviation: AL
+                link: /api/v1/leagues/103
+              - id: 104
+                name: National League
+                abbreviation: NL
+                link: /api/v1/leagues/104
