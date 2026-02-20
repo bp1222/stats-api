@@ -6,7 +6,7 @@ info:
     identifier: "Public Domain"
   description: >
     OpenAPI spec for the MLB Stats API (upstream API is undocumented).
-  version: 0.7.0
+  version: 0.7.1
   contact:
     name: "dave@mudsite.com"
 
