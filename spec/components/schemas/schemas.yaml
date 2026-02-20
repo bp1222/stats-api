@@ -48,6 +48,8 @@ Person:
   $ref: ./person.yaml
 PeopleResponse:
   $ref: ./peopleResponse.yaml
+PersonStatsResponse:
+  $ref: ./personStatsResponse.yaml
 Player:
   $ref: ./player.yaml
 Record:

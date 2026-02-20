@@ -1,0 +1,14 @@
+title: PersonStatsResponse
+description: >
+  Response for GET /v1/people/{personId}/stats. Contains a stats array
+  (type/group/splits per requested stat type, e.g. gameLog, statsSingleSeason).
+type: object
+required:
+  - stats
+properties:
+  copyright:
+    type: string
+  stats:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/PersonStatsItem

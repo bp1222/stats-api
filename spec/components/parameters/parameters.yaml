@@ -11,6 +11,8 @@ EndDate:
   $ref: ./query/endDate.yaml
 Fields:
   $ref: ./query/fields.yaml
+Group:
+  $ref: ./query/group.yaml
 GameTypes:
   $ref: ./query/gameTypes.yaml
 QueryGamePk:
@@ -25,6 +27,8 @@ Season:
   $ref: ./query/season.yaml
 SportId:
   $ref: ./query/sportId.yaml
+Stats:
+  $ref: ./query/stats.yaml
 StartDate:
   $ref: ./query/startDate.yaml
 TeamId:

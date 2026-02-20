@@ -36,6 +36,8 @@ paths:
     $ref: ./paths/leagues.yaml
   /v1/people/{personId}:
     $ref: ./paths/people.yaml
+  /v1/people/{personId}/stats:
+    $ref: ./paths/peopleStats.yaml
   /v1/schedule:
     $ref: ./paths/schedule.yaml
   /v1/seasons:

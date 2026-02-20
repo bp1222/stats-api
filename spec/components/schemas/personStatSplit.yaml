@@ -33,3 +33,35 @@ properties:
   group:
     type: string
     description: e.g. fielding, hitting
+  opponent:
+    $ref: ./schemas.yaml#/Team
+    description: Opponent team (e.g. in gameLog splits)
+  date:
+    type: string
+    description: Game date (e.g. in gameLog splits)
+  isHome:
+    type: boolean
+  isWin:
+    type: boolean
+  positionsPlayed:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/Position
+  game:
+    type: object
+    description: Game summary (e.g. in gameLog splits)
+    properties:
+      gamePk:
+        type: number
+      link:
+        type: string
+      content:
+        $ref: ./schemas.yaml#/Content
+      gameNumber:
+        type: number
+      dayNight:
+        type: string
+  numTeams:
+    type: number
+  numLeagues:
+    type: number
