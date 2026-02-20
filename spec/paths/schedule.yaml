@@ -13,9 +13,9 @@ get:
     - $ref: ../components/parameters/parameters.yaml#/Fields
     - $ref: ../components/parameters/parameters.yaml#/Hydrate
     - $ref: ../components/parameters/parameters.yaml#/LeagueIds
-    - $ref: ../components/parameters/parameters.yaml#/Teams
+    - $ref: ../components/parameters/parameters.yaml#/TeamIds
   tags:
-    - mlb
+    - Schedule
   responses:
     "200":
       description: OK
@@ -23,3 +23,74 @@ get:
         application/json:
           schema:
             $ref: ../components/schemas/schemas.yaml#/Schedule
+          example:
+            totalItems: 2430
+            totalEvents: 0
+            totalGames: 2430
+            totalGamesInProgress: 0
+            dates:
+              - date: "2025-03-27"
+                totalItems: 15
+                totalEvents: 0
+                totalGames: 15
+                totalGamesInProgress: 0
+                games:
+                  - gamePk: 847123
+                    gameGuid: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+                    link: /api/v1/game/847123/feed/live
+                    gameType: R
+                    season: 2025
+                    gameDate: "2025-03-27T17:05:00Z"
+                    officialDate: "2025-03-27"
+                    status:
+                      abstractGameState: Scheduled
+                      codedGameState: S
+                      detailedState: Scheduled
+                      startTimeTBD: false
+                    teams:
+                      away:
+                        team:
+                          id: 147
+                          name: New York Yankees
+                          link: /api/v1/teams/147
+                        score: 0
+                        isWinner: false
+                        leagueRecord:
+                          wins: 0
+                          losses: 0
+                          pct: ".000"
+                      home:
+                        team:
+                          id: 121
+                          name: New York Mets
+                          link: /api/v1/teams/121
+                        score: 0
+                        isWinner: false
+                        leagueRecord:
+                          wins: 0
+                          losses: 0
+                          pct: ".000"
+                    venue:
+                      id: 3289
+                      name: Citi Field
+                      link: /api/v1/venues/3289
+                    content:
+                      link: /api/v1/game/847123/content
+                    isTie: false
+                    gameNumber: 1
+                    publicFacing: true
+                    doubleHeader: N
+                    gamedayType: P
+                    tiebreaker: N
+                    calendarEventID: "14-847123-2025-03-27"
+                    seasonDisplay: "2025"
+                    dayNight: D
+                    scheduledInnings: 9
+                    reverseHomeAwayStatus: false
+                    inningBreakLength: 120
+                    gamesInSeries: 3
+                    seriesGameNumber: 1
+                    seriesDescription: "Game 1 of 3"
+                    recordSource: S
+                    ifNecessary: N
+                    ifNecessaryDescription: ""

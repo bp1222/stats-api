@@ -4,6 +4,8 @@ Boxscore:
   $ref: ./boxscore.yaml
 BoxscoreTeam:
   $ref: ./boxscoreTeam.yaml
+Content:
+  $ref: ./content.yaml
 Division:
   $ref: ./division.yaml
 DivisionStandings:
@@ -34,6 +36,20 @@ Official:
   $ref: ./official.yaml
 PitchingStats:
   $ref: ./pitchingStats.yaml
+Position:
+  $ref: ./position.yaml
+CodeDescription:
+  $ref: ./codeDescription.yaml
+PersonStatSplit:
+  $ref: ./personStatSplit.yaml
+PersonStatsItem:
+  $ref: ./personStatsItem.yaml
+Person:
+  $ref: ./person.yaml
+PeopleResponse:
+  $ref: ./peopleResponse.yaml
+PersonStatsResponse:
+  $ref: ./personStatsResponse.yaml
 Player:
   $ref: ./player.yaml
 Record:

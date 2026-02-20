@@ -23,6 +23,7 @@ properties:
       title: ScheduleDay
       type: object
       required:
+        - date
         - games
       properties:
         date:

@@ -1,0 +1,6 @@
+description: The unique identifier of a person (player)
+in: path
+name: personId
+required: true
+schema:
+  type: number

@@ -1,0 +1,89 @@
+title: Person
+description: >
+  A person (player) from the people API. Use hydrate to expand currentTeam, team, stats, etc.
+type: object
+required:
+  - id
+  - fullName
+  - link
+properties:
+  id:
+    type: number
+  fullName:
+    type: string
+  link:
+    type: string
+  firstName:
+    type: string
+  lastName:
+    type: string
+  primaryNumber:
+    type: string
+  birthDate:
+    type: string
+  currentAge:
+    type: number
+  birthCity:
+    type: string
+  birthStateProvince:
+    type: string
+  birthCountry:
+    type: string
+  height:
+    type: string
+  weight:
+    type: number
+  active:
+    type: boolean
+  currentTeam:
+    $ref: ./schemas.yaml#/Team
+  primaryPosition:
+    $ref: ./schemas.yaml#/Position
+  useName:
+    type: string
+  useLastName:
+    type: string
+  middleName:
+    type: string
+  boxscoreName:
+    type: string
+  gender:
+    type: string
+  isPlayer:
+    type: boolean
+  isVerified:
+    type: boolean
+  draftYear:
+    type: number
+  pronunciation:
+    type: string
+  stats:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/PersonStatsItem
+  mlbDebutDate:
+    type: string
+  batSide:
+    $ref: ./schemas.yaml#/CodeDescription
+  pitchHand:
+    $ref: ./schemas.yaml#/CodeDescription
+  nameFirstLast:
+    type: string
+  nameSlug:
+    type: string
+  firstLastName:
+    type: string
+  lastFirstName:
+    type: string
+  lastInitName:
+    type: string
+  initLastName:
+    type: string
+  fullFMLName:
+    type: string
+  fullLFMName:
+    type: string
+  strikeZoneTop:
+    type: number
+  strikeZoneBottom:
+    type: number

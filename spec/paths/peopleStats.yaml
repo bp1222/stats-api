@@ -1,0 +1,230 @@
+# /v1/people/{personId}/stats
+get:
+  operationId: getPersonStats
+  summary: Retrieves a person's stats
+  description: >
+    Returns stats for a person (player) by ID. Use query parameters to request
+    stat types (stats=gameLog,statSplits,statsSingleSeason), group (e.g. group=hitting
+    for batting stats, group=pitching for pitching stats), and season (e.g. season=2022).
+    Splits and stat keys vary by group (hitting vs pitching).
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathPersonId
+    - $ref: ../components/parameters/parameters.yaml#/Stats
+    - $ref: ../components/parameters/parameters.yaml#/Group
+    - $ref: ../components/parameters/parameters.yaml#/Season
+  tags:
+    - People
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/PersonStatsResponse
+          examples:
+            hitting:
+              summary: Hitting stats (group=hitting)
+              value:
+                copyright: "Copyright 2026 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt"
+                stats:
+                  - type:
+                      displayName: gameLog
+                    group:
+                      displayName: hitting
+                    exemptions: []
+                    splits:
+                      - season: "2022"
+                        stat:
+                          summary: "2-4 | HR, BB, 2 RBI"
+                          gamesPlayed: 1
+                          plateAppearances: 5
+                          totalBases: 5
+                          rbi: 2
+                        team:
+                          id: 143
+                          name: Philadelphia Phillies
+                          link: /api/v1/teams/143
+                        player:
+                          id: 656941
+                          fullName: Kyle Schwarber
+                          link: /api/v1/people/656941
+                        opponent:
+                          id: 133
+                          name: Oakland Athletics
+                          link: /api/v1/teams/133
+                        date: "2022-04-08"
+                        gameType: R
+                        isHome: true
+                        isWin: true
+                        game:
+                          gamePk: 661131
+                          link: /api/v1.1/game/661131/feed/live
+                          content:
+                            link: /api/v1/game/661131/content
+                          gameNumber: 1
+                          dayNight: day
+                  - type:
+                      displayName: statSplits
+                    group:
+                      displayName: hitting
+                    exemptions: []
+                    splits: []
+                  - type:
+                      displayName: statsSingleSeason
+                    group:
+                      displayName: hitting
+                    exemptions: []
+                    splits:
+                      - season: "2022"
+                        stat:
+                          age: 29
+                          gamesPlayed: 155
+                          runs: 100
+                          homeRuns: 46
+                          strikeOuts: 200
+                          baseOnBalls: 86
+                          hits: 126
+                          avg: ".218"
+                          obp: ".323"
+                          slg: ".504"
+                          ops: ".827"
+                          plateAppearances: 669
+                          totalBases: 291
+                          rbi: 94
+                        team:
+                          id: 143
+                          name: Philadelphia Phillies
+                          link: /api/v1/teams/143
+                        player:
+                          id: 656941
+                          fullName: Kyle Schwarber
+                          link: /api/v1/people/656941
+                        league:
+                          id: 104
+                          name: National League
+                          link: /api/v1/league/104
+                        sport:
+                          id: 1
+                          link: /api/v1/sports/1
+                          abbreviation: MLB
+                        gameType: R
+            pitching:
+              summary: Pitching stats (group=pitching)
+              value:
+                copyright: "Copyright 2026 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt"
+                stats:
+                  - type:
+                      displayName: gameLog
+                    group:
+                      displayName: pitching
+                    exemptions: []
+                    splits:
+                      - season: "2022"
+                        stat:
+                          summary: "5.0 IP, ER, 12 K, BB"
+                          gamesPlayed: 1
+                          gamesStarted: 1
+                          flyOuts: 1
+                          groundOuts: 0
+                          airOuts: 3
+                          runs: 1
+                          strikeOuts: 12
+                          baseOnBalls: 1
+                          hits: 2
+                          numberOfPitches: 76
+                          era: "1.80"
+                          inningsPitched: "5.0"
+                          wins: 0
+                          losses: 0
+                          saves: 0
+                          earnedRuns: 1
+                          whip: "0.60"
+                          battersFaced: 18
+                          outs: 15
+                          gamesPitched: 1
+                          completeGames: 0
+                          shutouts: 0
+                          strikes: 44
+                          strikePercentage: ".580"
+                        team:
+                          id: 146
+                          name: Miami Marlins
+                          link: /api/v1/teams/146
+                        player:
+                          id: 666200
+                          fullName: Jesús Luzardo
+                          link: /api/v1/people/666200
+                        league:
+                          id: 104
+                          name: National League
+                          link: /api/v1/league/104
+                        sport:
+                          id: 1
+                          link: /api/v1/sports/1
+                          abbreviation: MLB
+                        opponent:
+                          id: 108
+                          name: Los Angeles Angels
+                          link: /api/v1/teams/108
+                        date: "2022-04-12"
+                        gameType: R
+                        isHome: false
+                        isWin: false
+                        game:
+                          gamePk: 661038
+                          link: /api/v1.1/game/661038/feed/live
+                          content:
+                            link: /api/v1/game/661038/content
+                          gameNumber: 1
+                          dayNight: day
+                  - type:
+                      displayName: statSplits
+                    group:
+                      displayName: pitching
+                    exemptions: []
+                    splits: []
+                  - type:
+                      displayName: statsSingleSeason
+                    group:
+                      displayName: pitching
+                    exemptions: []
+                    splits:
+                      - season: "2022"
+                        stat:
+                          age: 24
+                          gamesPlayed: 18
+                          gamesStarted: 18
+                          inningsPitched: "100.1"
+                          wins: 4
+                          losses: 7
+                          saves: 0
+                          earnedRuns: 37
+                          era: "3.32"
+                          whip: "1.04"
+                          battersFaced: 400
+                          strikeOuts: 120
+                          baseOnBalls: 35
+                          hits: 69
+                          gamesPitched: 18
+                          completeGames: 0
+                          shutouts: 0
+                          strikeoutsPer9Inn: "10.76"
+                          walksPer9Inn: "3.14"
+                          hitsPer9Inn: "6.19"
+                        team:
+                          id: 146
+                          name: Miami Marlins
+                          link: /api/v1/teams/146
+                        player:
+                          id: 666200
+                          fullName: Jesús Luzardo
+                          link: /api/v1/people/666200
+                        league:
+                          id: 104
+                          name: National League
+                          link: /api/v1/league/104
+                        sport:
+                          id: 1
+                          link: /api/v1/sports/1
+                          abbreviation: MLB
+                        gameType: R

@@ -1,10 +1,9 @@
 title: Venue
 description: >
-  Venue
+  Venue. When embedded as springVenue, may contain only id and link.
 type: object
 required:
   - id
-  - name
 properties:
   id:
     type: number

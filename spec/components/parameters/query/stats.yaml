@@ -1,0 +1,6 @@
+description: Comma-separated list of stat types (e.g. gameLog, statSplits, statsSingleSeason)
+in: query
+name: stats
+required: false
+schema:
+  type: string

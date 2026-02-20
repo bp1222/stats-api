@@ -1,0 +1,6 @@
+description: Stat group; use hitting for batting stats, pitching for pitching stats, fielding for fielding (e.g. hitting, pitching, fielding)
+in: query
+name: group
+required: false
+schema:
+  type: string

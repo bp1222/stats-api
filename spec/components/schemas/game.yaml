@@ -11,9 +11,6 @@ required:
   - officialDate
   - status
   - teams
-  - gameNumber
-  - gamesInSeries
-  - seriesGameNumber
 properties:
   gamePk:
     type: number
@@ -66,6 +63,8 @@ properties:
         $ref: ./schemas.yaml#/GameTeam
   venue:
     $ref: ./schemas.yaml#/Venue
+  content:
+    $ref: ./schemas.yaml#/Content
   isTie:
     type: boolean
   gameNumber:

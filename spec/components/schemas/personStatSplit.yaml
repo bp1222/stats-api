@@ -1,0 +1,67 @@
+title: PersonStatSplit
+description: >
+  A single split within person stats (e.g. one season's stats, or career, or a placeholder for available splits).
+  Structure varies by stats type; season/stat/team/player/league/sport/gameType/type/group are optional.
+type: object
+properties:
+  season:
+    type: string
+  stat:
+    type: object
+    description: Stat keys vary by group/type (e.g. hitting avg, gamesPlayed, plateAppearances).
+    additionalProperties: true
+  team:
+    $ref: ./schemas.yaml#/Team
+  player:
+    type: object
+    properties:
+      id:
+        type: number
+      fullName:
+        type: string
+      link:
+        type: string
+  league:
+    $ref: ./schemas.yaml#/League
+  sport:
+    $ref: ./schemas.yaml#/Sport
+  gameType:
+    type: string
+  type:
+    type: string
+    description: e.g. gameLog, statSplits
+  group:
+    type: string
+    description: e.g. fielding, hitting
+  opponent:
+    $ref: ./schemas.yaml#/Team
+    description: Opponent team (e.g. in gameLog splits)
+  date:
+    type: string
+    description: Game date (e.g. in gameLog splits)
+  isHome:
+    type: boolean
+  isWin:
+    type: boolean
+  positionsPlayed:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/Position
+  game:
+    type: object
+    description: Game summary (e.g. in gameLog splits)
+    properties:
+      gamePk:
+        type: number
+      link:
+        type: string
+      content:
+        $ref: ./schemas.yaml#/Content
+      gameNumber:
+        type: number
+      dayNight:
+        type: string
+  numTeams:
+    type: number
+  numLeagues:
+    type: number
