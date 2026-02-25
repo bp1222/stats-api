@@ -4,6 +4,7 @@ enum:
   - "D"
   - "S"
   - "I"
+  - "M"
   - "P"
   - "O"
   - "C"
@@ -12,6 +13,7 @@ x-enum-varnames:
   - Postponed
   - Scheduled
   - InProgress
+  - Challenge
   - Pregame
   - GameOver
   - Canceled
@@ -21,6 +23,7 @@ description: >
     * `D` - Delayed/Postponed
     * `S` - Scheduled
     * `I` - In Progress
+    * `M` - Challenge
     * `P` - Pregame
     * `O` - Game Over
     * `C` - Canceled
