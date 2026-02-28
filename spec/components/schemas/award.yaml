@@ -1,0 +1,21 @@
+title: Award
+description: >
+  An award recipient record.
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  date:
+    type: string
+  season:
+    type: string
+  team:
+    $ref: ./schemas.yaml#/Team
+  player:
+    $ref: ./schemas.yaml#/Person
+  notes:
+    type: string
+  awardType:
+    type: string

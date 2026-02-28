@@ -1,0 +1,20 @@
+# /v1/people/{personId}/stats/game/{gamePk}
+get:
+  operationId: getPersonStatsForGame
+  summary: Retrieves player stats for a specific game
+  description: >
+    Returns fielding, hitting, and pitching gameLog statistics as well as
+    vsPlayer stats for a specific person in a specific game.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathPersonId
+    - $ref: ../components/parameters/parameters.yaml#/PathGamePk
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - People
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/PersonStatsResponse

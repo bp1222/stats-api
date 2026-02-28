@@ -21,3 +21,21 @@ properties:
     type: array
     items:
       $ref: ./schemas.yaml#/GameOfficial
+  info:
+    type: array
+    items:
+      title: BoxscoreInfoItem
+      type: object
+      properties:
+        label:
+          type: string
+        value:
+          type: string
+  pitchingNotes:
+    type: array
+    items:
+      type: string
+  topPerformers:
+    type: array
+    items:
+      type: object

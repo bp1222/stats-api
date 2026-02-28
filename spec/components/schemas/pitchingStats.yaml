@@ -3,6 +3,12 @@ description: >
   Pitching Stats
 type: object
 properties:
+  summary:
+    type: string
+  gamesPlayed:
+    type: number
+  gamesStarted:
+    type: number
   flyOuts:
     type: number
   groundOuts:
@@ -38,6 +44,12 @@ properties:
   stolenBasePercentage:
     type: string
   numberOfPitches:
+    type: number
+  wins:
+    type: number
+  losses:
+    type: number
+  saves:
     type: number
   era:
     type: string
@@ -89,6 +101,8 @@ properties:
     type: number
   catchersInterference:
     type: number
+  gamesPitched:
+    type: number
   sacBunts:
     type: number
   sacFlies:
@@ -99,3 +113,9 @@ properties:
     type: number
   lineOuts:
     type: number
+  strikeoutsPer9Inn:
+    type: string
+  walksPer9Inn:
+    type: string
+  hitsPer9Inn:
+    type: string

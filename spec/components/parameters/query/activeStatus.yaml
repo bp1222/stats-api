@@ -1,0 +1,6 @@
+in: query
+name: activeStatus
+required: false
+description: "Filter by active/inactive status. Values: Y, N, B."
+schema:
+  type: string

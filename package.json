@@ -13,7 +13,10 @@
     "url": "https://github.com/bp1222/stats-api.git"
   },
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "bundle": "redocly bundle --remove-unused-components -f -o bundle.yaml spec/openapi.yaml",
+    "generate": "openapi-generator-cli generate -i bundle.yaml -g typescript-fetch -o ./src --additional-properties=typescriptThreePlus=true,withSeparateModelsAndApi=true,stringEnums=true",
+    "lint": "redocly lint --lint-config error spec/openapi.yaml"
   },
   "files": [
     "dist/**"
@@ -26,12 +29,12 @@
   "license": "ISC",
   "description": "Library for Typescript Client to query MLB StatsAPI",
   "devDependencies": {
-    "@openapitools/openapi-generator-cli": "^2.20.2",
-    "@redocly/cli": "^2.19.1",
-    "@types/node": "^22.15.3",
+    "@openapitools/openapi-generator-cli": "^2.30.0",
+    "@redocly/cli": "^2.19.2",
+    "@types/node": "^22.19.12",
     "path": "^0.12.7",
-    "typescript": "^5.8.3",
-    "vite": "^6.3.0",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.1",
     "vite-plugin-dts": "^4.5.4",
     "yaml": "^2.8.2"
   }

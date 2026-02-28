@@ -13,6 +13,18 @@ properties:
     properties:
       displayName:
         type: string
+  totalSplits:
+    type: number
+  splitsTiedWithOffset:
+    type: array
+    items:
+      type: number
+  splitsTiedWithLimit:
+    type: array
+    items:
+      type: number
+  playerPool:
+    type: string
   exemptions:
     type: array
     items: {}

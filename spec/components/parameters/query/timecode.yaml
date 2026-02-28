@@ -1,0 +1,6 @@
+in: query
+name: timecode
+required: false
+description: Return a snapshot at the specified time. Format YYYYMMDD_HHMMSS.
+schema:
+  type: string

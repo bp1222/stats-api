@@ -9,6 +9,8 @@ properties:
     type: number
   stolenBasePercentage:
     type: string
+  caughtStealingPercentage:
+    type: string
   assists:
     type: number
   putOuts:
@@ -17,6 +19,8 @@ properties:
     type: number
   chances:
     type: number
+  fielding:
+    type: string
   passedBall:
     type: number
   pickoffs:

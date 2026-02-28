@@ -1,0 +1,9 @@
+title: TeamStatsResponse
+description: >
+  Response envelope for team stats endpoint.
+type: object
+properties:
+  stats:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/PersonStatsItem

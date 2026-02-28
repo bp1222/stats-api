@@ -61,6 +61,14 @@ properties:
         type: number
       dayNight:
         type: string
+  rank:
+    type: number
+  position:
+    $ref: ./schemas.yaml#/Position
+  batter:
+    $ref: ./schemas.yaml#/Person
+  pitcher:
+    $ref: ./schemas.yaml#/Person
   numTeams:
     type: number
   numLeagues:

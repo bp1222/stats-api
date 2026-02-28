@@ -22,7 +22,7 @@ properties:
   hasSplitSeason:
     type: boolean
   hasPlayoffPoints:
-    type: boolean 
+    type: boolean
   numGames:
     type: number
   numTeams:
@@ -73,6 +73,8 @@ properties:
         type: string 
       gameLevelGamedayType:
         type: string 
+  sport:
+    $ref: ./schemas.yaml#/Sport
   season:
     type: string
   orgCode:

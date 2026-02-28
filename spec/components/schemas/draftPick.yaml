@@ -1,0 +1,67 @@
+title: DraftPick
+description: >
+  A pick made in the MLB draft.
+type: object
+required:
+  - pickRound
+  - pickNumber
+  - roundPickNumber
+properties:
+  bisPlayerId:
+    type: number
+  pickRound:
+    type: string
+  pickNumber:
+    type: number
+  roundPickNumber:
+    type: number
+  displayPickNumber:
+    type: number
+  rank:
+    type: number
+  pickValue:
+    type: string
+  signingBonus:
+    type: string
+  home:
+    title: DraftPickHome
+    type: object
+    properties:
+      city:
+        type: string
+      state:
+        type: string
+      country:
+        type: string
+  scoutingReport:
+    type: string
+  school:
+    title: DraftPickSchool
+    type: object
+    properties:
+      name:
+        type: string
+      schoolClass:
+        type: string
+      city:
+        type: string
+      state:
+        type: string
+      country:
+        type: string
+  blurb:
+    type: string
+  headshotLink:
+    type: string
+  person:
+    $ref: ./schemas.yaml#/Person
+  team:
+    $ref: ./schemas.yaml#/Team
+  draftType:
+    $ref: ./schemas.yaml#/CodeDescription
+  isDrafted:
+    type: boolean
+  isPass:
+    type: boolean
+  year:
+    type: string

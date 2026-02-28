@@ -3,6 +3,10 @@ description: >
   Batting Stats
 type: object
 properties:
+  summary:
+    type: string
+  gamesPlayed:
+    type: number
   flyOuts:
     type: number
   groundOuts:
@@ -37,11 +41,15 @@ properties:
     type: string
   ops:
     type: string
+  babip:
+    type: string
   caughtStealing:
     type: number
   stolenBases:
     type: number
   stolenBasePercentage:
+    type: string
+  caughtStealingPercentage:
     type: string
   groundIntoDoublePlay:
     type: number
@@ -63,6 +71,10 @@ properties:
     type: number
   pickoffs:
     type: number
+  numberOfPitches:
+    type: number
+  groundOutsToAirouts:
+    type: string
   atBatsPerHomeRun:
     type: string
   popOuts:

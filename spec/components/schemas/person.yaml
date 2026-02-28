@@ -6,6 +6,7 @@ required:
   - id
   - fullName
   - link
+  - boxscoreName
 properties:
   id:
     type: number
@@ -46,6 +47,8 @@ properties:
   middleName:
     type: string
   boxscoreName:
+    type: string
+  nickName:
     type: string
   gender:
     type: string

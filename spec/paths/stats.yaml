@@ -1,0 +1,25 @@
+# /v1/stats
+get:
+  operationId: getStats
+  summary: Retrieves league-level stats
+  description: >
+    Returns stats by stat type and group. Can be filtered by team, league,
+    game type, sport, and season.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/Stats
+    - $ref: ../components/parameters/parameters.yaml#/Group
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/TeamId
+    - $ref: ../components/parameters/parameters.yaml#/LeagueId
+    - $ref: ../components/parameters/parameters.yaml#/GameTypes
+    - $ref: ../components/parameters/parameters.yaml#/SportIds
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/PersonStatsResponse

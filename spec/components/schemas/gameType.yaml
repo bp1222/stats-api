@@ -7,6 +7,7 @@ enum:
   - "D"
   - "L"
   - "W"
+  - "A"
 x-enum-varnames:
   - Exhibition
   - SpringTraining
@@ -15,6 +16,7 @@ x-enum-varnames:
   - DivisionSeries
   - LeagueChampionshipSeries
   - WorldSeries
+  - AllStar
 description: >
   Game Type:
     * `E` - Exhibition
@@ -24,3 +26,4 @@ description: >
     * `D` - Division Series
     * `L` - League Championship Series
     * `W` - World Series
+    * `A` - All-Star Game

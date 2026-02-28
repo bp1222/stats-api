@@ -1,0 +1,76 @@
+title: GamePaceMetrics
+type: object
+properties:
+  hitsPerGame:
+    type: number
+  runsPerGame:
+    type: number
+  pitchesPerGame:
+    type: number
+  plateAppearancesPerGame:
+    type: number
+  hitsPer9Inn:
+    type: number
+  runsPer9Inn:
+    type: number
+  pitchesPer9Inn:
+    type: number
+  plateAppearancesPer9Inn:
+    type: number
+  hitsPerRun:
+    type: number
+  pitchesPerPitcher:
+    type: number
+  pitchersPerGame:
+    type: number
+  inningsPlayedPerGame:
+    type: number
+  timePer9Inn:
+    type: string
+  timePerGame:
+    type: string
+  timePerPitch:
+    type: string
+  timePerHit:
+    type: string
+  timePerRun:
+    type: string
+  timePerPlateAppearance:
+    type: string
+  timePer77PlateAppearances:
+    type: string
+  timePer7InnGameWithoutExtraInn:
+    type: string
+  totalExtraInnGames:
+    type: number
+  totalExtraInnTime:
+    type: string
+  totalGameTime:
+    type: string
+  totalGames:
+    type: number
+  totalInningsPlayed:
+    type: number
+  totalHits:
+    type: number
+  totalRuns:
+    type: number
+  totalPitches:
+    type: number
+  totalPlateAppearances:
+    type: number
+  totalPitchers:
+    type: number
+  total7InnGames:
+    type: number
+  total9InnGames:
+    type: number
+  total9InnGamesScheduled:
+    type: number
+  total9InnGamesCompletedEarly:
+    type: number
+  total9InnGamesWithoutExtraInn:
+    type: number
+  prPortalCalculatedFields:
+    type: object
+    additionalProperties: true

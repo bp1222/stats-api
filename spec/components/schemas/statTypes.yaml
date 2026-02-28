@@ -1,0 +1,116 @@
+type: string
+enum:
+  - "projected"
+  - "projectedRos"
+  - "yearByYear"
+  - "yearByYearAdvanced"
+  - "yearByYearPlayoffs"
+  - "standard"
+  - "advanced"
+  - "career"
+  - "careerRegularSeason"
+  - "careerAdvanced"
+  - "seasonAdvanced"
+  - "careerStatSplits"
+  - "careerPlayoffs"
+  - "gameLog"
+  - "playLog"
+  - "pitchLog"
+  - "metricLog"
+  - "metricAverages"
+  - "pitchArsenal"
+  - "outsAboveAverage"
+  - "expectedStatistics"
+  - "sabermetrics"
+  - "sprayChart"
+  - "tracking"
+  - "vsPlayer"
+  - "vsPlayerTotal"
+  - "vsPlayer5Y"
+  - "vsTeam"
+  - "vsTeam5Y"
+  - "vsTeamTotal"
+  - "lastXGames"
+  - "byDateRange"
+  - "byDateRangeAdvanced"
+  - "byMonth"
+  - "byMonthPlayoffs"
+  - "byDayOfWeek"
+  - "byDayOfWeekPlayoffs"
+  - "homeAndAway"
+  - "homeAndAwayPlayoffs"
+  - "winLoss"
+  - "winLossPlayoffs"
+  - "rankings"
+  - "rankingsByYear"
+  - "statsSingleSeason"
+  - "statsSingleSeasonAdvanced"
+  - "hotColdZones"
+  - "availableStats"
+  - "opponentsFaced"
+  - "gameTypeStats"
+  - "firstYearStats"
+  - "lastYearStats"
+  - "statSplits"
+  - "statSplitsAdvanced"
+  - "atGameStart"
+  - "vsOpponents"
+  - "sabermetricsmultiteam"
+description: >
+  Stat Types:
+    * `projected` - Projected stats for the current season
+    * `projectedRos` - Projected stats for the rest of the current season
+    * `yearByYear` - Year-by-year stats for all seasons
+    * `yearByYearAdvanced` - Year-by-year advanced stats for all seasons
+    * `yearByYearPlayoffs` - Year-by-year stats for playoff seasons
+    * `standard` - Standard stats for the current season
+    * `advanced` - Advanced stats for the current season
+    * `career` - Career stats across all seasons
+    * `careerRegularSeason` - Career regular season stats
+    * `careerAdvanced` - Career advanced stats across all seasons
+    * `seasonAdvanced` - Advanced stats for a single season (requires season parameter)
+    * `careerStatSplits` - Career stats split by various factors (e.g. home/away, vs left/right, etc.)
+    * `careerPlayoffs` - Career playoff stats across all seasons
+    * `gameLog` - Game log for a single season (requires season parameter)
+    * `playLog` - Play log for a single season (requires season parameter)
+    * `pitchLog` - Pitch log for a single season (requires season parameter)
+    * `metricLog` - Log of advanced metrics for a single season (requires season parameter)
+    * `metricAverages` - Averages of advanced metrics for a single season (requires season parameter)
+    * `pitchArsenal` - Pitch arsenal information for a single season (requires season parameter)
+    * `outsAboveAverage` - Outs above average information for a single season (requires season parameter)
+    * `expectedStatistics` - Expected statistics based on batted ball data for a single season (requires season parameter)
+    * `sabermetrics` - Various sabermetric statistics for a single season (requires season parameter)
+    * `sprayChart` - Spray chart data for a single season (requires season parameter)
+    * `tracking` - Tracking data (e.g. Statcast) for a single season (requires season parameter)
+    * `vsPlayer` - Stats against a specific opponent player (requires opponentId parameter)
+    * `vsPlayerTotal` - Career stats against a specific opponent player (requires opponentId parameter)
+    * `vsPlayer5Y` - Stats against a specific opponent player over the last 5 years (requires opponentId parameter)
+    * `vsTeam` - Stats against a specific opponent team (requires opponentId parameter)
+    * `vsTeam5Y` - Stats against a specific opponent team over the last 5 years (requires opponentId parameter)
+    * `vsTeamTotal` - Career stats against a specific opponent team (requires opponentId parameter)
+    * `lastXGames` - Stats for the last X games (requires games parameter)
+    * `byDateRange` - Stats for a specific date range (requires startDate and endDate parameters)
+    * `byDateRangeAdvanced` - Advanced stats for a specific date range (requires startDate and endDate parameters)
+    * `byMonth` - Stats by month for a single season (requires season parameter)
+    * `byMonthPlayoffs` - Stats by month for playoff seasons (requires season parameter)
+    * `byDayOfWeek` - Stats by day of the week for a single season (requires season parameter)
+    * `byDayOfWeekPlayoffs` - Stats by day of the week for playoff seasons (requires season parameter)
+    * `homeAndAway` - Home and away stats for a single season (requires season parameter)
+    * `homeAndAwayPlayoffs` - Home and away stats for playoff seasons (requires season parameter)
+    * `winLoss` - Win/loss stats for a single season (requires season parameter)
+    * `winLossPlayoffs` - Win/loss stats for playoff seasons (requires season parameter)
+    * `rankings` - Various rankings for a single season (requires season parameter)
+    * `rankingsByYear` - Various rankings by year for all seasons
+    * `statsSingleSeason` - Standard stats for a single season (requires season parameter)
+    * `statsSingleSeasonAdvanced` - Advanced stats for a single season (requires season parameter)
+    * `hotColdZones` - Hot/cold zones for a single season (requires season parameter)
+    * `availableStats` - List of available stat types for a player
+    * `opponentsFaced` - List of opponents faced by a player along with stats against each opponent
+    * `gameTypeStats` - Stats split by game type (e.g. regular season vs playoffs) for a single season (requires season parameter)
+    * `firstYearStats` - Stats for a player's first year in the league
+    * `lastYearStats` - Stats for a player's most recent year in the league
+    * `statSplits` - Stats split by various factors (e.g. home/away, vs left/right, etc.) for a single season (requires season parameter)
+    * `statSplitsAdvanced` - Advanced stats split by various factors (e.g. home/away, vs left/right, etc.) for a single season (requires season parameter)
+    * `atGameStart` - Stats for a player at the start of each game for a single season (requires season parameter)
+    * `vsOpponents` - Stats against specific opponents (both players and teams) for a single season (requires season parameter)
+    * `sabermetricsmultiteam` - Various sabermetric statistics for a single season split by team for players who played on multiple teams in a season (requires season parameter)

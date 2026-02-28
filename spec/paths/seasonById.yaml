@@ -1,0 +1,19 @@
+# /v1/seasons/{seasonId}
+get:
+  operationId: getSeasonById
+  summary: Retrieves a specific season by ID
+  description: >
+    Returns season date information for a specific season year.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathSeasonId
+    - $ref: ../components/parameters/parameters.yaml#/SportId
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/Seasons

@@ -1,0 +1,28 @@
+# /v1/venues/{venueId}
+get:
+  operationId: getVenue
+  summary: Retrieves a single venue by ID
+  description: >
+    Returns venue information for a specific venueId.
+    Automatically hydrates location, fieldInfo, and timezone.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathVenueId
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+    - $ref: ../components/parameters/parameters.yaml#/Hydrate
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            title: VenuesResponse
+            type: object
+            required:
+              - venues
+            properties:
+              venues:
+                type: array
+                items:
+                  $ref: ../components/schemas/schemas.yaml#/Venue

@@ -1,0 +1,19 @@
+# /v1/homeRunDerby/{gamePk}
+get:
+  operationId: getHomeRunDerby
+  summary: Retrieves Home Run Derby data
+  description: >
+    Returns Home Run Derby data including Statcast trajectory, launch speed,
+    launch angle, and hit coordinates.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathGamePk
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Games
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/HomeRunDerby

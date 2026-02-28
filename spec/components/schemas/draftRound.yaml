@@ -1,0 +1,11 @@
+title: DraftRound
+description: >
+  A round in the MLB draft containing picks.
+type: object
+properties:
+  round:
+    type: string
+  picks:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/DraftPick

@@ -1,0 +1,161 @@
+title: Plays
+description: >
+  Play-by-play data for a game.
+type: object
+properties:
+  allPlays:
+    type: array
+    items:
+      title: Play
+      type: object
+      properties:
+        result:
+          title: PlayResult
+          type: object
+          properties:
+            type:
+              type: string
+            event:
+              type: string
+            eventType:
+              type: string
+            description:
+              type: string
+            rbi:
+              type: number
+            awayScore:
+              type: number
+            homeScore:
+              type: number
+            isOut:
+              type: boolean
+        about:
+          title: PlayAbout
+          type: object
+          properties:
+            atBatIndex:
+              type: number
+            halfInning:
+              type: string
+            isTopInning:
+              type: boolean
+            inning:
+              type: number
+            startTime:
+              type: string
+            endTime:
+              type: string
+            isComplete:
+              type: boolean
+            isScoringPlay:
+              type: boolean
+            hasReview:
+              type: boolean
+            hasOut:
+              type: boolean
+            captivatingIndex:
+              type: number
+        count:
+          title: PlayCount
+          type: object
+          properties:
+            balls:
+              type: number
+            strikes:
+              type: number
+            outs:
+              type: number
+        matchup:
+          title: PlayMatchup
+          type: object
+          properties:
+            batter:
+              $ref: ./schemas.yaml#/Person
+            batSide:
+              $ref: ./schemas.yaml#/CodeDescription
+            pitcher:
+              $ref: ./schemas.yaml#/Person
+            pitchHand:
+              $ref: ./schemas.yaml#/CodeDescription
+        atBatIndex:
+          type: number
+        playEndTime:
+          type: string
+        pitchIndex:
+          type: array
+          items:
+            type: number
+        actionIndex:
+          type: array
+          items:
+            type: number
+        runnerIndex:
+          type: array
+          items:
+            type: number
+        runners:
+          type: array
+          items:
+            title: PlayRunner
+            type: object
+            properties:
+              movement:
+                type: object
+                properties:
+                  originBase:
+                    type: string
+                  start:
+                    type: string
+                  end:
+                    type: string
+                  outBase:
+                    type: string
+                  isOut:
+                    type: boolean
+                  outNumber:
+                    type: number
+              details:
+                type: object
+                properties:
+                  event:
+                    type: string
+                  eventType:
+                    type: string
+                  runner:
+                    $ref: ./schemas.yaml#/Person
+                  isScoringEvent:
+                    type: boolean
+                  rbi:
+                    type: boolean
+                  earned:
+                    type: boolean
+        playEvents:
+          type: array
+          items:
+            title: PlayEvent
+            type: object
+            properties:
+              details:
+                type: object
+              count:
+                type: object
+              index:
+                type: number
+              startTime:
+                type: string
+              endTime:
+                type: string
+              isPitch:
+                type: boolean
+              type:
+                type: string
+  currentPlay:
+    type: object
+  scoringPlays:
+    type: array
+    items:
+      type: number
+  playsByInning:
+    type: array
+    items:
+      type: object

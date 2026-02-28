@@ -1,5 +1,5 @@
 in: query
-name: season 
+name: season
 required: true
 schema:
-  type: string 
+  type: string

@@ -1,0 +1,28 @@
+# /v1/teams/{teamId}
+get:
+  operationId: getTeam
+  summary: Retrieves a single team by ID
+  description: >
+    Returns detailed team information for a specific teamId.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathTeamId
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+    - $ref: ../components/parameters/parameters.yaml#/Hydrate
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            title: TeamsResponse
+            type: object
+            required:
+              - teams
+            properties:
+              teams:
+                type: array
+                items:
+                  $ref: ../components/schemas/schemas.yaml#/Team

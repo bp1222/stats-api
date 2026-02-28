@@ -7,6 +7,7 @@ get:
   parameters:
     - $ref: ../components/parameters/parameters.yaml#/LeagueId
     - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/StandingsTypes
     - $ref: ../components/parameters/parameters.yaml#/Date
     - $ref: ../components/parameters/parameters.yaml#/Fields
     - $ref: ../components/parameters/parameters.yaml#/Hydrate

@@ -1,0 +1,20 @@
+# /v1/sports/{sportId}/players
+get:
+  operationId: getSportPlayers
+  summary: Retrieves all players for a sport
+  description: >
+    Returns all players for a given sport. Used for player lookups by name.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathSportId
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/GameTypes
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - People
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/PeopleResponse

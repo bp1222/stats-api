@@ -1,0 +1,27 @@
+# /v1/gamePace
+get:
+  operationId: getGamePace
+  summary: Retrieves pace of game metrics
+  description: >
+    Returns pace of game metrics for a given season, sport, league, or team.
+  parameters:
+    - in: query
+      name: season
+      required: true
+      schema:
+        type: string
+    - $ref: ../components/parameters/parameters.yaml#/SportId
+    - $ref: ../components/parameters/parameters.yaml#/TeamIds
+    - $ref: ../components/parameters/parameters.yaml#/LeagueId
+    - $ref: ../components/parameters/parameters.yaml#/LeagueListId
+    - $ref: ../components/parameters/parameters.yaml#/GameTypes
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/GamePace

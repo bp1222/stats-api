@@ -1,0 +1,6 @@
+description: The unique identifier of a venue
+in: path
+name: venueId
+required: true
+schema:
+  type: number

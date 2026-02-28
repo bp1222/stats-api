@@ -1,0 +1,209 @@
+title: GameLiveFeed
+description: >
+  The GUMBO live feed for a game, containing gameData, liveData (plays, linescore, boxscore).
+type: object
+required:
+  - gamePk
+  - link
+  - gameData
+  - liveData
+properties:
+  gamePk:
+    type: number
+  link:
+    type: string
+  metaData:
+    title: GameMetaData
+    type: object
+    properties:
+      wait:
+        type: number
+      timeStamp:
+        type: string
+      gameEvents:
+        type: array
+        items:
+          type: string
+      logicalEvents:
+        type: array
+        items:
+          type: string
+  gameData:
+    title: GameData
+    type: object
+    properties:
+      game:
+        title: GameDataGame
+        type: object
+        properties:
+          pk:
+            type: number
+          type:
+            type: string
+          doubleHeader:
+            type: string
+          id:
+            type: string
+          gamedayType:
+            type: string
+          tiebreaker:
+            type: string
+          calendarEventID:
+            type: string
+          gameNumber:
+            type: number
+          season:
+            type: string
+          seasonDisplay:
+            type: string
+      datetime:
+        title: GameDatetime
+        type: object
+        properties:
+          dateTime:
+            type: string
+          originalDate:
+            type: string
+          officialDate:
+            type: string
+          dayNight:
+            type: string
+          time:
+            type: string
+          ampm:
+            type: string
+      status:
+        title: GameLiveFeedStatus
+        type: object
+        properties:
+          abstractGameState:
+            type: string
+          codedGameState:
+            type: string
+          detailedState:
+            type: string
+          statusCode:
+            type: string
+          startTimeTBD:
+            type: boolean
+          abstractGameCode:
+            type: string
+      teams:
+        title: GameDataTeams
+        type: object
+        properties:
+          away:
+            $ref: ./schemas.yaml#/Team
+          home:
+            $ref: ./schemas.yaml#/Team
+      players:
+        type: object
+        additionalProperties:
+          $ref: ./schemas.yaml#/Person
+      venue:
+        $ref: ./schemas.yaml#/Venue
+      weather:
+        title: GameWeather
+        type: object
+        properties:
+          condition:
+            type: string
+          temp:
+            type: string
+          wind:
+            type: string
+      officialScorer:
+        $ref: ./schemas.yaml#/Person
+      primaryDatacaster:
+        $ref: ./schemas.yaml#/Person
+      moundVisits:
+        type: object
+        properties:
+          away:
+            type: object
+            properties:
+              used:
+                type: number
+              remaining:
+                type: number
+          home:
+            type: object
+            properties:
+              used:
+                type: number
+              remaining:
+                type: number
+      flags:
+        type: object
+        properties:
+          noHitter:
+            type: boolean
+          perfectGame:
+            type: boolean
+          awayTeamNoHitter:
+            type: boolean
+          awayTeamPerfectGame:
+            type: boolean
+          homeTeamNoHitter:
+            type: boolean
+          homeTeamPerfectGame:
+            type: boolean
+      alerts:
+        type: array
+        items:
+          type: object
+      review:
+        type: object
+        properties:
+          hasChallenges:
+            type: boolean
+          away:
+            type: object
+            properties:
+              used:
+                type: number
+              remaining:
+                type: number
+          home:
+            type: object
+            properties:
+              used:
+                type: number
+              remaining:
+                type: number
+      gameInfo:
+        type: object
+        additionalProperties: true
+      officialVenue:
+        $ref: ./schemas.yaml#/Venue
+      probablePitchers:
+        title: ProbablePitchers
+        type: object
+        properties:
+          away:
+            $ref: ./schemas.yaml#/Person
+          home:
+            $ref: ./schemas.yaml#/Person
+  liveData:
+    title: LiveData
+    type: object
+    properties:
+      plays:
+        $ref: ./schemas.yaml#/Plays
+      linescore:
+        $ref: ./schemas.yaml#/Linescore
+      boxscore:
+        $ref: ./schemas.yaml#/Boxscore
+      leaders:
+        type: object
+        additionalProperties: true
+      decisions:
+        title: GameDecisions
+        type: object
+        properties:
+          winner:
+            $ref: ./schemas.yaml#/Person
+          loser:
+            $ref: ./schemas.yaml#/Person
+          save:
+            $ref: ./schemas.yaml#/Person

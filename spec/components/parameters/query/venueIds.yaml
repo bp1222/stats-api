@@ -1,0 +1,6 @@
+in: query
+name: venueIds
+required: false
+description: Comma-separated list of venue IDs
+schema:
+  type: string

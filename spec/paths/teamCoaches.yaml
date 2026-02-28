@@ -1,0 +1,34 @@
+# /v1/teams/{teamId}/coaches
+get:
+  operationId: getTeamCoaches
+  summary: Retrieves team coaching staff
+  description: >
+    Returns the coaching roster for a team.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathTeamId
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/Date
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - People
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            title: CoachesResponse
+            type: object
+            required:
+              - roster
+            properties:
+              roster:
+                type: array
+                items:
+                  $ref: ../components/schemas/schemas.yaml#/Coach
+              link:
+                type: string
+              teamId:
+                type: number
+              rosterType:
+                type: string

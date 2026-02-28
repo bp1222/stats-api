@@ -1,0 +1,6 @@
+description: The unique identifier of an award (e.g. RETIREDUNI_108)
+in: path
+name: awardId
+required: true
+schema:
+  type: string

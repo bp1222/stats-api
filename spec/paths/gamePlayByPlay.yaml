@@ -1,0 +1,19 @@
+# /v1/game/{gamePk}/playByPlay
+get:
+  operationId: getGamePlayByPlay
+  summary: Retrieves play-by-play data for a game
+  description: >
+    Returns play-by-play data for a specific game.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathGamePk
+    - $ref: ../components/parameters/parameters.yaml#/Timecode
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Games
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/Plays

@@ -1,0 +1,6 @@
+in: query
+name: sportIds
+required: false
+description: Comma-separated list of sport IDs
+schema:
+  type: string

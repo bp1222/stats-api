@@ -36,17 +36,16 @@ properties:
         $ref: ./schemas.yaml#/LinescoreTeam
       home:
         $ref: ./schemas.yaml#/LinescoreTeam
-
-  # defense:
-    #   title: Defense
-    #   type: object
-    #   properties:
-
-  # offense:
-    #   title: Offense
-    #   type: object
-    #   properties:
-
+  defense:
+    title: LinescoreDefense
+    description: Current defensive positions (batter, pitcher, catcher, etc.).
+    type: object
+    additionalProperties: true
+  offense:
+    title: LinescoreOffense
+    description: Current offensive base runners and batter (batter, onDeck, first, etc.).
+    type: object
+    additionalProperties: true
   balls:
     type: number
     default: 0

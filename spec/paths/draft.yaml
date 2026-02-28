@@ -1,0 +1,63 @@
+# /v1/draft/{yearId}
+get:
+  operationId: getDraft
+  summary: Retrieves draft data for a year
+  description: >
+    Returns draft round and pick information for a given year.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathYearId
+    - in: query
+      name: round
+      required: false
+      schema:
+        type: string
+    - in: query
+      name: name
+      required: false
+      description: First letter of draftee's last name
+      schema:
+        type: string
+    - in: query
+      name: school
+      required: false
+      description: First letter of draftee's school
+      schema:
+        type: string
+    - in: query
+      name: state
+      required: false
+      schema:
+        type: string
+    - in: query
+      name: country
+      required: false
+      schema:
+        type: string
+    - in: query
+      name: position
+      required: false
+      schema:
+        type: string
+    - $ref: ../components/parameters/parameters.yaml#/TeamId
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            title: DraftResponse
+            type: object
+            properties:
+              drafts:
+                title: DraftData
+                type: object
+                properties:
+                  draftYear:
+                    type: number
+                  rounds:
+                    type: array
+                    items:
+                      $ref: ../components/schemas/schemas.yaml#/DraftRound

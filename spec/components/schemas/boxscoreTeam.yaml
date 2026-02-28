@@ -47,8 +47,39 @@ properties:
     type: array
     items:
       type: number
+  battingOrder:
+    title: BoxscoreTeamBattingOrder
+    type: array
+    items:
+      type: number
   players:
     title: BoxscoreTeamPlayers
     type: object
     additionalProperties:
       $ref: ./schemas.yaml#/Player
+  info:
+    type: array
+    items:
+      title: BoxscoreTeamInfoSection
+      type: object
+      properties:
+        title:
+          type: string
+        fieldList:
+          type: array
+          items:
+            type: object
+            properties:
+              label:
+                type: string
+              value:
+                type: string
+  note:
+    type: array
+    items:
+      type: object
+      properties:
+        label:
+          type: string
+        value:
+          type: string

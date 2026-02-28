@@ -1,0 +1,6 @@
+description: The season year identifier
+in: path
+name: seasonId
+required: true
+schema:
+  type: string

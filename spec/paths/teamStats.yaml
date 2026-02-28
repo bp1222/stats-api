@@ -1,0 +1,21 @@
+# /v1/teams/{teamId}/stats
+get:
+  operationId: getTeamStats
+  summary: Retrieves team stats
+  description: >
+    Returns stats for a team by stat type and group.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathTeamId
+    - $ref: ../components/parameters/parameters.yaml#/Stats
+    - $ref: ../components/parameters/parameters.yaml#/Group
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/TeamStatsResponse

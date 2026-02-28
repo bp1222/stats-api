@@ -1,0 +1,10 @@
+in: query
+name: leagueListId
+required: false
+description: >
+  Unique League List Identifier. Available values: milb_full, milb_short,
+  milb_complex, milb_all, milb_all_nomex, milb_all_domestic, milb_noncomp,
+  milb_noncomp_nomex, milb_domcomp, milb_intcomp, win_noabl, win_caribbean,
+  win_all, abl, mlb, mlb_hist, mlb_milb, mlb_milb_hist, mlb_milb_win, baseball_all
+schema:
+  type: string

@@ -1,0 +1,25 @@
+# /v1/sports
+get:
+  operationId: getSports
+  summary: Retrieves all sports
+  description: >
+    Returns a list of all sports.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            title: SportsResponse
+            type: object
+            required:
+              - sports
+            properties:
+              sports:
+                type: array
+                items:
+                  $ref: ../components/schemas/schemas.yaml#/Sport

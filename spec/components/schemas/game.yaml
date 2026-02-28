@@ -21,17 +21,17 @@ properties:
   gameType:
     $ref: ./schemas.yaml#/GameType
   season:
-    type: number
+    type: string
   gameDate:
     type: string
   officialDate:
     type: string
   rescheduledTo:
-    type: number
+    type: string
   rescheduledToDate:
     type: string
   rescheduledFrom:
-    type: number
+    type: string
   rescheduledFromDate:
     type: string
   status:

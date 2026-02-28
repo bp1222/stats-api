@@ -3,4 +3,4 @@ in: query
 name: stats
 required: false
 schema:
-  type: string
+  $ref: ../../schemas/schemas.yaml#/StatTypes

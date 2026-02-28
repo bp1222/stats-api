@@ -6,7 +6,8 @@ info:
     identifier: "Public Domain"
   description: >
     OpenAPI spec for the MLB Stats API (upstream API is undocumented).
-  version: 0.7.5
+    Derived from the python-mlb-statsapi library by zero-sum-seattle.
+  version: 0.8.0
   contact:
     name: "dave@mudsite.com"
 
@@ -15,39 +16,79 @@ servers:
 
 tags:
   - name: Reference
-    description: Reference data (divisions, leagues, seasons, teams)
+    description: Reference data (divisions, leagues, seasons, sports, teams, venues, draft, awards, attendance, game pace)
   - name: People
     description: Person (player) information and stats
   - name: Schedule
     description: Schedule and games list
   - name: Games
-    description: Game detail (boxscore, linescore)
+    description: Game detail (live feed, boxscore, linescore, play-by-play, home run derby)
   - name: Standings
     description: Division and league standings
 
 paths:
+  /v1/attendance:
+    $ref: ./paths/attendance.yaml
+  /v1/awards/{awardId}/recipients:
+    $ref: ./paths/awards.yaml
   /v1/divisions:
     $ref: ./paths/divisions.yaml
+  /v1/draft/{yearId}:
+    $ref: ./paths/draft.yaml
   /v1/game/{gamePk}/boxscore:
     $ref: ./paths/boxscore.yaml
   /v1/game/{gamePk}/linescore:
     $ref: ./paths/linescore.yaml
+  /v1/game/{gamePk}/playByPlay:
+    $ref: ./paths/gamePlayByPlay.yaml
+  /v1/gamePace:
+    $ref: ./paths/gamePace.yaml
+  /v1/homeRunDerby/{gamePk}:
+    $ref: ./paths/homeRunDerby.yaml
   /v1/leagues:
     $ref: ./paths/leagues.yaml
+  /v1/people:
+    $ref: ./paths/peopleByIds.yaml
   /v1/people/{personId}:
     $ref: ./paths/people.yaml
   /v1/people/{personId}/stats:
     $ref: ./paths/peopleStats.yaml
+  /v1/people/{personId}/stats/game/{gamePk}:
+    $ref: ./paths/personStatsForGame.yaml
   /v1/schedule:
     $ref: ./paths/schedule.yaml
   /v1/seasons:
     $ref: ./paths/season.yaml
   /v1/seasons/all:
     $ref: ./paths/allSeasons.yaml
-  /v1/teams:
-    $ref: ./paths/teams.yaml
+  /v1/seasons/{seasonId}:
+    $ref: ./paths/seasonById.yaml
+  /v1/sports:
+    $ref: ./paths/sports.yaml
+  /v1/sports/{sportId}:
+    $ref: ./paths/sport.yaml
+  /v1/sports/{sportId}/players:
+    $ref: ./paths/sportPlayers.yaml
   /v1/standings:
     $ref: ./paths/standings.yaml
+  /v1/stats:
+    $ref: ./paths/stats.yaml
+  /v1/teams:
+    $ref: ./paths/teams.yaml
+  /v1/teams/{teamId}:
+    $ref: ./paths/team.yaml
+  /v1/teams/{teamId}/coaches:
+    $ref: ./paths/teamCoaches.yaml
+  /v1/teams/{teamId}/roster:
+    $ref: ./paths/teamRoster.yaml
+  /v1/teams/{teamId}/stats:
+    $ref: ./paths/teamStats.yaml
+  /v1/venues:
+    $ref: ./paths/venues.yaml
+  /v1/venues/{venueId}:
+    $ref: ./paths/venue.yaml
+  /v1.1/game/{gamePk}/feed/live:
+    $ref: ./paths/gameLiveFeed.yaml
 
 components:
   parameters:

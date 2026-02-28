@@ -1,0 +1,8 @@
+in: query
+name: rosterType
+required: false
+description: >
+  Type of roster to return. Values include 40Man, fullSeason, fullRoster,
+  nonRosterInvitees, active, allTime, depthChart, gameday, coach.
+schema:
+  type: string

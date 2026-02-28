@@ -1,0 +1,6 @@
+in: query
+name: personIds
+required: false
+description: Comma-separated list of person IDs
+schema:
+  type: string

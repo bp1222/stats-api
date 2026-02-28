@@ -1,6 +1,7 @@
 title: Venue
 description: >
   Venue. When embedded as springVenue, may contain only id and link.
+  Hydrate with location, fieldInfo, timezone for full details.
 type: object
 required:
   - id
@@ -15,3 +16,69 @@ properties:
     type: boolean
   season:
     type: string
+  location:
+    title: VenueLocation
+    type: object
+    properties:
+      address1:
+        type: string
+      address2:
+        type: string
+      city:
+        type: string
+      state:
+        type: string
+      stateAbbrev:
+        type: string
+      postalCode:
+        type: string
+      country:
+        type: string
+      phone:
+        type: string
+      defaultCoordinates:
+        title: Coordinates
+        type: object
+        properties:
+          latitude:
+            type: number
+          longitude:
+            type: number
+      azimuthAngle:
+        type: number
+      elevation:
+        type: number
+  timeZone:
+    title: VenueTimeZone
+    type: object
+    properties:
+      id:
+        type: string
+      offset:
+        type: number
+      offsetAtGameTime:
+        type: number
+      tz:
+        type: string
+  fieldInfo:
+    title: VenueFieldInfo
+    type: object
+    properties:
+      capacity:
+        type: number
+      turfType:
+        type: string
+      roofType:
+        type: string
+      leftLine:
+        type: number
+      left:
+        type: number
+      leftCenter:
+        type: number
+      center:
+        type: number
+      rightCenter:
+        type: number
+      rightLine:
+        type: number

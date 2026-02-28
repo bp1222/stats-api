@@ -39,7 +39,7 @@ get:
                     gameGuid: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
                     link: /api/v1/game/847123/feed/live
                     gameType: R
-                    season: 2025
+                    season: "2025"
                     gameDate: "2025-03-27T17:05:00Z"
                     officialDate: "2025-03-27"
                     status:

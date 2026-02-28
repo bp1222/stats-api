@@ -1,0 +1,15 @@
+title: Coach
+description: >
+  A coach on a team's coaching staff.
+type: object
+properties:
+  person:
+    $ref: ./schemas.yaml#/Person
+  jerseyNumber:
+    type: string
+  job:
+    type: string
+  jobId:
+    type: string
+  title:
+    type: string

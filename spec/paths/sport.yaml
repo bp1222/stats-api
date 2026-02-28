@@ -1,0 +1,26 @@
+# /v1/sports/{sportId}
+get:
+  operationId: getSport
+  summary: Retrieves a single sport by ID
+  description: >
+    Returns sport information for a specific sportId.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathSportId
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            title: SportsResponse
+            type: object
+            required:
+              - sports
+            properties:
+              sports:
+                type: array
+                items:
+                  $ref: ../components/schemas/schemas.yaml#/Sport

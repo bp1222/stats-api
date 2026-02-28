@@ -1,0 +1,41 @@
+title: GamePace
+description: >
+  Pace of game metrics for sports, leagues, or teams.
+type: object
+properties:
+  teams:
+    type: array
+    items:
+      title: GamePaceTeamData
+      allOf:
+        - type: object
+          properties:
+            season:
+              type: string
+            team:
+              $ref: ./schemas.yaml#/Team
+        - $ref: ./schemas.yaml#/GamePaceMetrics
+  leagues:
+    type: array
+    items:
+      title: GamePaceLeagueData
+      allOf:
+        - type: object
+          properties:
+            season:
+              type: string
+            league:
+              $ref: ./schemas.yaml#/League
+        - $ref: ./schemas.yaml#/GamePaceMetrics
+  sports:
+    type: array
+    items:
+      title: GamePaceSportData
+      allOf:
+        - type: object
+          properties:
+            season:
+              type: string
+            sport:
+              $ref: ./schemas.yaml#/Sport
+        - $ref: ./schemas.yaml#/GamePaceMetrics

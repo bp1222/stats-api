@@ -1,27 +1,47 @@
+Attendance:
+  $ref: ./attendance.yaml
+Award:
+  $ref: ./award.yaml
 BattingStats:
   $ref: ./battingStats.yaml
 Boxscore:
   $ref: ./boxscore.yaml
 BoxscoreTeam:
   $ref: ./boxscoreTeam.yaml
+Coach:
+  $ref: ./coach.yaml
 Content:
   $ref: ./content.yaml
+CodeDescription:
+  $ref: ./codeDescription.yaml
 Division:
   $ref: ./division.yaml
 DivisionStandings:
   $ref: ./divisionStandings.yaml
+DraftPick:
+  $ref: ./draftPick.yaml
+DraftRound:
+  $ref: ./draftRound.yaml
 FieldingStats:
   $ref: ./fieldingStats.yaml
 Game:
   $ref: ./game.yaml
+GameLiveFeed:
+  $ref: ./gameLiveFeed.yaml
 GameOfficial:
   $ref: ./gameOfficial.yaml
+GamePace:
+  $ref: ./gamePace.yaml
+GamePaceMetrics:
+  $ref: ./gamePaceMetrics.yaml
 GameTeam:
   $ref: ./gameTeam.yaml
 GameStatusCode:
   $ref: ./gameStatusCode.yaml
 GameType:
   $ref: ./gameType.yaml
+HomeRunDerby:
+  $ref: ./homeRunDerby.yaml
 Inning:
   $ref: ./inning.yaml
 Linescore:
@@ -34,24 +54,24 @@ LeagueRecord:
   $ref: ./leagueRecord.yaml
 Official:
   $ref: ./official.yaml
-PitchingStats:
-  $ref: ./pitchingStats.yaml
-Position:
-  $ref: ./position.yaml
-CodeDescription:
-  $ref: ./codeDescription.yaml
+PeopleResponse:
+  $ref: ./peopleResponse.yaml
+Person:
+  $ref: ./person.yaml
 PersonStatSplit:
   $ref: ./personStatSplit.yaml
 PersonStatsItem:
   $ref: ./personStatsItem.yaml
-Person:
-  $ref: ./person.yaml
-PeopleResponse:
-  $ref: ./peopleResponse.yaml
 PersonStatsResponse:
   $ref: ./personStatsResponse.yaml
+PitchingStats:
+  $ref: ./pitchingStats.yaml
 Player:
   $ref: ./player.yaml
+Plays:
+  $ref: ./plays.yaml
+Position:
+  $ref: ./position.yaml
 Record:
   $ref: ./record.yaml
 Seasons:
@@ -62,7 +82,11 @@ Schedule:
   $ref: ./schedule.yaml
 Sport:
   $ref: ./sport.yaml
+StatTypes:
+  $ref: ./statTypes.yaml
 Team:
   $ref: ./team.yaml
+TeamStatsResponse:
+  $ref: ./teamStatsResponse.yaml
 Venue:
   $ref: ./venue.yaml

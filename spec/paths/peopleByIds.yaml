@@ -1,0 +1,20 @@
+# /v1/people
+get:
+  operationId: getPeople
+  summary: Retrieves multiple people by IDs
+  description: >
+    Returns biographical information for one or more players, coaches, or umpires.
+    Use personIds to specify which people to return.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PersonIds
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+    - $ref: ../components/parameters/parameters.yaml#/Hydrate
+  tags:
+    - People
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/PeopleResponse

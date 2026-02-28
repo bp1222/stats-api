@@ -1,0 +1,29 @@
+# /v1/venues
+get:
+  operationId: getVenues
+  summary: Retrieves all venues
+  description: >
+    Returns a list of all venues. Use hydrate for location, fieldInfo, timezone.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/VenueIds
+    - $ref: ../components/parameters/parameters.yaml#/SportIds
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+    - $ref: ../components/parameters/parameters.yaml#/Hydrate
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            title: VenuesResponse
+            type: object
+            required:
+              - venues
+            properties:
+              venues:
+                type: array
+                items:
+                  $ref: ../components/schemas/schemas.yaml#/Venue

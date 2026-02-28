@@ -1,0 +1,6 @@
+description: Draft year
+in: path
+name: yearId
+required: true
+schema:
+  type: number

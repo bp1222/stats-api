@@ -1,0 +1,24 @@
+# /v1/attendance
+get:
+  operationId: getAttendance
+  summary: Retrieves attendance data
+  description: >
+    Returns attendance data based on teamId, leagueId, or leagueListId.
+    At least one of teamId, leagueId, or leagueListId is required.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/TeamId
+    - $ref: ../components/parameters/parameters.yaml#/LeagueId
+    - $ref: ../components/parameters/parameters.yaml#/LeagueListId
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/Date
+    - $ref: ../components/parameters/parameters.yaml#/GameTypes
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/Attendance

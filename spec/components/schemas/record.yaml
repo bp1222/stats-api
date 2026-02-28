@@ -33,6 +33,12 @@ properties:
           Streak Type:
             * Losing Streak
             * Winning Streak
+      streakCode:
+        type: string
+      streakNumber:
+        type: number
+  clinchIndicator:
+    type: string
   divisionRank:
     type: string
   leagueRank:
@@ -48,6 +54,8 @@ properties:
   leagueGamesBack:
     type: string
   sportGamesBack:
+    type: string
+  springLeagueGamesBack:
     type: string
   divisionGamesBack:
     type: string

@@ -1,10 +1,24 @@
 # ./path
+PathAwardId:
+  $ref: ./path/awardId.yaml
 PathGamePk:
   $ref: ./path/gamePk.yaml
 PathPersonId:
   $ref: ./path/personId.yaml
+PathSeasonId:
+  $ref: ./path/seasonId.yaml
+PathSportId:
+  $ref: ./path/sportId.yaml
+PathTeamId:
+  $ref: ./path/teamId.yaml
+PathVenueId:
+  $ref: ./path/venueId.yaml
+PathYearId:
+  $ref: ./path/yearId.yaml
 
 # ./query
+ActiveStatus:
+  $ref: ./query/activeStatus.yaml
 Date:
   $ref: ./query/date.yaml
 EndDate:
@@ -23,10 +37,20 @@ LeagueId:
   $ref: ./query/leagueId.yaml
 LeagueIds:
   $ref: ./query/leagueIds.yaml
+LeagueListId:
+  $ref: ./query/leagueListId.yaml
+PersonIds:
+  $ref: ./query/personIds.yaml
+RosterType:
+  $ref: ./query/rosterType.yaml
 Season:
   $ref: ./query/season.yaml
 SportId:
   $ref: ./query/sportId.yaml
+SportIds:
+  $ref: ./query/sportIds.yaml
+StandingsTypes:
+  $ref: ./query/standingsTypes.yaml
 Stats:
   $ref: ./query/stats.yaml
 StartDate:
@@ -35,3 +59,7 @@ TeamId:
   $ref: ./query/teamId.yaml
 TeamIds:
   $ref: ./query/teams.yaml
+Timecode:
+  $ref: ./query/timecode.yaml
+VenueIds:
+  $ref: ./query/venueIds.yaml

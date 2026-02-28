@@ -1,0 +1,45 @@
+title: HomeRunDerby
+description: >
+  Home Run Derby data including rounds, batters, and Statcast measurements.
+type: object
+properties:
+  info:
+    title: HomeRunDerbyInfo
+    type: object
+    properties:
+      id:
+        type: number
+      name:
+        type: string
+      season:
+        type: string
+      venue:
+        $ref: ./schemas.yaml#/Venue
+  status:
+    title: HomeRunDerbyStatus
+    type: object
+    properties:
+      state:
+        type: string
+      currentRound:
+        type: number
+      currentRoundTimeRemaining:
+        type: string
+      inProgress:
+        type: boolean
+      isComplete:
+        type: boolean
+  rounds:
+    type: array
+    items:
+      title: HomeRunDerbyRound
+      type: object
+      properties:
+        round:
+          type: number
+        numBatters:
+          type: number
+        matchups:
+          type: array
+          items:
+            type: object

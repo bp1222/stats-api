@@ -16,8 +16,14 @@ properties:
     $ref: ./schemas.yaml#/Division
   sport:
     $ref: ./schemas.yaml#/Sport
+  roundRobin:
+    title: RoundRobin
+    type: object
+    properties:
+      status:
+        type: string
   lastUpdated:
-    type: string 
+    type: string
   teamRecords:
     type: array
     items:

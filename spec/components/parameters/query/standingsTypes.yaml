@@ -1,0 +1,9 @@
+in: query
+name: standingsTypes
+required: false
+description: >
+  Type of standings to return. Available values: regularSeason, wildCard,
+  divisionLeaders, wildCardWithLeaders, firstHalf, secondHalf,
+  springTraining, postseason, byDivision, byConference, byLeague.
+schema:
+  type: string

@@ -1,0 +1,112 @@
+title: Attendance
+description: >
+  Attendance data for teams, leagues, or sports.
+type: object
+required:
+  - records
+  - aggregateTotals
+properties:
+  records:
+    type: array
+    items:
+      title: AttendanceRecord
+      type: object
+      properties:
+        team:
+          $ref: ./schemas.yaml#/Team
+        year:
+          type: string
+        gameType:
+          title: AttendanceGameType
+          type: object
+          properties:
+            id:
+              type: string
+            description:
+              type: string
+        gamesTotal:
+          type: number
+        gamesAwayTotal:
+          type: number
+        gamesHomeTotal:
+          type: number
+        openingsTotal:
+          type: number
+        openingsTotalAway:
+          type: number
+        openingsTotalHome:
+          type: number
+        openingsTotalLost:
+          type: number
+        attendanceTotal:
+          type: number
+        attendanceTotalAway:
+          type: number
+        attendanceTotalHome:
+          type: number
+        attendanceAverageAway:
+          type: number
+        attendanceAverageHome:
+          type: number
+        attendanceAverageYtd:
+          type: number
+        attendanceOpeningAverage:
+          type: number
+        attendanceHigh:
+          type: number
+        attendanceHighDate:
+          type: string
+        attendanceHighGame:
+          type: object
+          properties:
+            gamePk:
+              type: number
+            link:
+              type: string
+            content:
+              $ref: ./schemas.yaml#/Content
+            dayNight:
+              type: string
+        attendanceLow:
+          type: number
+        attendanceLowDate:
+          type: string
+        attendanceLowGame:
+          type: object
+          properties:
+            gamePk:
+              type: number
+            link:
+              type: string
+            content:
+              $ref: ./schemas.yaml#/Content
+            dayNight:
+              type: string
+  aggregateTotals:
+    title: AttendanceTotals
+    type: object
+    properties:
+      openingsTotalAway:
+        type: number
+      openingsTotalHome:
+        type: number
+      openingsTotalLost:
+        type: number
+      openingsTotalYtd:
+        type: number
+      attendanceTotal:
+        type: number
+      attendanceTotalAway:
+        type: number
+      attendanceTotalHome:
+        type: number
+      attendanceAverageAway:
+        type: number
+      attendanceAverageHome:
+        type: number
+      attendanceAverageYtd:
+        type: number
+      attendanceHigh:
+        type: number
+      attendanceHighDate:
+        type: string

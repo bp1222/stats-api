@@ -1,0 +1,21 @@
+# /v1.1/game/{gamePk}/feed/live
+get:
+  operationId: getGameLiveFeed
+  summary: Retrieves GUMBO live feed for a game
+  description: >
+    Returns the full GUMBO live feed for a game including gameData,
+    liveData (plays, linescore, boxscore, decisions).
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathGamePk
+    - $ref: ../components/parameters/parameters.yaml#/Timecode
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+    - $ref: ../components/parameters/parameters.yaml#/Hydrate
+  tags:
+    - Games
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/GameLiveFeed
