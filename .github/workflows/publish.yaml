@@ -27,7 +27,7 @@ jobs:
           run_install: true
 
       - name: Install Dependencies
-        run: pnpm ci
+        run: pnpm install
 
       - name: Lint spec
         run: pnpm lint
