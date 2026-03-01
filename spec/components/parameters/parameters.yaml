@@ -41,6 +41,8 @@ LeagueListId:
   $ref: ./query/leagueListId.yaml
 PersonIds:
   $ref: ./query/personIds.yaml
+PlayerId:
+  $ref: ./query/playerId.yaml
 RosterType:
   $ref: ./query/rosterType.yaml
 Season:

@@ -86,6 +86,12 @@ StatTypes:
   $ref: ./statTypes.yaml
 Team:
   $ref: ./team.yaml
+Transaction:
+  $ref: ./transaction.yaml
+TransactionTypeCode:
+  $ref: ./transactionTypeCode.yaml
+TransactionsResponse:
+  $ref: ./transactionsResponse.yaml
 TeamStatsResponse:
   $ref: ./teamStatsResponse.yaml
 Venue:

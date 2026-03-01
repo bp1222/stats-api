@@ -1,0 +1,35 @@
+type: string
+enum:
+  - "ASG"
+  - "SGN"
+  - "SC"
+  - "SE"
+  - "OPT"
+  - "CU"
+  - "NUM"
+  - "TR"
+  - "DFA"
+  - "SFA"
+x-enum-varnames:
+  - Assigned
+  - Signed
+  - StatusChange
+  - Selected
+  - Optioned
+  - Recalled
+  - NumberChange
+  - Trade
+  - DeclaredFreeAgency
+  - SignedAsFreeAgent
+description: >
+  Transaction type code:
+    * `ASG` - Assigned
+    * `SGN` - Signed
+    * `SC` - Status Change
+    * `SE` - Selected
+    * `OPT` - Optioned
+    * `CU` - Recalled
+    * `NUM` - Number Change
+    * `TR` - Trade
+    * `DFA` - Declared Free Agency
+    * `SFA` - Signed as Free Agent

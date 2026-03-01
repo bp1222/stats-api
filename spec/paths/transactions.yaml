@@ -1,0 +1,24 @@
+# /v1/transactions
+get:
+  operationId: getTransactions
+  summary: Retrieves transactions
+  description: >
+    Returns transactions (trades, signings, assignments, status changes, etc.).
+    Must specify at least one of teamId, playerId, date, startDate, or endDate.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/TeamId
+    - $ref: ../components/parameters/parameters.yaml#/PlayerId
+    - $ref: ../components/parameters/parameters.yaml#/Date
+    - $ref: ../components/parameters/parameters.yaml#/StartDate
+    - $ref: ../components/parameters/parameters.yaml#/EndDate
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+    - $ref: ../components/parameters/parameters.yaml#/Hydrate
+  tags:
+    - People
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/TransactionsResponse

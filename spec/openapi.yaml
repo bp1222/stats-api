@@ -83,6 +83,8 @@ paths:
     $ref: ./paths/teamRoster.yaml
   /v1/teams/{teamId}/stats:
     $ref: ./paths/teamStats.yaml
+  /v1/transactions:
+    $ref: ./paths/transactions.yaml
   /v1/venues:
     $ref: ./paths/venues.yaml
   /v1/venues/{venueId}:

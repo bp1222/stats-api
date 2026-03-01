@@ -1,0 +1,6 @@
+in: query
+name: playerId
+required: false
+description: Filter transactions by player (person) ID.
+schema:
+  type: number

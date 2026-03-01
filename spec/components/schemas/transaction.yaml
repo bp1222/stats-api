@@ -1,0 +1,41 @@
+title: Transaction
+description: >
+  A single transaction (trade, signing, assignment, status change, etc.) from the transactions API.
+type: object
+required:
+  - id
+  - person
+  - toTeam
+  - date
+  - effectiveDate
+  - typeCode
+  - typeDesc
+  - description
+properties:
+  id:
+    type: number
+    description: Unique transaction ID.
+  person:
+    $ref: ./schemas.yaml#/Person
+  toTeam:
+    $ref: ./schemas.yaml#/Team
+  fromTeam:
+    $ref: ./schemas.yaml#/Team
+    description: Present when the transaction involves moving from one team to another.
+  date:
+    type: string
+    description: Date of the transaction (YYYY-MM-DD).
+  effectiveDate:
+    type: string
+    description: Effective date of the transaction (YYYY-MM-DD).
+  resolutionDate:
+    type: string
+    description: Resolution date when applicable (YYYY-MM-DD).
+  typeCode:
+    $ref: ./schemas.yaml#/TransactionTypeCode
+  typeDesc:
+    type: string
+    description: Human-readable transaction type (e.g. Assigned, Signed, Trade, Optioned).
+  description:
+    type: string
+    description: Full text description of the transaction.

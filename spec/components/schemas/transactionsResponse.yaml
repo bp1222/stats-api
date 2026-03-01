@@ -1,0 +1,14 @@
+title: TransactionsResponse
+description: >
+  Response for GET /v1/transactions. Contains a list of transactions filtered by team, player, or date range.
+type: object
+required:
+  - transactions
+properties:
+  copyright:
+    type: string
+    description: MLB copyright notice.
+  transactions:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/Transaction
