@@ -1,6 +1,6 @@
 in: query
 name: sportId
-required: true
+required: false
 schema:
   type: number
   default: 1
