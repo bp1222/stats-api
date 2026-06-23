@@ -8,6 +8,7 @@ enum:
   - "P"
   - "O"
   - "C"
+  - "U"
 x-enum-varnames:
   - Final
   - Postponed
@@ -17,6 +18,7 @@ x-enum-varnames:
   - Pregame
   - GameOver
   - Canceled
+  - Suspended
 description: >
   Coded Game State
     * `F` - Final
@@ -27,3 +29,4 @@ description: >
     * `P` - Pregame
     * `O` - Game Over
     * `C` - Canceled
+    * `U` - Suspended

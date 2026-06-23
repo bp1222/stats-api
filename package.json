@@ -29,13 +29,13 @@
   "license": "ISC",
   "description": "Library for Typescript Client to query MLB StatsAPI",
   "devDependencies": {
-    "@openapitools/openapi-generator-cli": "^2.30.0",
-    "@redocly/cli": "^2.19.2",
-    "@types/node": "^22.19.12",
+    "@openapitools/openapi-generator-cli": "^2.39.0",
+    "@redocly/cli": "^2.34.0",
+    "@types/node": "^22.20.0",
     "path": "^0.12.7",
     "typescript": "^5.9.3",
-    "vite": "^6.4.1",
+    "vite": "^6.4.3",
     "vite-plugin-dts": "^4.5.4",
-    "yaml": "^2.8.2"
+    "yaml": "^2.9.0"
   }
 }
