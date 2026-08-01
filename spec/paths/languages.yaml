@@ -1,0 +1,17 @@
+# /v1/languages
+get:
+  operationId: getLanguages
+  summary: List languages
+  description: >
+    Returns supported language codes.
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/Language

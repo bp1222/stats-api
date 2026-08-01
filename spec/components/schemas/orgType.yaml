@@ -1,0 +1,23 @@
+type: string
+enum:
+  - "player"
+  - "team"
+  - "division"
+  - "league"
+  - "sport"
+  - "types"
+x-enum-varnames:
+  - Player
+  - Team
+  - Division
+  - League
+  - Sport
+  - Types
+description: >
+  High/low organization type:
+    * `player` - Player
+    * `team` - Team
+    * `division` - Division
+    * `league` - League
+    * `sport` - Sport
+    * `types` - List available high/low stat types

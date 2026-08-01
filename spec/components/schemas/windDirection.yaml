@@ -1,0 +1,8 @@
+title: WindDirection
+description: Wind direction from GET /v1/windDirection.
+type: object
+properties:
+  code:
+    $ref: ./schemas.yaml#/WindDirectionCode
+  description:
+    type: string

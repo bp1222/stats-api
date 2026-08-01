@@ -1,0 +1,19 @@
+title: GameContextMetrics
+description: Current win probabilities and related context metrics for a game.
+type: object
+properties:
+  game:
+    $ref: ./schemas.yaml#/Game
+  leftFieldSacFlyProbability:
+    type: object
+    additionalProperties: true
+  centerFieldSacFlyProbability:
+    type: object
+    additionalProperties: true
+  rightFieldSacFlyProbability:
+    type: object
+    additionalProperties: true
+  awayWinProbability:
+    type: number
+  homeWinProbability:
+    type: number

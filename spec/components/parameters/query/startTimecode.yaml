@@ -1,0 +1,6 @@
+in: query
+name: startTimecode
+required: true
+description: Start timecode (yyyyMMdd_HHmmss) for live feed diffPatch.
+schema:
+  type: string

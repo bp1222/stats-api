@@ -67,6 +67,8 @@ properties:
     $ref: ./schemas.yaml#/Content
   isTie:
     type: boolean
+  isFeaturedGame:
+    type: boolean
   gameNumber:
     type: number
   publicFacing:
@@ -102,4 +104,6 @@ properties:
   ifNecessary:
     type: string # enum
   ifNecessaryDescription:
+    type: string
+  gameId:
     type: string

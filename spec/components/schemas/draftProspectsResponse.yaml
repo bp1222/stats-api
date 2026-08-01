@@ -1,0 +1,18 @@
+title: DraftProspectsResponse
+description: Draft prospects list for a year.
+type: object
+properties:
+  copyright:
+    type: string
+  totalSize:
+    type: number
+  queriedSize:
+    type: number
+  returnedSize:
+    type: number
+  offset:
+    type: number
+  prospects:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/DraftPick

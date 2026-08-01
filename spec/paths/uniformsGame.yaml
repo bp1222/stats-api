@@ -1,0 +1,18 @@
+# /v1/uniforms/game
+get:
+  operationId: getGameUniforms
+  summary: Retrieves uniforms worn in games
+  description: >
+    Returns home/away uniform assets for the given game PKs.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/GamePks
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Games
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/UniformsResponse

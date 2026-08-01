@@ -1,0 +1,77 @@
+type: string
+enum:
+  - "FA"
+  - "FF"
+  - "FT"
+  - "FC"
+  - "FS"
+  - "FO"
+  - "SI"
+  - "ST"
+  - "SL"
+  - "CU"
+  - "KC"
+  - "SC"
+  - "GY"
+  - "SV"
+  - "CS"
+  - "CH"
+  - "KN"
+  - "EP"
+  - "UN"
+  - "IN"
+  - "PO"
+  - "AB"
+  - "AS"
+  - "NP"
+x-enum-varnames:
+  - Fastball
+  - Four-seam FB
+  - Two-seam FB
+  - Cutter
+  - Splitter
+  - Forkball
+  - Sinker
+  - Sweeper
+  - Slider
+  - Curveball
+  - Knuckle Curve
+  - Screwball
+  - Gyroball
+  - Slurve
+  - Slow Curve
+  - Changeup
+  - Knuckleball
+  - Eephus Pitch
+  - Unknown
+  - Intentional Ball
+  - Pitchout
+  - Automatic Ball
+  - Automatic Strike
+  - No Pitch
+description: >
+  Pitch type code:
+    * `FA` - Fastball
+    * `FF` - FourSeamFB
+    * `FT` - TwoSeamFB
+    * `FC` - Cutter
+    * `FS` - Splitter
+    * `FO` - Forkball
+    * `SI` - Sinker
+    * `ST` - Sweeper
+    * `SL` - Slider
+    * `CU` - Curveball
+    * `KC` - KnuckleCurve
+    * `SC` - Screwball
+    * `GY` - Gyroball
+    * `SV` - Slurve
+    * `CS` - SlowCurve
+    * `CH` - Changeup
+    * `KN` - Knuckleball
+    * `EP` - EephusPitch
+    * `UN` - Unknown
+    * `IN` - IntentionalBall
+    * `PO` - Pitchout
+    * `AB` - AutomaticBall
+    * `AS` - AutomaticStrike
+    * `NP` - NoPitch

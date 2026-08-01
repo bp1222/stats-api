@@ -1,0 +1,35 @@
+type: string
+enum:
+  - "Clear"
+  - "Cloudy"
+  - "Dome"
+  - "Drizzle"
+  - "Overcast"
+  - "Partly Cloudy"
+  - "Rain"
+  - "Roof Closed"
+  - "Snow"
+  - "Sunny"
+x-enum-varnames:
+  - Clear
+  - Cloudy
+  - Dome
+  - Drizzle
+  - Overcast
+  - Partly Cloudy
+  - Rain
+  - Roof Closed
+  - Snow
+  - Sunny
+description: >
+  Sky condition code:
+    * `Clear` - Clear
+    * `Cloudy` - Cloudy
+    * `Dome` - Dome
+    * `Drizzle` - Drizzle
+    * `Overcast` - Overcast
+    * `Partly Cloudy` - PartlyCloudy
+    * `Rain` - Rain
+    * `Roof Closed` - RoofClosed
+    * `Snow` - Snow
+    * `Sunny` - Sunny

@@ -1,0 +1,26 @@
+type: string
+enum:
+  - "bunt_grounder"
+  - "bunt_popup"
+  - "bunt_line_drive"
+  - "line_drive"
+  - "ground_ball"
+  - "fly_ball"
+  - "popup"
+x-enum-varnames:
+  - Bunt - Ground Ball
+  - Bunt - Popup
+  - Bunt - Line Drive
+  - Line Drive
+  - Ground Ball
+  - Fly Ball
+  - Popup
+description: >
+  Hit trajectory code:
+    * `bunt_grounder` - BuntGrounder
+    * `bunt_popup` - BuntPopup
+    * `bunt_line_drive` - BuntLineDrive
+    * `line_drive` - LineDrive
+    * `ground_ball` - GroundBall
+    * `fly_ball` - FlyBall
+    * `popup` - Popup

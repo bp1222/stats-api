@@ -1,0 +1,69 @@
+title: WinProbabilityPlay
+description: >
+  A play entry from GET /v1/game/{gamePk}/winProbability, including
+  home/away win probability and WPA (win probability added).
+type: object
+properties:
+  result:
+    type: object
+    additionalProperties: true
+  about:
+    type: object
+    additionalProperties: true
+  count:
+    type: object
+    properties:
+      balls:
+        type: number
+      strikes:
+        type: number
+      outs:
+        type: number
+  matchup:
+    type: object
+    additionalProperties: true
+  pitchIndex:
+    type: array
+    items:
+      type: number
+  actionIndex:
+    type: array
+    items:
+      type: number
+  runnerIndex:
+    type: array
+    items:
+      type: number
+  runners:
+    type: array
+    items:
+      type: object
+      additionalProperties: true
+  playEvents:
+    type: array
+    items:
+      type: object
+      additionalProperties: true
+  credits:
+    type: array
+    items:
+      type: object
+      additionalProperties: true
+  flags:
+    type: array
+    items:
+      type: object
+      additionalProperties: true
+  homeTeamWinProbability:
+    type: number
+  awayTeamWinProbability:
+    type: number
+  homeTeamWinProbabilityAdded:
+    type: number
+  contextMetrics:
+    type: object
+    additionalProperties: true
+  playEndTime:
+    type: string
+  atBatIndex:
+    type: number

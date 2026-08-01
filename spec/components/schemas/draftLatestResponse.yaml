@@ -1,0 +1,13 @@
+title: DraftLatestResponse
+description: Most recent draft pick for a year.
+type: object
+properties:
+  copyright:
+    type: string
+  pick:
+    $ref: ./schemas.yaml#/DraftPick
+  number:
+    type: number
+  nextUp:
+    type: object
+    additionalProperties: true

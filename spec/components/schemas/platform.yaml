@@ -1,0 +1,8 @@
+title: Platform
+description: Media platform from GET /v1/platforms.
+type: object
+properties:
+  platformCode:
+    type: string
+  platformDescription:
+    type: string

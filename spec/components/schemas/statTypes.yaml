@@ -56,6 +56,63 @@ enum:
   - "atGameStart"
   - "vsOpponents"
   - "sabermetricsmultiteam"
+x-enum-varnames:
+  - Projected
+  - ProjectedRos
+  - YearByYear
+  - YearByYearAdvanced
+  - YearByYearPlayoffs
+  - Standard
+  - Advanced
+  - Career
+  - CareerRegularSeason
+  - CareerAdvanced
+  - SeasonAdvanced
+  - CareerStatSplits
+  - CareerPlayoffs
+  - GameLog
+  - PlayLog
+  - PitchLog
+  - MetricLog
+  - MetricAverages
+  - PitchArsenal
+  - OutsAboveAverage
+  - ExpectedStatistics
+  - Sabermetrics
+  - SprayChart
+  - Tracking
+  - VsPlayer
+  - VsPlayerTotal
+  - VsPlayer5Y
+  - VsTeam
+  - VsTeam5Y
+  - VsTeamTotal
+  - LastXGames
+  - ByDateRange
+  - ByDateRangeAdvanced
+  - ByMonth
+  - ByMonthPlayoffs
+  - ByDayOfWeek
+  - ByDayOfWeekPlayoffs
+  - HomeAndAway
+  - HomeAndAwayPlayoffs
+  - WinLoss
+  - WinLossPlayoffs
+  - Rankings
+  - RankingsByYear
+  - StatsSingleSeason
+  - StatsSingleSeasonAdvanced
+  - HotColdZones
+  - AvailableStats
+  - OpponentsFaced
+  - GameTypeStats
+  - FirstYearStats
+  - LastYearStats
+  - StatSplits
+  - StatSplitsAdvanced
+  - AtGameStart
+  - VsOpponents
+  - Sabermetricsmultiteam
 description: >
   Stat Types:
     * `projected` - Projected stats for the current season

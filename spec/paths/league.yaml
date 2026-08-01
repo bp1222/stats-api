@@ -1,0 +1,31 @@
+# /v1/league
+get:
+  operationId: getLeague
+  summary: Retrieves leagues (singular path)
+  description: >
+    Same payload as GET /v1/leagues. The live API commonly emits link fields as
+    /api/v1/league/{id}; this collection path is the singular counterpart.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/SportId
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/LeagueIds
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            title: Leagues
+            type: object
+            required:
+              - leagues
+            properties:
+              copyright:
+                type: string
+              leagues:
+                type: array
+                items:
+                  $ref: ../components/schemas/schemas.yaml#/League

@@ -1,0 +1,20 @@
+# /v1/schedule/games/tied
+get:
+  operationId: getScheduleTied
+  summary: Retrieves tied games schedule
+  description: >
+    Returns games that ended in a tie for the given season.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/GameTypes
+    - $ref: ../components/parameters/parameters.yaml#/Hydrate
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Schedule
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/Schedule

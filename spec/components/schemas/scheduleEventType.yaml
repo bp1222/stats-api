@@ -1,0 +1,8 @@
+title: ScheduleEventType
+description: Schedule event type from GET /v1/scheduleEventTypes.
+type: object
+properties:
+  code:
+    type: string
+  name:
+    type: string

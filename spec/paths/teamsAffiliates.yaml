@@ -1,0 +1,21 @@
+# /v1/teams/affiliates
+get:
+  operationId: getTeamsAffiliates
+  summary: Retrieves team affiliates
+  description: >
+    Returns minor-league affiliates for the given MLB team IDs.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/TeamIdsRequired
+    - $ref: ../components/parameters/parameters.yaml#/SportId
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/Hydrate
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/TeamsResponse

@@ -1,0 +1,18 @@
+# /v1/game/{gamePk}/content
+get:
+  operationId: getGameContent
+  summary: Retrieves game content
+  description: >
+    Returns editorial, media/EPG, highlights, and summary flags for a game.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathGamePk
+    - $ref: ../components/parameters/parameters.yaml#/HighlightLimit
+  tags:
+    - Games
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/GameContent

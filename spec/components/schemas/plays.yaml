@@ -72,11 +72,11 @@ properties:
             batter:
               $ref: ./schemas.yaml#/Person
             batSide:
-              $ref: ./schemas.yaml#/CodeDescription
+              $ref: ./schemas.yaml#/BatSide
             pitcher:
               $ref: ./schemas.yaml#/Person
             pitchHand:
-              $ref: ./schemas.yaml#/CodeDescription
+              $ref: ./schemas.yaml#/PitchHand
         atBatIndex:
           type: number
         playEndTime:

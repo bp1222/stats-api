@@ -1,0 +1,22 @@
+# /v1/schedule/postseason/series
+get:
+  operationId: getSchedulePostseasonSeries
+  summary: Retrieves postseason schedule by series
+  description: >
+    Returns postseason games grouped by series (Wild Card, Division, LCS, World Series).
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/SportId
+    - $ref: ../components/parameters/parameters.yaml#/TeamId
+    - $ref: ../components/parameters/parameters.yaml#/GameTypes
+    - $ref: ../components/parameters/parameters.yaml#/SeriesNumber
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Schedule
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/SchedulePostseasonSeries

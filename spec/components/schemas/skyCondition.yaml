@@ -1,0 +1,8 @@
+title: SkyCondition
+description: Sky/weather condition from GET /v1/sky.
+type: object
+properties:
+  code:
+    $ref: ./schemas.yaml#/SkyConditionCode
+  description:
+    type: string

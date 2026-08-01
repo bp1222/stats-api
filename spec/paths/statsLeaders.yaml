@@ -1,0 +1,39 @@
+# /v1/stats/leaders
+get:
+  operationId: getStatsLeaders
+  summary: Retrieves statistical leaders
+  description: >
+    Returns ranked leaders for one or more leader categories.
+    Use GET /v1/leagueLeaderTypes for valid leaderCategories values.
+    When omitting season for all-time leaders, include statType=statsSingleSeason.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/LeaderCategories
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/SportId
+    - $ref: ../components/parameters/parameters.yaml#/LeagueId
+    - $ref: ../components/parameters/parameters.yaml#/StatGroup
+    - $ref: ../components/parameters/parameters.yaml#/LeaderGameTypes
+    - $ref: ../components/parameters/parameters.yaml#/Limit
+    - $ref: ../components/parameters/parameters.yaml#/Hydrate
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+    - name: statType
+      in: query
+      required: false
+      description: Stat type for all-time leaders (commonly statsSingleSeason).
+      schema:
+        type: string
+    - name: playerPool
+      in: query
+      required: false
+      description: Player pool filter (e.g. ALL, QUALIFIED).
+      schema:
+        type: string
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/StatsLeadersResponse

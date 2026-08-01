@@ -1,0 +1,8 @@
+title: BatSide
+description: Batter handedness.
+type: object
+properties:
+  code:
+    $ref: ./schemas.yaml#/BatSideCode
+  description:
+    type: string

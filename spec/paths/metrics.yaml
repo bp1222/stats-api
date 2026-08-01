@@ -1,0 +1,17 @@
+# /v1/metrics
+get:
+  operationId: getMetrics
+  summary: List metrics
+  description: >
+    Returns advanced metric identifiers.
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/Metric

@@ -1,0 +1,29 @@
+title: HighLowType
+description: Available high/low stat type from GET /v1/highLow/types.
+type: object
+properties:
+  name:
+    type: string
+  lookupParam:
+    type: string
+  isCounting:
+    type: boolean
+  label:
+    type: string
+  statGroups:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/StatGroup
+  orgTypes:
+    type: array
+    items:
+      type: string
+  highLowTypes:
+    type: array
+    items:
+      type: string
+  streakLevels:
+    type: array
+    items:
+      type: object
+      additionalProperties: true

@@ -1,0 +1,10 @@
+title: ContentEpg
+description: Named EPG grouping (e.g. MLBTV) with broadcast items.
+type: object
+properties:
+  title:
+    type: string
+  items:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/ContentEpgItem

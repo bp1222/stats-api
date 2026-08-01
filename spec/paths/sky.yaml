@@ -1,0 +1,17 @@
+# /v1/sky
+get:
+  operationId: getSkyConditions
+  summary: List sky conditions
+  description: >
+    Returns sky/weather condition codes.
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/SkyCondition

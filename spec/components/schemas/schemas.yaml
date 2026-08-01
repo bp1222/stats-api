@@ -2,6 +2,14 @@ Attendance:
   $ref: ./attendance.yaml
 Award:
   $ref: ./award.yaml
+AwardDefinition:
+  $ref: ./awardDefinition.yaml
+AwardsListResponse:
+  $ref: ./awardsListResponse.yaml
+BatSide:
+  $ref: ./batSide.yaml
+BatSideCode:
+  $ref: ./batSideCode.yaml
 BattingStats:
   $ref: ./battingStats.yaml
 Boxscore:
@@ -10,22 +18,54 @@ BoxscoreTeam:
   $ref: ./boxscoreTeam.yaml
 Coach:
   $ref: ./coach.yaml
+Conference:
+  $ref: ./conference.yaml
+ConferencesResponse:
+  $ref: ./conferencesResponse.yaml
 Content:
   $ref: ./content.yaml
-CodeDescription:
-  $ref: ./codeDescription.yaml
+ContentEditorialItem:
+  $ref: ./contentEditorialItem.yaml
+ContentEpg:
+  $ref: ./contentEpg.yaml
+ContentEpgItem:
+  $ref: ./contentEpgItem.yaml
+ContentHighlight:
+  $ref: ./contentHighlight.yaml
+ContentImage:
+  $ref: ./contentImage.yaml
+ContentKeyword:
+  $ref: ./contentKeyword.yaml
+ContentPlayback:
+  $ref: ./contentPlayback.yaml
 Division:
   $ref: ./division.yaml
 DivisionStandings:
   $ref: ./divisionStandings.yaml
+DraftLatestResponse:
+  $ref: ./draftLatestResponse.yaml
 DraftPick:
   $ref: ./draftPick.yaml
+DraftProspectsResponse:
+  $ref: ./draftProspectsResponse.yaml
 DraftRound:
   $ref: ./draftRound.yaml
+DraftType:
+  $ref: ./draftType.yaml
+EventType:
+  $ref: ./eventType.yaml
 FieldingStats:
   $ref: ./fieldingStats.yaml
+FreeAgent:
+  $ref: ./freeAgent.yaml
+FreeAgentsResponse:
+  $ref: ./freeAgentsResponse.yaml
 Game:
   $ref: ./game.yaml
+GameContent:
+  $ref: ./gameContent.yaml
+GameContextMetrics:
+  $ref: ./gameContextMetrics.yaml
 GameLiveFeed:
   $ref: ./gameLiveFeed.yaml
 GameOfficial:
@@ -34,38 +74,80 @@ GamePace:
   $ref: ./gamePace.yaml
 GamePaceMetrics:
   $ref: ./gamePaceMetrics.yaml
-GameTeam:
-  $ref: ./gameTeam.yaml
+GameStatus:
+  $ref: ./gameStatus.yaml
 GameStatusCode:
   $ref: ./gameStatusCode.yaml
+GameTeam:
+  $ref: ./gameTeam.yaml
 GameType:
   $ref: ./gameType.yaml
+GameTypeInfo:
+  $ref: ./gameTypeInfo.yaml
+GameUniforms:
+  $ref: ./gameUniforms.yaml
+HighLowResponse:
+  $ref: ./highLowResponse.yaml
+HighLowType:
+  $ref: ./highLowType.yaml
+HitTrajectory:
+  $ref: ./hitTrajectory.yaml
+HitTrajectoryCode:
+  $ref: ./hitTrajectoryCode.yaml
 HomeRunDerby:
   $ref: ./homeRunDerby.yaml
 Inning:
   $ref: ./inning.yaml
+JobType:
+  $ref: ./jobType.yaml
+JsonPatchOperation:
+  $ref: ./jsonPatchOperation.yaml
+Language:
+  $ref: ./language.yaml
+League:
+  $ref: ./league.yaml
+LeagueLeaderCategory:
+  $ref: ./leagueLeaderCategory.yaml
+LeagueRecord:
+  $ref: ./leagueRecord.yaml
 Linescore:
   $ref: ./linescore.yaml
 LinescoreTeam:
   $ref: ./linescoreTeam.yaml
-League:
-  $ref: ./league.yaml
-LeagueRecord:
-  $ref: ./leagueRecord.yaml
+LiveFeedDiffPatch:
+  $ref: ./liveFeedDiffPatch.yaml
+LogicalEvent:
+  $ref: ./logicalEvent.yaml
+Metric:
+  $ref: ./metric.yaml
 Official:
   $ref: ./official.yaml
+OrgType:
+  $ref: ./orgType.yaml
 PeopleResponse:
   $ref: ./peopleResponse.yaml
 Person:
   $ref: ./person.yaml
-PersonStatSplit:
-  $ref: ./personStatSplit.yaml
 PersonStatsItem:
   $ref: ./personStatsItem.yaml
+PersonStatSplit:
+  $ref: ./personStatSplit.yaml
 PersonStatsResponse:
   $ref: ./personStatsResponse.yaml
+PitchCode:
+  $ref: ./pitchCode.yaml
+PitchHand:
+  $ref: ./pitchHand.yaml
+PitchHandCode:
+  $ref: ./pitchHandCode.yaml
 PitchingStats:
   $ref: ./pitchingStats.yaml
+PitchType:
+  $ref: ./pitchType.yaml
+PitchTypeCode:
+  $ref: ./pitchTypeCode.yaml
+Platform:
+  $ref: ./platform.yaml
 Player:
   $ref: ./player.yaml
 Plays:
@@ -74,25 +156,81 @@ Position:
   $ref: ./position.yaml
 Record:
   $ref: ./record.yaml
-Seasons:
-  $ref: ./seasons.yaml
-Season:
-  $ref: ./season.yaml
+ReviewReason:
+  $ref: ./reviewReason.yaml
+ReviewReasonCode:
+  $ref: ./reviewReasonCode.yaml
+RosterResponse:
+  $ref: ./rosterResponse.yaml
+RosterType:
+  $ref: ./rosterType.yaml
+RosterTypeCode:
+  $ref: ./rosterTypeCode.yaml
 Schedule:
   $ref: ./schedule.yaml
+ScheduleEventType:
+  $ref: ./scheduleEventType.yaml
+SchedulePostseasonSeries:
+  $ref: ./schedulePostseasonSeries.yaml
+Season:
+  $ref: ./season.yaml
+Seasons:
+  $ref: ./seasons.yaml
+SituationCode:
+  $ref: ./situationCode.yaml
+SkyCondition:
+  $ref: ./skyCondition.yaml
+SkyConditionCode:
+  $ref: ./skyConditionCode.yaml
 Sport:
   $ref: ./sport.yaml
+StandingsType:
+  $ref: ./standingsType.yaml
+StandingsTypeCode:
+  $ref: ./standingsTypeCode.yaml
+StatGroup:
+  $ref: ./statGroup.yaml
+StatGroupCode:
+  $ref: ./statGroupCode.yaml
+StatsLeader:
+  $ref: ./statsLeader.yaml
+StatsLeaderCategory:
+  $ref: ./statsLeaderCategory.yaml
+StatsLeadersResponse:
+  $ref: ./statsLeadersResponse.yaml
+StatTypeInfo:
+  $ref: ./statTypeInfo.yaml
 StatTypes:
   $ref: ./statTypes.yaml
+StreakType:
+  $ref: ./streakType.yaml
 Team:
   $ref: ./team.yaml
-Transaction:
-  $ref: ./transaction.yaml
-TransactionTypeCode:
-  $ref: ./transactionTypeCode.yaml
-TransactionsResponse:
-  $ref: ./transactionsResponse.yaml
+TeamLeadersResponse:
+  $ref: ./teamLeadersResponse.yaml
+TeamsResponse:
+  $ref: ./teamsResponse.yaml
 TeamStatsResponse:
   $ref: ./teamStatsResponse.yaml
+TeamUniforms:
+  $ref: ./teamUniforms.yaml
+Transaction:
+  $ref: ./transaction.yaml
+TransactionsResponse:
+  $ref: ./transactionsResponse.yaml
+TransactionTypeCode:
+  $ref: ./transactionTypeCode.yaml
+UniformAsset:
+  $ref: ./uniformAsset.yaml
+UniformAssetType:
+  $ref: ./uniformAssetType.yaml
+UniformsResponse:
+  $ref: ./uniformsResponse.yaml
 Venue:
   $ref: ./venue.yaml
+WindDirection:
+  $ref: ./windDirection.yaml
+WindDirectionCode:
+  $ref: ./windDirectionCode.yaml
+WinProbabilityPlay:
+  $ref: ./winProbabilityPlay.yaml

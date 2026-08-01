@@ -1,0 +1,21 @@
+# /v1/game/changes
+get:
+  operationId: getGameChanges
+  summary: Retrieves recently changed games
+  description: >
+    Returns schedule-shaped results for games updated since the given timestamp.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/UpdatedSince
+    - $ref: ../components/parameters/parameters.yaml#/SportId
+    - $ref: ../components/parameters/parameters.yaml#/GameTypes
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Games
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/Schedule

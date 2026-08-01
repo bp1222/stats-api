@@ -1,0 +1,12 @@
+title: ContentPlayback
+description: A media playback URL variant for a highlight or article media item.
+type: object
+properties:
+  name:
+    type: string
+  url:
+    type: string
+  width:
+    type: string
+  height:
+    type: string

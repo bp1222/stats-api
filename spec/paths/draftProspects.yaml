@@ -1,0 +1,20 @@
+# /v1/draft/prospects/{yearId}
+get:
+  operationId: getDraftProspects
+  summary: Retrieves draft prospects
+  description: >
+    Returns draft prospects for a year.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathYearId
+    - $ref: ../components/parameters/parameters.yaml#/Limit
+    - $ref: ../components/parameters/parameters.yaml#/Offset
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/DraftProspectsResponse

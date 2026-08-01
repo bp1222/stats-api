@@ -1,0 +1,17 @@
+# /v1/reviewReasons
+get:
+  operationId: getReviewReasons
+  summary: List review reasons
+  description: >
+    Returns replay review reason codes.
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/ReviewReason

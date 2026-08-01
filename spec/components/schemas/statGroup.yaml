@@ -1,0 +1,8 @@
+title: StatGroup
+description: Stat group from GET /v1/statGroups.
+type: object
+required:
+  - displayName
+properties:
+  displayName:
+    $ref: ./schemas.yaml#/StatGroupCode

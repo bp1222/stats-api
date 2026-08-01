@@ -8,6 +8,10 @@ enum:
   - "L"
   - "W"
   - "A"
+  - "C"
+  - "N"
+  - "P"
+  - "I"
 x-enum-varnames:
   - Exhibition
   - SpringTraining
@@ -17,6 +21,10 @@ x-enum-varnames:
   - LeagueChampionshipSeries
   - WorldSeries
   - AllStar
+  - Championship
+  - NineteenthCenturySeries
+  - Playoffs
+  - Intrasquad
 description: >
   Game Type:
     * `E` - Exhibition
@@ -27,3 +35,7 @@ description: >
     * `L` - League Championship Series
     * `W` - World Series
     * `A` - All-Star Game
+    * `C` - Championship
+    * `N` - Nineteenth Century Series
+    * `P` - Playoffs
+    * `I` - Intrasquad

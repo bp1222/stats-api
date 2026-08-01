@@ -1,0 +1,21 @@
+# /v1.1/game/{gamePk}/feed/live/timestamps
+get:
+  operationId: getGameLiveFeedTimestamps
+  summary: Retrieves live feed timestamps
+  description: >
+    Returns available timecode stamps for the GUMBO live feed, usable with the
+    timecode query parameter on live feed and related game endpoints.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathGamePk
+  tags:
+    - Games
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              description: Timecode in yyyyMMdd_HHmmss form

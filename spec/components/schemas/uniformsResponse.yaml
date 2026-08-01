@@ -1,0 +1,12 @@
+title: UniformsResponse
+description: Team or game uniforms response.
+type: object
+properties:
+  copyright:
+    type: string
+  uniforms:
+    type: array
+    items:
+      oneOf:
+        - $ref: ./schemas.yaml#/TeamUniforms
+        - $ref: ./schemas.yaml#/GameUniforms

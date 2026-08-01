@@ -1,0 +1,28 @@
+# /v1/teams/history
+get:
+  operationId: getTeamsHistory
+  summary: Retrieves team history
+  description: >
+    Returns historical team records for the given team IDs across seasons.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/TeamIdsRequired
+    - name: startSeason
+      in: query
+      required: false
+      schema:
+        type: string
+    - name: endSeason
+      in: query
+      required: false
+      schema:
+        type: string
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/TeamsResponse

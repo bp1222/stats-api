@@ -1,0 +1,36 @@
+title: ContentEpgItem
+description: Electronic program guide / broadcast feed item.
+type: object
+properties:
+  id:
+    type: number
+  contentId:
+    type: string
+  mediaId:
+    type: string
+  mediaFeedType:
+    type: string
+  mediaFeedSubType:
+    type: string
+  callLetters:
+    type: string
+  gameDate:
+    type: string
+  mediaState:
+    type: string
+  freeGame:
+    type: boolean
+  espnAuthRequired:
+    type: boolean
+  espn2AuthRequired:
+    type: boolean
+  tbsAuthRequired:
+    type: boolean
+  fs1AuthRequired:
+    type: boolean
+  mlbnAuthRequired:
+    type: boolean
+  foxAuthRequired:
+    type: boolean
+  abcAuthRequired:
+    type: boolean

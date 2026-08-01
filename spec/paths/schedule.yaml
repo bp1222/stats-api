@@ -14,6 +14,21 @@ get:
     - $ref: ../components/parameters/parameters.yaml#/Hydrate
     - $ref: ../components/parameters/parameters.yaml#/LeagueIds
     - $ref: ../components/parameters/parameters.yaml#/TeamIds
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/Date
+    - $ref: ../components/parameters/parameters.yaml#/VenueIds
+    - name: opponentId
+      in: query
+      required: false
+      description: Opponent team ID filter.
+      schema:
+        type: integer
+    - name: scheduleType
+      in: query
+      required: false
+      description: Schedule type filter.
+      schema:
+        type: string
   tags:
     - Schedule
   responses:

@@ -1,0 +1,6 @@
+in: query
+name: highlightLimit
+required: false
+description: Maximum number of highlights to include in game content.
+schema:
+  type: integer

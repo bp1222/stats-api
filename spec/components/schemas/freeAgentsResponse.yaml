@@ -1,0 +1,11 @@
+title: FreeAgentsResponse
+type: object
+properties:
+  copyright:
+    type: string
+  season:
+    type: string
+  freeAgents:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/FreeAgent

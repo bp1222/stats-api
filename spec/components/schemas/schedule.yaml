@@ -9,6 +9,8 @@ required:
   - totalGamesInProgress
   - dates
 properties:
+  copyright:
+    type: string
   totalItems:
     type: number
   totalEvents:
@@ -16,6 +18,8 @@ properties:
   totalGames:
     type: number
   totalGamesInProgress:
+    type: number
+  wait:
     type: number
   dates:
     type: array

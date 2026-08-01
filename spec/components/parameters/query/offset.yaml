@@ -1,0 +1,6 @@
+in: query
+name: offset
+required: false
+description: Result offset for pagination.
+schema:
+  type: integer

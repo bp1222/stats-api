@@ -1,0 +1,16 @@
+title: GameStatus
+description: >
+  Full game status combination from GET /v1/gameStatus (abstract/coded/detailed).
+  Distinct from GameStatusCode, which is the scalar codedGameState enum.
+type: object
+properties:
+  abstractGameState:
+    type: string
+  codedGameState:
+    $ref: ./schemas.yaml#/GameStatusCode
+  detailedState:
+    type: string
+  statusCode:
+    type: string
+  abstractGameCode:
+    type: string

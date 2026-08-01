@@ -1,0 +1,17 @@
+# /v1/situationCodes
+get:
+  operationId: getSituationCodes
+  summary: List situation codes
+  description: >
+    Returns situation codes for stat splits (sitCodes).
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/SituationCode

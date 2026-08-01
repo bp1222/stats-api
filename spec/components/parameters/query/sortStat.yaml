@@ -1,0 +1,8 @@
+in: query
+name: sortStat
+required: false
+description: >
+  Stat to sort by for high/low queries (e.g. homeRuns, atBats).
+  Use GET /v1/highLow/types for valid lookupParam values.
+schema:
+  type: string

@@ -1,0 +1,8 @@
+title: LeagueLeaderCategory
+description: Leader category from GET /v1/leagueLeaderTypes (use as leaderCategories).
+type: object
+required:
+  - displayName
+properties:
+  displayName:
+    type: string

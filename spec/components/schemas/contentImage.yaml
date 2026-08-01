@@ -1,0 +1,15 @@
+title: ContentImage
+description: Image metadata for editorial or highlight content.
+type: object
+properties:
+  title:
+    type: string
+  altText:
+    type: string
+  templateUrl:
+    type: string
+  cuts:
+    type: array
+    items:
+      type: object
+      additionalProperties: true

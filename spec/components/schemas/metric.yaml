@@ -1,0 +1,8 @@
+title: Metric
+description: Metric identifier from GET /v1/metrics.
+type: object
+properties:
+  name:
+    type: string
+  metricId:
+    type: number

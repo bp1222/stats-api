@@ -1,0 +1,8 @@
+title: LiveFeedDiffPatch
+description: Diff patch segment between two live-feed timecodes.
+type: object
+properties:
+  diff:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/JsonPatchOperation

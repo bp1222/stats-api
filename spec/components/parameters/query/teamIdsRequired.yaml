@@ -1,0 +1,6 @@
+in: query
+name: teamIds
+required: true
+description: Comma-separated team IDs.
+schema:
+  type: string

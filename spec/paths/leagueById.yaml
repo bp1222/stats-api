@@ -1,0 +1,27 @@
+# /v1/league/{leagueId}
+get:
+  operationId: getLeagueByIdSingular
+  summary: Retrieves a league by ID (singular path)
+  description: >
+    Same payload as GET /v1/leagues/{leagueId}. Prefer this path when following
+    link fields from schedule/team/person responses, which use /api/v1/league/{id}.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathLeagueId
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            title: LeaguesResponse
+            type: object
+            properties:
+              copyright:
+                type: string
+              leagues:
+                type: array
+                items:
+                  $ref: ../components/schemas/schemas.yaml#/League

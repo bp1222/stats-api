@@ -1,0 +1,20 @@
+# /v1/jobs
+get:
+  operationId: getJobs
+  summary: Retrieves jobs roster
+  description: >
+    Returns people for a job type (e.g. umpires). Use GET /v1/jobTypes for codes.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/JobType
+    - $ref: ../components/parameters/parameters.yaml#/SportId
+    - $ref: ../components/parameters/parameters.yaml#/Date
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/RosterResponse

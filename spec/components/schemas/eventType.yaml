@@ -1,0 +1,14 @@
+title: EventType
+description: Play/event type from GET /v1/eventTypes.
+type: object
+properties:
+  code:
+    type: string
+  description:
+    type: string
+  plateAppearance:
+    type: boolean
+  hit:
+    type: boolean
+  baseRunningEvent:
+    type: boolean

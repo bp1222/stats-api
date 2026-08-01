@@ -1,0 +1,24 @@
+title: PitchCode
+description: Pitch result code metadata from GET /v1/pitchCodes.
+type: object
+properties:
+  code:
+    type: string
+  description:
+    type: string
+  swingStatus:
+    type: boolean
+  swingMissStatus:
+    type: boolean
+  swingContactStatus:
+    type: boolean
+  sortOrder:
+    type: number
+  strikeStatus:
+    type: boolean
+  ballStatus:
+    type: boolean
+  pitchStatus:
+    type: boolean
+  pitchResultText:
+    type: string

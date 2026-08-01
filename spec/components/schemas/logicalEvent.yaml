@@ -1,0 +1,6 @@
+title: LogicalEvent
+description: Logical event code from GET /v1/logicalEvents (live-feed metadata).
+type: object
+properties:
+  code:
+    type: string

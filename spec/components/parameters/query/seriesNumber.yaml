@@ -1,0 +1,6 @@
+in: query
+name: seriesNumber
+required: false
+description: Postseason series number filter.
+schema:
+  type: integer

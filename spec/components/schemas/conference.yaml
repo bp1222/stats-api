@@ -1,0 +1,20 @@
+title: Conference
+description: League conference (primarily used in minor leagues).
+type: object
+properties:
+  id:
+    type: number
+  name:
+    type: string
+  link:
+    type: string
+  abbreviation:
+    type: string
+  hasWildcard:
+    type: boolean
+  nameShort:
+    type: string
+  league:
+    $ref: ./schemas.yaml#/League
+  sport:
+    $ref: ./schemas.yaml#/Sport

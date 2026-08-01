@@ -1,0 +1,27 @@
+title: GameUniforms
+type: object
+properties:
+  gamePk:
+    type: number
+  home:
+    type: object
+    properties:
+      id:
+        type: number
+      teamName:
+        type: string
+      uniformAssets:
+        type: array
+        items:
+          $ref: ./schemas.yaml#/UniformAsset
+  away:
+    type: object
+    properties:
+      id:
+        type: number
+      teamName:
+        type: string
+      uniformAssets:
+        type: array
+        items:
+          $ref: ./schemas.yaml#/UniformAsset

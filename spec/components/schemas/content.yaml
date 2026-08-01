@@ -1,6 +1,8 @@
 title: Content
 description: >
-  Links to game-related content (highlights, editorials, etc.). Present on schedule games.
+  Link stub to game-related content present on schedule/game objects.
+  For the full editorial/media/highlights payload, use GET /v1/game/{gamePk}/content
+  (GameContent schema).
 type: object
 properties:
   link:

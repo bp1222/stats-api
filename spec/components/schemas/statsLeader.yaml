@@ -1,0 +1,20 @@
+title: StatsLeader
+description: A single ranked leader entry.
+type: object
+properties:
+  rank:
+    type: number
+  value:
+    type: string
+  team:
+    $ref: ./schemas.yaml#/Team
+  league:
+    $ref: ./schemas.yaml#/League
+  person:
+    $ref: ./schemas.yaml#/Person
+  sport:
+    $ref: ./schemas.yaml#/Sport
+  season:
+    type: string
+  numTeams:
+    type: number

@@ -58,7 +58,7 @@ properties:
   team:
     $ref: ./schemas.yaml#/Team
   draftType:
-    $ref: ./schemas.yaml#/CodeDescription
+    $ref: ./schemas.yaml#/DraftType
   isDrafted:
     type: boolean
   isPass:

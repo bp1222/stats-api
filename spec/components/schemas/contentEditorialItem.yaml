@@ -1,0 +1,44 @@
+title: ContentEditorialItem
+description: Editorial article (preview, recap, wrap) embedded in game content.
+type: object
+properties:
+  type:
+    type: string
+  state:
+    type: string
+  date:
+    type: string
+  headline:
+    type: string
+  seoTitle:
+    type: string
+  slug:
+    type: string
+  blurb:
+    type: string
+  keywordsAll:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/ContentKeyword
+  keywordsDisplay:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/ContentKeyword
+  image:
+    $ref: ./schemas.yaml#/ContentImage
+  seoKeywords:
+    type: string
+  body:
+    type: string
+  contributors:
+    type: array
+    items:
+      type: object
+      additionalProperties: true
+  photo:
+    $ref: ./schemas.yaml#/ContentImage
+  url:
+    type: string
+  media:
+    type: object
+    additionalProperties: true

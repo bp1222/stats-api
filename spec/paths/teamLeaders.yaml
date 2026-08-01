@@ -1,0 +1,23 @@
+# /v1/teams/{teamId}/leaders
+get:
+  operationId: getTeamLeaders
+  summary: Retrieves team statistical leaders
+  description: >
+    Returns leaders for a single team. Use GET /v1/leagueLeaderTypes for categories.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathTeamId
+    - $ref: ../components/parameters/parameters.yaml#/LeaderCategories
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/LeaderGameTypes
+    - $ref: ../components/parameters/parameters.yaml#/Limit
+    - $ref: ../components/parameters/parameters.yaml#/Hydrate
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/TeamLeadersResponse

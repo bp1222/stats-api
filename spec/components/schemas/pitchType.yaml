@@ -1,0 +1,8 @@
+title: PitchType
+description: Pitch type from GET /v1/pitchTypes.
+type: object
+properties:
+  code:
+    $ref: ./schemas.yaml#/PitchTypeCode
+  description:
+    type: string

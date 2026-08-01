@@ -1,0 +1,9 @@
+title: ConferencesResponse
+type: object
+properties:
+  copyright:
+    type: string
+  conferences:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/Conference

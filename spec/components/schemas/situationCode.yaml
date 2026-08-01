@@ -1,0 +1,20 @@
+title: SituationCode
+description: Situation code metadata from GET /v1/situationCodes (for statSplits sitCodes).
+type: object
+properties:
+  code:
+    type: string
+  sortOrder:
+    type: number
+  navigationMenu:
+    type: string
+  description:
+    type: string
+  team:
+    type: boolean
+  batting:
+    type: boolean
+  fielding:
+    type: boolean
+  pitching:
+    type: boolean

@@ -1,0 +1,45 @@
+title: SchedulePostseasonSeries
+description: Postseason schedule grouped by series (GET /v1/schedule/postseason/series).
+type: object
+properties:
+  copyright:
+    type: string
+  totalItems:
+    type: number
+  totalEvents:
+    type: number
+  totalGames:
+    type: number
+  totalGamesInProgress:
+    type: number
+  wait:
+    type: number
+  series:
+    type: array
+    items:
+      title: PostseasonSeriesGroup
+      type: object
+      properties:
+        series:
+          type: object
+          properties:
+            id:
+              type: string
+            sortNumber:
+              type: number
+            isDefault:
+              type: boolean
+            gameType:
+              $ref: ./schemas.yaml#/GameType
+        totalItems:
+          type: number
+        totalGames:
+          type: number
+        totalGamesInProgress:
+          type: number
+        sortOrder:
+          type: number
+        games:
+          type: array
+          items:
+            $ref: ./schemas.yaml#/Game

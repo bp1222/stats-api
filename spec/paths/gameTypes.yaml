@@ -1,0 +1,16 @@
+get:
+  operationId: getGameTypes
+  summary: List game types
+  description: >
+    Returns metadata for all game types (R, S, F, D, L, W, A, ...).
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/GameTypeInfo

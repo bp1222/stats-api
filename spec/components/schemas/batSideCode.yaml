@@ -1,0 +1,14 @@
+type: string
+enum:
+  - "R"
+  - "L"
+  - "S"
+x-enum-varnames:
+  - Right
+  - Left
+  - Switch
+description: >
+  Batter handedness code:
+    * `R` - Right
+    * `L` - Left
+    * `S` - Switch

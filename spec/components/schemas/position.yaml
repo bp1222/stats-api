@@ -1,6 +1,7 @@
 title: Position
 description: >
-  Position (e.g. primaryPosition on a person).
+  Player/fielder position. Embedded forms (e.g. primaryPosition) typically
+  include code/name/type/abbreviation; GET /v1/positions returns the fuller shape.
 type: object
 properties:
   code:
@@ -11,3 +12,21 @@ properties:
     type: string
   abbreviation:
     type: string
+  shortName:
+    type: string
+  fullName:
+    type: string
+  abbrev:
+    type: string
+  formalName:
+    type: string
+  displayName:
+    type: string
+  pitcher:
+    type: boolean
+  gamePosition:
+    type: boolean
+  fielder:
+    type: boolean
+  outfield:
+    type: boolean

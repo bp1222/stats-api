@@ -1,0 +1,86 @@
+type: string
+enum:
+  - "A"
+  - "F"
+  - "C"
+  - "H"
+  - "O"
+  - "D"
+  - "T"
+  - "J"
+  - "I"
+  - "P"
+  - "E"
+  - "M"
+  - "U"
+  - "B"
+  - "R"
+  - "Y"
+  - "S"
+  - "N"
+  - "V"
+  - "Q"
+  - "K"
+  - "G"
+  - "L"
+  - "X"
+  - "W"
+  - "Z"
+  - "AA"
+x-enum-varnames:
+  - Tag play
+  - Close play at 1st
+  - Force play
+  - Home run
+  - Fair/foul in outfield
+  - Catch/drop in outfield
+  - Trap play in outfield
+  - Pitch result
+  - Hit by pitch
+  - Home-plate collision
+  - Slide interference
+  - Timing Play
+  - Tag-up play
+  - Touching a base
+  - Passing runners
+  - Runner placement
+  - Stadium boundary call
+  - Fan interference
+  - Catcher interference
+  - Rules check
+  - Record keeping
+  - Grounds rule
+  - Multiple issues
+  - Other
+  - Defensive Shift
+  - Check Swing
+  - Runner Abandonment
+description: >
+  Review reason code:
+    * `A` - TagPlay
+    * `F` - ClosePlayAt1st
+    * `C` - ForcePlay
+    * `H` - HomeRun
+    * `O` - FairFoulInOutfield
+    * `D` - CatchDropInOutfield
+    * `T` - TrapPlayInOutfield
+    * `J` - PitchResult
+    * `I` - HitByPitch
+    * `P` - HomePlateCollision
+    * `E` - SlideInterference
+    * `M` - TimingPlay
+    * `U` - TagUpPlay
+    * `B` - TouchingABase
+    * `R` - PassingRunners
+    * `Y` - RunnerPlacement
+    * `S` - StadiumBoundaryCall
+    * `N` - FanInterference
+    * `V` - CatcherInterference
+    * `Q` - RulesCheck
+    * `K` - RecordKeeping
+    * `G` - GroundsRule
+    * `L` - MultipleIssues
+    * `X` - Other
+    * `W` - DefensiveShift
+    * `Z` - CheckSwing
+    * `AA` - RunnerAbandonment

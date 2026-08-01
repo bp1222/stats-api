@@ -1,0 +1,7 @@
+in: path
+name: orgType
+required: true
+description: >
+  Organization type for high/low stats. Use types to list available sortStat values.
+schema:
+  $ref: ../../schemas/schemas.yaml#/OrgType

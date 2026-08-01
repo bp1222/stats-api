@@ -1,0 +1,22 @@
+# /v1/game/{gamePk}/winProbability
+get:
+  operationId: getGameWinProbability
+  summary: Retrieves play-by-play win probability
+  description: >
+    Returns an array of plays with home/away win probability and WPA for each play.
+    For current win probability only, prefer GET /v1/game/{gamePk}/contextMetrics.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathGamePk
+    - $ref: ../components/parameters/parameters.yaml#/Timecode
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Games
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/WinProbabilityPlay

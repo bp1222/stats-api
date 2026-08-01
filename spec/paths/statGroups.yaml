@@ -1,0 +1,16 @@
+get:
+  operationId: getStatGroups
+  summary: List stat groups
+  description: >
+    Returns available stat groups (hitting, pitching, fielding, ...).
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/StatGroup

@@ -1,0 +1,11 @@
+title: UniformAssetType
+type: object
+properties:
+  uniformAssetTypeDesc:
+    type: string
+  uniformAssetTypeCode:
+    type: string
+  uniformAssetTypeText:
+    type: string
+  uniformAssetTypeId:
+    type: number

@@ -1,0 +1,9 @@
+title: TeamUniforms
+type: object
+properties:
+  teamId:
+    type: number
+  uniformAssets:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/UniformAsset

@@ -1,0 +1,22 @@
+# /v1/schedule/postseason/tuneIn
+get:
+  operationId: getSchedulePostseasonTuneIn
+  summary: Retrieves postseason tune-in schedule
+  description: >
+    Returns a schedule-shaped postseason tune-in response. Often empty depending
+    on season/timing.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/SportId
+    - $ref: ../components/parameters/parameters.yaml#/TeamId
+    - $ref: ../components/parameters/parameters.yaml#/Hydrate
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Schedule
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/Schedule

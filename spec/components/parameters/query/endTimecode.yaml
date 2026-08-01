@@ -1,0 +1,6 @@
+in: query
+name: endTimecode
+required: true
+description: End timecode (yyyyMMdd_HHmmss) for live feed diffPatch.
+schema:
+  type: string

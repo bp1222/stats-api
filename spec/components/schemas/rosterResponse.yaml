@@ -1,0 +1,11 @@
+title: RosterResponse
+description: >
+  Response envelope with a roster array (coaches, personnel, jobs/umpires, etc.).
+type: object
+properties:
+  copyright:
+    type: string
+  roster:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/Coach

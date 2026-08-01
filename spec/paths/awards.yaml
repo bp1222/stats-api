@@ -1,14 +1,11 @@
-# /v1/awards/{awardId}/recipients
+# /v1/awards
 get:
-  operationId: getAwardRecipients
-  summary: Retrieves award recipients
+  operationId: getAwards
+  summary: List awards
   description: >
-    Returns a list of recipients for a given award.
+    Returns award definitions. Use an award id with GET /v1/awards/{awardId}/recipients
+    to fetch recipients.
   parameters:
-    - $ref: ../components/parameters/parameters.yaml#/PathAwardId
-    - $ref: ../components/parameters/parameters.yaml#/SportId
-    - $ref: ../components/parameters/parameters.yaml#/LeagueId
-    - $ref: ../components/parameters/parameters.yaml#/Season
     - $ref: ../components/parameters/parameters.yaml#/Fields
   tags:
     - Reference
@@ -18,10 +15,4 @@ get:
       content:
         application/json:
           schema:
-            title: AwardsResponse
-            type: object
-            properties:
-              awards:
-                type: array
-                items:
-                  $ref: ../components/schemas/schemas.yaml#/Award
+            $ref: ../components/schemas/schemas.yaml#/AwardsListResponse

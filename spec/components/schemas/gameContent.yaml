@@ -1,0 +1,102 @@
+title: GameContent
+description: >
+  Full game content from GET /v1/game/{gamePk}/content — editorial, media/EPG,
+  highlights, and summary flags. Distinct from the Content link stub on schedule games.
+type: object
+properties:
+  copyright:
+    type: string
+  link:
+    type: string
+  editorial:
+    type: object
+    properties:
+      preview:
+        type: object
+        additionalProperties: true
+      articles:
+        type: object
+        additionalProperties: true
+      recap:
+        type: object
+        properties:
+          mlb:
+            $ref: ./schemas.yaml#/ContentEditorialItem
+        additionalProperties: true
+      wrap:
+        type: object
+        additionalProperties: true
+  media:
+    type: object
+    properties:
+      epg:
+        type: array
+        items:
+          $ref: ./schemas.yaml#/ContentEpg
+      epgAlternate:
+        type: array
+        items:
+          $ref: ./schemas.yaml#/ContentEpg
+      milestones:
+        type: object
+        additionalProperties: true
+      featuredMedia:
+        type: object
+        properties:
+          id:
+            type: string
+        additionalProperties: true
+      freeGame:
+        type: boolean
+      enhancedGame:
+        type: boolean
+      previewStory:
+        type: object
+        additionalProperties: true
+  highlights:
+    type: object
+    properties:
+      scoreboard:
+        type: object
+        additionalProperties: true
+      gameCenter:
+        type: object
+        additionalProperties: true
+      milestone:
+        type: object
+        additionalProperties: true
+      highlights:
+        type: object
+        properties:
+          items:
+            type: array
+            items:
+              $ref: ./schemas.yaml#/ContentHighlight
+      live:
+        type: object
+        properties:
+          items:
+            type: array
+            items:
+              $ref: ./schemas.yaml#/ContentHighlight
+      scoreboardPreview:
+        type: object
+        properties:
+          items:
+            type: array
+            items:
+              $ref: ./schemas.yaml#/ContentHighlight
+  summary:
+    type: object
+    properties:
+      hasPreviewArticle:
+        type: boolean
+      hasRecapArticle:
+        type: boolean
+      hasWrapArticle:
+        type: boolean
+      hasHighlightsVideo:
+        type: boolean
+  gameNotes:
+    type: object
+    additionalProperties: true

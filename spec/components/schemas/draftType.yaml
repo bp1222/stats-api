@@ -1,0 +1,8 @@
+title: DraftType
+description: Draft classification on a draft pick (e.g. Rule 4 / June Amateur Draft).
+type: object
+properties:
+  code:
+    type: string
+  description:
+    type: string

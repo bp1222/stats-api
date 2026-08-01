@@ -1,0 +1,10 @@
+title: StatsLeadersResponse
+description: Response from GET /v1/stats/leaders.
+type: object
+properties:
+  copyright:
+    type: string
+  leagueLeaders:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/StatsLeaderCategory

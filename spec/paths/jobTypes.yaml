@@ -1,0 +1,16 @@
+get:
+  operationId: getJobTypes
+  summary: List job types
+  description: >
+    Returns job type codes (umpires, scorers, etc.) for jobs endpoints.
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/JobType

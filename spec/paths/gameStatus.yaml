@@ -1,0 +1,16 @@
+get:
+  operationId: getGameStatusTypes
+  summary: List game status codes
+  description: >
+    Returns game status code combinations (abstract/coded/detailed).
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/GameStatus

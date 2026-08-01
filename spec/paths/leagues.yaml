@@ -29,8 +29,8 @@ get:
               - id: 103
                 name: American League
                 abbreviation: AL
-                link: /api/v1/leagues/103
+                link: /api/v1/league/103
               - id: 104
                 name: National League
                 abbreviation: NL
-                link: /api/v1/leagues/104
+                link: /api/v1/league/104

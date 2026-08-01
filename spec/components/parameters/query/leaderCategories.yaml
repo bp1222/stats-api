@@ -1,0 +1,8 @@
+in: query
+name: leaderCategories
+required: true
+description: >
+  Comma-separated leader category names (e.g. homeRuns, battingAverage, earnedRunAverage).
+  Use GET /v1/leagueLeaderTypes for valid values.
+schema:
+  type: string

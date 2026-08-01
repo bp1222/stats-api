@@ -1,0 +1,31 @@
+# /v1/highLow/{orgType}
+get:
+  operationId: getHighLow
+  summary: Retrieves high/low stats
+  description: >
+    Returns high/low statistical extremes for players, teams, etc.
+    Use orgType=types to list available sortStat values.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathOrgType
+    - $ref: ../components/parameters/parameters.yaml#/SortStat
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/StatGroup
+    - $ref: ../components/parameters/parameters.yaml#/GameTypes
+    - $ref: ../components/parameters/parameters.yaml#/TeamId
+    - $ref: ../components/parameters/parameters.yaml#/LeagueId
+    - $ref: ../components/parameters/parameters.yaml#/SportIds
+    - $ref: ../components/parameters/parameters.yaml#/Limit
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            oneOf:
+              - $ref: ../components/schemas/schemas.yaml#/HighLowResponse
+              - type: array
+                items:
+                  $ref: ../components/schemas/schemas.yaml#/HighLowType

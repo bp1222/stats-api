@@ -1,0 +1,59 @@
+title: HighLowResponse
+description: High/low stat results from GET /v1/highLow/{orgType}.
+type: object
+properties:
+  copyright:
+    type: string
+  highLowResults:
+    type: array
+    items:
+      type: object
+      properties:
+        group:
+          $ref: ./schemas.yaml#/StatGroup
+        totalSplits:
+          type: number
+        exemptions:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        splits:
+          type: array
+          items:
+            type: object
+            properties:
+              season:
+                type: string
+              stat:
+                type: object
+                additionalProperties: true
+              team:
+                $ref: ./schemas.yaml#/Team
+              player:
+                $ref: ./schemas.yaml#/Person
+              opponent:
+                $ref: ./schemas.yaml#/Team
+              date:
+                type: string
+              gameType:
+                $ref: ./schemas.yaml#/GameType
+              isHome:
+                type: boolean
+              rank:
+                type: number
+              gameInnings:
+                type: number
+              game:
+                type: object
+                properties:
+                  gamePk:
+                    type: number
+                  link:
+                    type: string
+                  content:
+                    $ref: ./schemas.yaml#/Content
+                  gameNumber:
+                    type: number
+                  dayNight:
+                    type: string

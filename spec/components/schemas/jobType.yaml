@@ -1,0 +1,10 @@
+title: JobType
+description: Job type from GET /v1/jobTypes.
+type: object
+properties:
+  code:
+    type: string
+  job:
+    type: string
+  sortOrder:
+    type: number

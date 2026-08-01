@@ -1,0 +1,16 @@
+get:
+  operationId: getPositions
+  summary: List positions
+  description: >
+    Returns position metadata used across people, roster, and play-by-play.
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/Position

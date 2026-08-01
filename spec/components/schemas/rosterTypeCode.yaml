@@ -1,0 +1,32 @@
+type: string
+enum:
+  - "40Man"
+  - "fullSeason"
+  - "fullRoster"
+  - "nonRosterInvitees"
+  - "active"
+  - "allTime"
+  - "depthChart"
+  - "gameday"
+  - "coach"
+x-enum-varnames:
+  - FortyMan
+  - FullSeason
+  - FullRoster
+  - NonRosterInvitees
+  - Active
+  - AllTime
+  - DepthChart
+  - Gameday
+  - Coach
+description: >
+  Roster type parameter (rosterType query value):
+    * `40Man` - 40 man roster for a team
+    * `fullSeason` - Full roster including active and inactive players for a season
+    * `fullRoster` - Full roster including active and inactive players
+    * `nonRosterInvitees` - Non-Roster Invitees
+    * `active` - Active roster for a team
+    * `allTime` - All Time roster for a team
+    * `depthChart` - Depth chart for a team
+    * `gameday` - Roster for day of game
+    * `coach` - Coach roster for a team

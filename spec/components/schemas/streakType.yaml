@@ -1,0 +1,11 @@
+type: string
+enum:
+  - "wins"
+  - "losses"
+x-enum-varnames:
+  - Winning
+  - Losing
+description: >
+  Standings streak type:
+    * `wins` - Winning streak
+    * `losses` - Losing streak

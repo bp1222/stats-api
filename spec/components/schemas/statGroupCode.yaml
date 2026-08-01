@@ -1,0 +1,29 @@
+type: string
+enum:
+  - "hitting"
+  - "pitching"
+  - "fielding"
+  - "catching"
+  - "running"
+  - "game"
+  - "team"
+  - "streak"
+x-enum-varnames:
+  - Hitting
+  - Pitching
+  - Fielding
+  - Catching
+  - Running
+  - Game
+  - Team
+  - Streak
+description: >
+  Stat group:
+    * `hitting` - hitting
+    * `pitching` - pitching
+    * `fielding` - fielding
+    * `catching` - catching
+    * `running` - running
+    * `game` - game
+    * `team` - team
+    * `streak` - streak

@@ -1,0 +1,6 @@
+in: query
+name: gamePks
+required: true
+description: Comma-separated game PKs.
+schema:
+  type: string

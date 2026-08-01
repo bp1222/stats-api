@@ -1,0 +1,18 @@
+title: StatsLeaderCategory
+description: Leaders for one category.
+type: object
+properties:
+  leaderCategory:
+    type: string
+  season:
+    type: string
+  gameType:
+    $ref: ./schemas.yaml#/GameTypeInfo
+  leaders:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/StatsLeader
+  statGroup:
+    type: string
+  totalSplits:
+    type: number

@@ -1,0 +1,8 @@
+title: HitTrajectory
+description: Batted-ball trajectory from GET /v1/hitTrajectories.
+type: object
+properties:
+  code:
+    $ref: ./schemas.yaml#/HitTrajectoryCode
+  description:
+    type: string

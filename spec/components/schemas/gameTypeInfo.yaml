@@ -1,0 +1,13 @@
+title: GameTypeInfo
+description: >
+  Game type lookup entry from GET /v1/gameTypes. Payloads usually embed the
+  scalar GameType code; this object adds the human-readable description.
+type: object
+required:
+  - id
+  - description
+properties:
+  id:
+    $ref: ./schemas.yaml#/GameType
+  description:
+    type: string

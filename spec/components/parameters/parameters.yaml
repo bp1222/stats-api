@@ -1,8 +1,12 @@
 # ./path
 PathAwardId:
   $ref: ./path/awardId.yaml
+PathConferenceId:
+  $ref: ./path/conferenceId.yaml
 PathGamePk:
   $ref: ./path/gamePk.yaml
+PathOrgType:
+  $ref: ./path/orgType.yaml
 PathPersonId:
   $ref: ./path/personId.yaml
 PathSeasonId:
@@ -15,6 +19,8 @@ PathVenueId:
   $ref: ./path/venueId.yaml
 PathYearId:
   $ref: ./path/yearId.yaml
+PathLeagueId:
+  $ref: ./path/leagueId.yaml
 
 # ./query
 ActiveStatus:
@@ -31,14 +37,24 @@ GameTypes:
   $ref: ./query/gameTypes.yaml
 QueryGamePk:
   $ref: ./query/gamePk.yaml
+HighlightLimit:
+  $ref: ./query/highlightLimit.yaml
 Hydrate:
   $ref: ./query/hydrate.yaml
+LeaderCategories:
+  $ref: ./query/leaderCategories.yaml
+LeaderGameTypes:
+  $ref: ./query/leaderGameTypes.yaml
 LeagueId:
   $ref: ./query/leagueId.yaml
 LeagueIds:
   $ref: ./query/leagueIds.yaml
 LeagueListId:
   $ref: ./query/leagueListId.yaml
+Limit:
+  $ref: ./query/limit.yaml
+Offset:
+  $ref: ./query/offset.yaml
 PersonIds:
   $ref: ./query/personIds.yaml
 PlayerId:
@@ -47,12 +63,18 @@ RosterType:
   $ref: ./query/rosterType.yaml
 Season:
   $ref: ./query/season.yaml
+SeriesNumber:
+  $ref: ./query/seriesNumber.yaml
+SortStat:
+  $ref: ./query/sortStat.yaml
 SportId:
   $ref: ./query/sportId.yaml
 SportIds:
   $ref: ./query/sportIds.yaml
 StandingsTypes:
   $ref: ./query/standingsTypes.yaml
+StatGroup:
+  $ref: ./query/statGroup.yaml
 Stats:
   $ref: ./query/stats.yaml
 StartDate:
@@ -63,5 +85,17 @@ TeamIds:
   $ref: ./query/teams.yaml
 Timecode:
   $ref: ./query/timecode.yaml
+UpdatedSince:
+  $ref: ./query/updatedSince.yaml
 VenueIds:
   $ref: ./query/venueIds.yaml
+TeamIdsRequired:
+  $ref: ./query/teamIdsRequired.yaml
+GamePks:
+  $ref: ./query/gamePks.yaml
+JobType:
+  $ref: ./query/jobType.yaml
+StartTimecode:
+  $ref: ./query/startTimecode.yaml
+EndTimecode:
+  $ref: ./query/endTimecode.yaml

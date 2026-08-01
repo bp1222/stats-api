@@ -1,0 +1,9 @@
+in: query
+name: updatedSince
+required: true
+description: >
+  ISO-8601 timestamp; return games/people changed at or after this time
+  (e.g. 2024-10-01T00:00:00Z).
+schema:
+  type: string
+  format: date-time

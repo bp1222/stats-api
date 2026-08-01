@@ -1,0 +1,16 @@
+get:
+  operationId: getStandingsTypes
+  summary: List standings types
+  description: >
+    Returns standings type names (regularSeason, wildCard, ...).
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/StandingsType

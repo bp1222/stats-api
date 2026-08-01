@@ -1,0 +1,8 @@
+title: ReviewReason
+description: Replay review reason from GET /v1/reviewReasons.
+type: object
+properties:
+  code:
+    $ref: ./schemas.yaml#/ReviewReasonCode
+  description:
+    type: string

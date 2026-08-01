@@ -1,0 +1,15 @@
+title: TeamLeadersResponse
+description: Team-scoped statistical leaders.
+type: object
+properties:
+  copyright:
+    type: string
+  teamLeaders:
+    type: array
+    items:
+      allOf:
+        - $ref: ./schemas.yaml#/StatsLeaderCategory
+        - type: object
+          properties:
+            team:
+              $ref: ./schemas.yaml#/Team

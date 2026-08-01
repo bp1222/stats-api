@@ -1,0 +1,30 @@
+# /v1/divisions/{divisionId}
+get:
+  operationId: getDivisionById
+  summary: Retrieves a division by ID
+  description: >
+    Returns a single division (same envelope as GET /v1/divisions).
+  parameters:
+    - name: divisionId
+      in: path
+      required: true
+      schema:
+        type: integer
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            title: DivisionsResponse
+            type: object
+            properties:
+              copyright:
+                type: string
+              divisions:
+                type: array
+                items:
+                  $ref: ../components/schemas/schemas.yaml#/Division

@@ -1,0 +1,34 @@
+# /v1/teams/stats
+get:
+  operationId: getTeamsStats
+  summary: Retrieves stats for multiple teams
+  description: >
+    Returns aggregated team stats. Requires season, group, and stats.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/Group
+    - $ref: ../components/parameters/parameters.yaml#/Stats
+    - $ref: ../components/parameters/parameters.yaml#/SportIds
+    - $ref: ../components/parameters/parameters.yaml#/GameTypes
+    - $ref: ../components/parameters/parameters.yaml#/StartDate
+    - $ref: ../components/parameters/parameters.yaml#/EndDate
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+    - name: order
+      in: query
+      required: false
+      schema:
+        type: string
+    - name: sortStat
+      in: query
+      required: false
+      schema:
+        type: string
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/TeamStatsResponse

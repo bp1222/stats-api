@@ -1,12 +1,12 @@
 title: Record
 description: >
-  Record
+  Standings team record. Field presence varies by era (e.g. pre-division seasons
+  often omit divisionRank and may include wildCardRank instead).
 type: object
 required:
   - team
   - season
   - streak
-  - divisionRank
   - leagueRank
   - gamesBack
   - leagueRecord
@@ -22,17 +22,7 @@ properties:
     type: object
     properties:
       streakType:
-        type: string
-        enum:
-          - "losses"
-          - "wins"
-        x-enum-varnames:
-          - Losing
-          - Winning
-        description: >
-          Streak Type:
-            * Losing Streak
-            * Winning Streak
+        $ref: ./schemas.yaml#/StreakType
       streakCode:
         type: string
       streakNumber:
@@ -41,12 +31,15 @@ properties:
     type: string
   divisionRank:
     type: string
+  wildCardRank:
+    type: string
+    description: Seen in some historical standings responses when divisionRank is absent.
   leagueRank:
     type: string
   sportRank:
     type: string
   gamesPlayed:
-    type: number 
+    type: number
   gamesBack:
     type: string
   wildCardGamesBack:
@@ -65,39 +58,41 @@ properties:
     $ref: ./schemas.yaml#/LeagueRecord
   lastUpdated:
     type: string
-  # records:  NEED TO FILL OUT MORE
-  #  type: object
+  records:
+    type: object
+    description: Split/overall/league/expected (and sometimes division) sub-records.
+    additionalProperties: true
   runsAllowed:
-    type: number 
+    type: number
   runsScored:
-    type: number 
+    type: number
   divisionChamp:
-    type: boolean 
+    type: boolean
   divisionLeader:
-    type: boolean 
+    type: boolean
   hasWildcard:
-    type: boolean 
+    type: boolean
   clinched:
     type: boolean
   eliminationNumber:
-    type: string 
+    type: string
   eliminationNumberSport:
-    type: string 
+    type: string
   eliminationNumberLeague:
-    type: string 
+    type: string
   eliminationNumberDivision:
-    type: string 
+    type: string
   eliminationNumberConference:
-    type: string 
+    type: string
   wildCardEliminationNumber:
-    type: string 
+    type: string
   magicNumber:
-    type: string 
+    type: string
   wins:
     type: number
   losses:
-    type: number 
+    type: number
   runDifferential:
-    type: number 
+    type: number
   winningPercentage:
-    type: string 
+    type: string

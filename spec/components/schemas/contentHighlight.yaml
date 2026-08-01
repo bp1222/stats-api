@@ -1,0 +1,46 @@
+title: ContentHighlight
+description: A video or media highlight item from game content.
+type: object
+properties:
+  type:
+    type: string
+  state:
+    type: string
+  date:
+    type: string
+  id:
+    type: string
+  headline:
+    type: string
+  seoTitle:
+    type: string
+  slug:
+    type: string
+  blurb:
+    type: string
+  keywordsAll:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/ContentKeyword
+  keywordsDisplay:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/ContentKeyword
+  image:
+    $ref: ./schemas.yaml#/ContentImage
+  noIndex:
+    type: boolean
+  mediaPlaybackId:
+    type: string
+  title:
+    type: string
+  description:
+    type: string
+  duration:
+    type: string
+  mediaPlaybackUrl:
+    type: string
+  playbacks:
+    type: array
+    items:
+      $ref: ./schemas.yaml#/ContentPlayback

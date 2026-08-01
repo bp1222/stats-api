@@ -1,0 +1,12 @@
+title: Language
+description: Language from GET /v1/languages.
+type: object
+properties:
+  languageId:
+    type: number
+  languageCode:
+    type: string
+  name:
+    type: string
+  locale:
+    type: string

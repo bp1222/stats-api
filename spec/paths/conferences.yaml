@@ -1,0 +1,23 @@
+# /v1/conferences
+get:
+  operationId: getConferences
+  summary: Retrieves conferences
+  description: >
+    Returns conferences (primarily minor-league). Optional conferenceId and season filters.
+  parameters:
+    - name: conferenceId
+      in: query
+      required: false
+      schema:
+        type: integer
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/ConferencesResponse

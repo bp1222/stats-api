@@ -1,0 +1,18 @@
+# /v1/jobs/officialScorers
+get:
+  operationId: getJobsOfficialScorers
+  summary: Retrieves official scorers roster
+  description: >
+    Returns the official scorers jobs roster.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/Timecode
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/RosterResponse

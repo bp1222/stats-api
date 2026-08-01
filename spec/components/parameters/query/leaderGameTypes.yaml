@@ -1,0 +1,6 @@
+in: query
+name: leaderGameTypes
+required: false
+description: Game type filter for leaders (e.g. R for regular season).
+schema:
+  type: string

@@ -1,0 +1,18 @@
+# /v1/people/changes
+get:
+  operationId: getPeopleChanges
+  summary: Retrieves recently changed people
+  description: >
+    Returns people records updated since the given timestamp.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/UpdatedSince
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - People
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/PeopleResponse

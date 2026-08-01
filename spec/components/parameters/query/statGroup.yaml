@@ -1,0 +1,7 @@
+in: query
+name: statGroup
+required: false
+description: >
+  Stat group filter. Use GET /v1/statGroups for values.
+schema:
+  $ref: ../../schemas/schemas.yaml#/StatGroupCode

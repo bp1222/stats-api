@@ -66,10 +66,21 @@ properties:
       $ref: ./schemas.yaml#/PersonStatsItem
   mlbDebutDate:
     type: string
+  lastPlayedDate:
+    type: string
+    description: Present for inactive/historical players.
+  deathDate:
+    type: string
+  deathCity:
+    type: string
+  deathStateProvince:
+    type: string
+  deathCountry:
+    type: string
   batSide:
-    $ref: ./schemas.yaml#/CodeDescription
+    $ref: ./schemas.yaml#/BatSide
   pitchHand:
-    $ref: ./schemas.yaml#/CodeDescription
+    $ref: ./schemas.yaml#/PitchHand
   nameFirstLast:
     type: string
   nameSlug:
@@ -85,6 +96,12 @@ properties:
   fullFMLName:
     type: string
   fullLFMName:
+    type: string
+  nameMatrilineal:
+    type: string
+  nameSuffix:
+    type: string
+  nameTitle:
     type: string
   strikeZoneTop:
     type: number

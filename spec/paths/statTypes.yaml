@@ -1,0 +1,16 @@
+get:
+  operationId: getStatTypes
+  summary: List stat types
+  description: >
+    Returns available stat type display names (e.g. season, career, gameLog).
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/StatTypeInfo

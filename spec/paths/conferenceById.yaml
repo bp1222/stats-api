@@ -1,0 +1,19 @@
+# /v1/conferences/{conferenceId}
+get:
+  operationId: getConferenceById
+  summary: Retrieves a conference by ID
+  description: >
+    Returns a single conference (same envelope as GET /v1/conferences).
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathConferenceId
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/ConferencesResponse

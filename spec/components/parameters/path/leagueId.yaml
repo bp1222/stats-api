@@ -1,0 +1,6 @@
+in: path
+name: leagueId
+required: true
+description: Unique League Identifier
+schema:
+  type: integer

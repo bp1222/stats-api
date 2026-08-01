@@ -1,9 +1,0 @@
-title: CodeDescription
-description: >
-  Code and description pair (e.g. batSide, pitchHand).
-type: object
-properties:
-  code:
-    type: string
-  description:
-    type: string

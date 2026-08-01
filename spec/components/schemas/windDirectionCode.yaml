@@ -1,0 +1,38 @@
+type: string
+enum:
+  - "Calm"
+  - "In From CF"
+  - "In From LF"
+  - "In From RF"
+  - "L To R"
+  - "None"
+  - "Out To CF"
+  - "Out To LF"
+  - "Out To RF"
+  - "R To L"
+  - "Varies"
+x-enum-varnames:
+  - Calm
+  - In From CF
+  - In From LF
+  - In From RF
+  - L To R
+  - None
+  - Out To CF
+  - Out To LF
+  - Out To RF
+  - R To L
+  - Varies
+description: >
+  Wind direction code:
+    * `Calm` - Calm
+    * `In From CF` - InFromCF
+    * `In From LF` - InFromLF
+    * `In From RF` - InFromRF
+    * `L To R` - LToR
+    * `None` - None
+    * `Out To CF` - OutToCF
+    * `Out To LF` - OutToLF
+    * `Out To RF` - OutToRF
+    * `R To L` - RToL
+    * `Varies` - Varies

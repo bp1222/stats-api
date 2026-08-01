@@ -1,0 +1,17 @@
+# /v1/logicalEvents
+get:
+  operationId: getLogicalEvents
+  summary: List logical events
+  description: >
+    Returns logical event codes used in live feed metadata.
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/LogicalEvent

@@ -1,0 +1,10 @@
+title: StatTypeInfo
+description: >
+  Stat type lookup entry from GET /v1/statTypes. The displayName values align
+  with the StatTypes enum used by stats query parameters.
+type: object
+required:
+  - displayName
+properties:
+  displayName:
+    $ref: ./schemas.yaml#/StatTypes

@@ -1,12 +1,10 @@
 title: Linescore
 description: >
-  Linescore
+  Linescore. Historical games may omit balls/strikes/outs and detailed
+  offense/defense position objects.
 type: object
 required:
   - teams
-  - balls
-  - strikes
-  - outs
 properties:
   currentInning:
     type: number
@@ -38,12 +36,12 @@ properties:
         $ref: ./schemas.yaml#/LinescoreTeam
   defense:
     title: LinescoreDefense
-    description: Current defensive positions (batter, pitcher, catcher, etc.).
+    description: Current defensive positions (batter, pitcher, catcher, etc.). Sparse or absent on some historical games.
     type: object
     additionalProperties: true
   offense:
     title: LinescoreOffense
-    description: Current offensive base runners and batter (batter, onDeck, first, etc.).
+    description: Current offensive base runners and batter (batter, onDeck, first, etc.). Sparse or absent on some historical games.
     type: object
     additionalProperties: true
   balls:

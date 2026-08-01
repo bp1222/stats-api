@@ -16,53 +16,145 @@ servers:
 
 tags:
   - name: Reference
-    description: Reference data (divisions, leagues, seasons, sports, teams, venues, draft, awards, attendance, game pace)
+    description: Reference data (divisions, leagues, seasons, sports, teams, venues, draft, awards, attendance, game pace, meta)
   - name: People
     description: Person (player) information and stats
   - name: Schedule
     description: Schedule and games list
   - name: Games
-    description: Game detail (live feed, boxscore, linescore, play-by-play, home run derby)
+    description: Game detail (live feed, boxscore, linescore, play-by-play, content, win probability, home run derby)
   - name: Standings
     description: Division and league standings
 
 paths:
   /v1/attendance:
     $ref: ./paths/attendance.yaml
-  /v1/awards/{awardId}/recipients:
+  /v1/baseballStats:
+    $ref: ./paths/baseballStats.yaml
+  /v1/awards:
     $ref: ./paths/awards.yaml
+  /v1/awards/{awardId}/recipients:
+    $ref: ./paths/awardRecipients.yaml
+  /v1/conferences:
+    $ref: ./paths/conferences.yaml
+  /v1/conferences/{conferenceId}:
+    $ref: ./paths/conferenceById.yaml
   /v1/divisions:
     $ref: ./paths/divisions.yaml
+  /v1/divisions/{divisionId}:
+    $ref: ./paths/divisionById.yaml
+  /v1/draft/prospects/{yearId}:
+    $ref: ./paths/draftProspects.yaml
   /v1/draft/{yearId}:
     $ref: ./paths/draft.yaml
+  /v1/draft/{yearId}/latest:
+    $ref: ./paths/draftLatest.yaml
+  /v1/eventTypes:
+    $ref: ./paths/eventTypes.yaml
+  /v1/game/changes:
+    $ref: ./paths/gameChanges.yaml
   /v1/game/{gamePk}/boxscore:
     $ref: ./paths/boxscore.yaml
+  /v1/game/{gamePk}/content:
+    $ref: ./paths/gameContent.yaml
+  /v1/game/{gamePk}/contextMetrics:
+    $ref: ./paths/gameContextMetrics.yaml
   /v1/game/{gamePk}/linescore:
     $ref: ./paths/linescore.yaml
   /v1/game/{gamePk}/playByPlay:
     $ref: ./paths/gamePlayByPlay.yaml
+  /v1/game/{gamePk}/winProbability:
+    $ref: ./paths/gameWinProbability.yaml
   /v1/gamePace:
     $ref: ./paths/gamePace.yaml
+  /v1/gameStatus:
+    $ref: ./paths/gameStatus.yaml
+  /v1/gameTypes:
+    $ref: ./paths/gameTypes.yaml
+  /v1/hitTrajectories:
+    $ref: ./paths/hitTrajectories.yaml
+  /v1/highLow/{orgType}:
+    $ref: ./paths/highLow.yaml
   /v1/homeRunDerby/{gamePk}:
     $ref: ./paths/homeRunDerby.yaml
+  /v1/jobs:
+    $ref: ./paths/jobs.yaml
+  /v1/jobs/datacasters:
+    $ref: ./paths/jobsDatacasters.yaml
+  /v1/jobs/officialScorers:
+    $ref: ./paths/jobsOfficialScorers.yaml
+  /v1/jobs/umpires:
+    $ref: ./paths/jobsUmpires.yaml
+  /v1/jobTypes:
+    $ref: ./paths/jobTypes.yaml
+  /v1/languages:
+    $ref: ./paths/languages.yaml
+  /v1/league:
+    $ref: ./paths/league.yaml
+  /v1/league/{leagueId}:
+    $ref: ./paths/leagueById.yaml
+  /v1/league/{leagueId}/allStarBallot:
+    $ref: ./paths/leagueAllStarBallot.yaml
+  /v1/league/{leagueId}/allStarFinalVote:
+    $ref: ./paths/leagueAllStarFinalVote.yaml
+  /v1/league/{leagueId}/allStarWriteIns:
+    $ref: ./paths/leagueAllStarWriteIns.yaml
+  /v1/logicalEvents:
+    $ref: ./paths/logicalEvents.yaml
+  /v1/leagueLeaderTypes:
+    $ref: ./paths/leagueLeaderTypes.yaml
   /v1/leagues:
     $ref: ./paths/leagues.yaml
+  /v1/leagues/{leagueId}:
+    $ref: ./paths/leaguesById.yaml
+  /v1/metrics:
+    $ref: ./paths/metrics.yaml
   /v1/people:
     $ref: ./paths/peopleByIds.yaml
+  /v1/people/changes:
+    $ref: ./paths/peopleChanges.yaml
+  /v1/people/freeAgents:
+    $ref: ./paths/peopleFreeAgents.yaml
   /v1/people/{personId}:
     $ref: ./paths/people.yaml
   /v1/people/{personId}/stats:
     $ref: ./paths/peopleStats.yaml
   /v1/people/{personId}/stats/game/{gamePk}:
     $ref: ./paths/personStatsForGame.yaml
+  /v1/pitchCodes:
+    $ref: ./paths/pitchCodes.yaml
+  /v1/pitchTypes:
+    $ref: ./paths/pitchTypes.yaml
+  /v1/platforms:
+    $ref: ./paths/platforms.yaml
+  /v1/positions:
+    $ref: ./paths/positions.yaml
+  /v1/reviewReasons:
+    $ref: ./paths/reviewReasons.yaml
+  /v1/rosterTypes:
+    $ref: ./paths/rosterTypes.yaml
+  /v1/scheduleEventTypes:
+    $ref: ./paths/scheduleEventTypes.yaml
   /v1/schedule:
     $ref: ./paths/schedule.yaml
+  /v1/schedule/games/tied:
+    $ref: ./paths/scheduleTied.yaml
+  /v1/schedule/postseason:
+    $ref: ./paths/schedulePostseason.yaml
+  /v1/schedule/postseason/series:
+    $ref: ./paths/schedulePostseasonSeries.yaml
+  /v1/schedule/postseason/tuneIn:
+    $ref: ./paths/schedulePostseasonTuneIn.yaml
   /v1/seasons:
     $ref: ./paths/season.yaml
   /v1/seasons/all:
     $ref: ./paths/allSeasons.yaml
   /v1/seasons/{seasonId}:
     $ref: ./paths/seasonById.yaml
+  /v1/situationCodes:
+    $ref: ./paths/situationCodes.yaml
+  /v1/sky:
+    $ref: ./paths/sky.yaml
   /v1/sports:
     $ref: ./paths/sports.yaml
   /v1/sports/{sportId}:
@@ -71,26 +163,56 @@ paths:
     $ref: ./paths/sportPlayers.yaml
   /v1/standings:
     $ref: ./paths/standings.yaml
+  /v1/standingsTypes:
+    $ref: ./paths/standingsTypes.yaml
+  /v1/statGroups:
+    $ref: ./paths/statGroups.yaml
   /v1/stats:
     $ref: ./paths/stats.yaml
+  /v1/stats/leaders:
+    $ref: ./paths/statsLeaders.yaml
+  /v1/statTypes:
+    $ref: ./paths/statTypes.yaml
   /v1/teams:
     $ref: ./paths/teams.yaml
+  /v1/teams/affiliates:
+    $ref: ./paths/teamsAffiliates.yaml
+  /v1/teams/history:
+    $ref: ./paths/teamsHistory.yaml
+  /v1/teams/stats:
+    $ref: ./paths/teamsStats.yaml
   /v1/teams/{teamId}:
     $ref: ./paths/team.yaml
+  /v1/teams/{teamId}/alumni:
+    $ref: ./paths/teamAlumni.yaml
   /v1/teams/{teamId}/coaches:
     $ref: ./paths/teamCoaches.yaml
+  /v1/teams/{teamId}/leaders:
+    $ref: ./paths/teamLeaders.yaml
+  /v1/teams/{teamId}/personnel:
+    $ref: ./paths/teamPersonnel.yaml
   /v1/teams/{teamId}/roster:
     $ref: ./paths/teamRoster.yaml
   /v1/teams/{teamId}/stats:
     $ref: ./paths/teamStats.yaml
   /v1/transactions:
     $ref: ./paths/transactions.yaml
+  /v1/uniforms/game:
+    $ref: ./paths/uniformsGame.yaml
+  /v1/uniforms/team:
+    $ref: ./paths/uniformsTeam.yaml
   /v1/venues:
     $ref: ./paths/venues.yaml
   /v1/venues/{venueId}:
     $ref: ./paths/venue.yaml
+  /v1/windDirection:
+    $ref: ./paths/windDirection.yaml
   /v1.1/game/{gamePk}/feed/live:
     $ref: ./paths/gameLiveFeed.yaml
+  /v1.1/game/{gamePk}/feed/live/diffPatch:
+    $ref: ./paths/gameDiffPatch.yaml
+  /v1.1/game/{gamePk}/feed/live/timestamps:
+    $ref: ./paths/gameTimestamps.yaml
 
 components:
   parameters:

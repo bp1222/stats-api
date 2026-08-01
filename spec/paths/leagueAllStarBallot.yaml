@@ -1,0 +1,19 @@
+# /v1/league/{leagueId}/allStarBallot
+get:
+  operationId: getLeagueAllStarBallot
+  summary: Retrieves All-Star ballot
+  description: >
+    Returns people for the league All-Star ballot for a season.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathLeagueId
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - People
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/PeopleResponse

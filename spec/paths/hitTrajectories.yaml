@@ -1,0 +1,17 @@
+# /v1/hitTrajectories
+get:
+  operationId: getHitTrajectories
+  summary: List hit trajectories
+  description: >
+    Returns hit trajectory codes (e.g. ground_ball, fly_ball).
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/HitTrajectory

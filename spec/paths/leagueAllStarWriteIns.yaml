@@ -1,0 +1,19 @@
+# /v1/league/{leagueId}/allStarWriteIns
+get:
+  operationId: getLeagueAllStarWriteIns
+  summary: Retrieves All-Star write-ins
+  description: >
+    Returns people for the league All-Star write-ins for a season.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathLeagueId
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - People
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/PeopleResponse

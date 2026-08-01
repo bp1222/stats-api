@@ -1,0 +1,19 @@
+# /v1/jobs/umpires
+get:
+  operationId: getJobsUmpires
+  summary: Retrieves umpire roster
+  description: >
+    Returns the umpire jobs roster.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/SportId
+    - $ref: ../components/parameters/parameters.yaml#/Date
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/RosterResponse

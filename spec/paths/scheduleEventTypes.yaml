@@ -1,0 +1,17 @@
+# /v1/scheduleEventTypes
+get:
+  operationId: getScheduleEventTypes
+  summary: List schedule event types
+  description: >
+    Returns schedule event type codes.
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/ScheduleEventType

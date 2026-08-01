@@ -1,0 +1,7 @@
+in: query
+name: jobType
+required: true
+description: >
+  Job type code (e.g. UMPR). Use GET /v1/jobTypes for valid values.
+schema:
+  type: string

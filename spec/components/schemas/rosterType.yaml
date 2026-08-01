@@ -1,0 +1,10 @@
+title: RosterType
+description: Roster type from GET /v1/rosterTypes. Use parameter as rosterType query value.
+type: object
+properties:
+  description:
+    type: string
+  lookupName:
+    type: string
+  parameter:
+    $ref: ./schemas.yaml#/RosterTypeCode

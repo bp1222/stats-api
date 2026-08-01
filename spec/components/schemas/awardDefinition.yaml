@@ -1,0 +1,16 @@
+title: AwardDefinition
+description: Award definition from GET /v1/awards (not a recipient record).
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  description:
+    type: string
+  sortOrder:
+    type: number
+  sport:
+    $ref: ./schemas.yaml#/Sport
+  active:
+    type: boolean

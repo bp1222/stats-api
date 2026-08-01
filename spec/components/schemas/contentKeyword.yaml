@@ -1,0 +1,10 @@
+title: ContentKeyword
+description: Keyword tag on editorial or highlight content.
+type: object
+properties:
+  type:
+    type: string
+  value:
+    type: string
+  displayName:
+    type: string

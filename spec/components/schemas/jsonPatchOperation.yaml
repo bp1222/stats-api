@@ -1,0 +1,11 @@
+title: JsonPatchOperation
+description: A JSON Patch operation from the live feed diffPatch endpoint.
+type: object
+properties:
+  op:
+    type: string
+  path:
+    type: string
+  value: {}
+  from:
+    type: string

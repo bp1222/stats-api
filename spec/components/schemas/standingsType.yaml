@@ -1,0 +1,8 @@
+title: StandingsType
+description: Standings type from GET /v1/standingsTypes.
+type: object
+properties:
+  name:
+    $ref: ./schemas.yaml#/StandingsTypeCode
+  description:
+    type: string

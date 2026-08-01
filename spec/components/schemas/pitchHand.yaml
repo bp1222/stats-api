@@ -1,0 +1,8 @@
+title: PitchHand
+description: Pitcher handedness.
+type: object
+properties:
+  code:
+    $ref: ./schemas.yaml#/PitchHandCode
+  description:
+    type: string

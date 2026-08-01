@@ -1,0 +1,26 @@
+# /v1/people/freeAgents
+get:
+  operationId: getPeopleFreeAgents
+  summary: Retrieves free agents
+  description: >
+    Returns free agent declarations/signings for a season.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/LeagueId
+    - $ref: ../components/parameters/parameters.yaml#/Hydrate
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+    - name: order
+      in: query
+      required: false
+      description: Sort order for results.
+      schema:
+        type: string
+  tags:
+    - People
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/FreeAgentsResponse

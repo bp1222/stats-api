@@ -1,0 +1,16 @@
+get:
+  operationId: getEventTypes
+  summary: List event types
+  description: >
+    Returns play/event type codes and flags.
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/EventType

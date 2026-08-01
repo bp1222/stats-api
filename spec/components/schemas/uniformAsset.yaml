@@ -1,0 +1,17 @@
+title: UniformAsset
+type: object
+properties:
+  uniformAssetId:
+    type: number
+  uniformAssetCode:
+    type: string
+  uniformAssetText:
+    type: string
+  uniformAssetType:
+    $ref: ./schemas.yaml#/UniformAssetType
+  active:
+    type: boolean
+  startSeason:
+    type: string
+  endSeason:
+    type: string

@@ -1,10 +1,10 @@
 title: DivisionStandings
 description: >
-  Standings
+  Standings group for a league (and optionally a division). Pre-division eras
+  may omit division.
 type: object
 required:
   - league
-  - division
   - sport
   - teamRecords
 properties:

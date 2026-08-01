@@ -1,0 +1,17 @@
+# /v1/platforms
+get:
+  operationId: getPlatforms
+  summary: List platforms
+  description: >
+    Returns media platform codes.
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/schemas.yaml#/Platform

@@ -1,0 +1,19 @@
+# /v1/teams/{teamId}/personnel
+get:
+  operationId: getTeamPersonnel
+  summary: Retrieves team personnel
+  description: >
+    Returns front-office / non-coach personnel for a team.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathTeamId
+    - $ref: ../components/parameters/parameters.yaml#/Date
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/RosterResponse

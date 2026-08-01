@@ -1,0 +1,19 @@
+# /v1/uniforms/team
+get:
+  operationId: getTeamUniforms
+  summary: Retrieves team uniforms
+  description: >
+    Returns uniform assets for one or more teams.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/TeamIdsRequired
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/UniformsResponse

@@ -1,0 +1,6 @@
+in: path
+name: conferenceId
+required: true
+description: Unique Conference Identifier
+schema:
+  type: integer

@@ -1,0 +1,26 @@
+# /v1/leagues/{leagueId}
+get:
+  operationId: getLeagueById
+  summary: Retrieves a league by ID
+  description: >
+    Returns a single league (same envelope as GET /v1/leagues).
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathLeagueId
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            title: LeaguesResponse
+            type: object
+            properties:
+              copyright:
+                type: string
+              leagues:
+                type: array
+                items:
+                  $ref: ../components/schemas/schemas.yaml#/League

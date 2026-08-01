@@ -1,0 +1,21 @@
+# /v1/teams/{teamId}/alumni
+get:
+  operationId: getTeamAlumni
+  summary: Retrieves team alumni
+  description: >
+    Returns alumni players for a team/season/group.
+  parameters:
+    - $ref: ../components/parameters/parameters.yaml#/PathTeamId
+    - $ref: ../components/parameters/parameters.yaml#/Season
+    - $ref: ../components/parameters/parameters.yaml#/Group
+    - $ref: ../components/parameters/parameters.yaml#/Hydrate
+    - $ref: ../components/parameters/parameters.yaml#/Fields
+  tags:
+    - Reference
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/schemas.yaml#/PeopleResponse

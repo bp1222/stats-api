@@ -1,0 +1,18 @@
+title: FreeAgent
+description: A free agent signing / declaration record.
+type: object
+properties:
+  player:
+    $ref: ./schemas.yaml#/Person
+  originalTeam:
+    $ref: ./schemas.yaml#/Team
+  newTeam:
+    $ref: ./schemas.yaml#/Team
+  notes:
+    type: string
+  dateSigned:
+    type: string
+  dateDeclared:
+    type: string
+  position:
+    $ref: ./schemas.yaml#/Position
