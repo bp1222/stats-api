@@ -29,6 +29,11 @@ properties:
     type: string
   note:
     type: string
+  allPositions:
+    type: array
+    description: Positions played in the game (starter plus PH/PR/defensive moves).
+    items:
+      $ref: ./schemas.yaml#/Position
   gameStatus:
     title: PlayerGameStatus
     type: object

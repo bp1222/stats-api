@@ -14,7 +14,12 @@ get:
     - $ref: ../components/parameters/parameters.yaml#/Hydrate
     - $ref: ../components/parameters/parameters.yaml#/LeagueIds
     - $ref: ../components/parameters/parameters.yaml#/TeamIds
-    - $ref: ../components/parameters/parameters.yaml#/Season
+    - name: season
+      in: query
+      required: false
+      description: Season year filter (optional when startDate/endDate or date is provided).
+      schema:
+        type: string
     - $ref: ../components/parameters/parameters.yaml#/Date
     - $ref: ../components/parameters/parameters.yaml#/VenueIds
     - name: opponentId

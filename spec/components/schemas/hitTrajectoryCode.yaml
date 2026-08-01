@@ -8,12 +8,12 @@ enum:
   - "fly_ball"
   - "popup"
 x-enum-varnames:
-  - Bunt - Ground Ball
-  - Bunt - Popup
-  - Bunt - Line Drive
-  - Line Drive
-  - Ground Ball
-  - Fly Ball
+  - BuntGrounder
+  - BuntPopup
+  - BuntLineDrive
+  - LineDrive
+  - GroundBall
+  - FlyBall
   - Popup
 description: >
   Hit trajectory code:

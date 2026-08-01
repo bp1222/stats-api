@@ -20,3 +20,6 @@ properties:
   leftOnBase:
     type: number
     default: 0
+  isWinner:
+    type: boolean
+    description: Present on final linescores; omitted while the game is in progress.

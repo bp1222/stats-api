@@ -77,6 +77,33 @@ properties:
               $ref: ./schemas.yaml#/Person
             pitchHand:
               $ref: ./schemas.yaml#/PitchHand
+            batterHotColdZones:
+              type: array
+              items:
+                type: object
+            pitcherHotColdZones:
+              type: array
+              items:
+                type: object
+            batterHotColdZoneStats:
+              type: object
+              additionalProperties: true
+            postOnFirst:
+              $ref: ./schemas.yaml#/Person
+            postOnSecond:
+              $ref: ./schemas.yaml#/Person
+            postOnThird:
+              $ref: ./schemas.yaml#/Person
+            splits:
+              title: PlayMatchupSplits
+              type: object
+              properties:
+                batter:
+                  type: string
+                pitcher:
+                  type: string
+                menOnBase:
+                  type: string
         atBatIndex:
           type: number
         playEndTime:
@@ -121,7 +148,11 @@ properties:
                     type: string
                   eventType:
                     type: string
+                  movementReason:
+                    type: string
                   runner:
+                    $ref: ./schemas.yaml#/Person
+                  responsiblePitcher:
                     $ref: ./schemas.yaml#/Person
                   isScoringEvent:
                     type: boolean
@@ -129,6 +160,27 @@ properties:
                     type: boolean
                   earned:
                     type: boolean
+                  teamUnearned:
+                    type: boolean
+                  playIndex:
+                    type: number
+              credits:
+                type: array
+                items:
+                  title: PlayRunnerCredit
+                  type: object
+                  properties:
+                    player:
+                      type: object
+                      properties:
+                        id:
+                          type: number
+                        link:
+                          type: string
+                    position:
+                      $ref: ./schemas.yaml#/Position
+                    credit:
+                      type: string
         playEvents:
           type: array
           items:
@@ -137,8 +189,10 @@ properties:
             properties:
               details:
                 type: object
+                additionalProperties: true
               count:
                 type: object
+                additionalProperties: true
               index:
                 type: number
               startTime:
@@ -149,8 +203,53 @@ properties:
                 type: boolean
               type:
                 type: string
+              playId:
+                type: string
+              pitchNumber:
+                type: number
+              pfxId:
+                type: string
+              pitchData:
+                type: object
+                description: Pitch tracking metrics; key set varies by pitch/era.
+                additionalProperties: true
+              hitData:
+                type: object
+                description: Batted-ball metrics when the ball is put in play.
+                additionalProperties: true
+              actionPlayId:
+                type: string
+              isBaseRunningPlay:
+                type: boolean
+              isSubstitution:
+                type: boolean
+              battingOrder:
+                type: string
+              player:
+                type: object
+                properties:
+                  id:
+                    type: number
+                  link:
+                    type: string
+              position:
+                $ref: ./schemas.yaml#/Position
+              replacedPlayer:
+                type: object
+                properties:
+                  id:
+                    type: number
+                  link:
+                    type: string
+              reviewDetails:
+                type: object
+                additionalProperties: true
   currentPlay:
+    description: Same shape as an allPlays entry; present during/after the game.
+    # Inline duplicate of Play title above is not referenceable; keep object pass-through
+    # until Play is extracted. Prefer allPlays typing; currentPlay preserves raw keys today.
     type: object
+    additionalProperties: true
   scoringPlays:
     type: array
     items:
@@ -159,3 +258,4 @@ properties:
     type: array
     items:
       type: object
+      additionalProperties: true

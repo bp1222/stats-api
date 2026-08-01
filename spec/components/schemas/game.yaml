@@ -107,3 +107,17 @@ properties:
     type: string
   gameId:
     type: string
+  linescore:
+    description: Present when schedule is hydrated with linescore.
+    $ref: ./schemas.yaml#/Linescore
+  decisions:
+    title: ScheduleGameDecisions
+    description: Present when schedule is hydrated with decisions (finals).
+    type: object
+    properties:
+      winner:
+        $ref: ./schemas.yaml#/Person
+      loser:
+        $ref: ./schemas.yaml#/Person
+      save:
+        $ref: ./schemas.yaml#/Person

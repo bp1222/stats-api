@@ -14,19 +14,19 @@ enum:
   - "byOrganization"
   - "currentHalf"
 x-enum-varnames:
-  - Regular Season Standings
-  - Wild card standings
-  - Division Leader standings
-  - Wild card standings with Division Leaders
-  - First half standings.  Only valid for leagues with a split season.
-  - Second half standings. Only valid for leagues with a split season.
-  - Spring Training Standings
-  - Postseason Standings
-  - Standings by Division
-  - Standings by Conference
-  - Standings by League
-  - Standing by Organization
-  - Current Half Standings. Returns standings in the current half for split season leagues and overall standings for full season leagues.
+  - RegularSeason
+  - WildCard
+  - DivisionLeaders
+  - WildCardWithLeaders
+  - FirstHalf
+  - SecondHalf
+  - SpringTraining
+  - Postseason
+  - ByDivision
+  - ByConference
+  - ByLeague
+  - ByOrganization
+  - CurrentHalf
 description: >
   Standings type name:
     * `regularSeason` - RegularSeason

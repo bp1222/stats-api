@@ -34,6 +34,9 @@ properties:
   wildCardRank:
     type: string
     description: Seen in some historical standings responses when divisionRank is absent.
+  wildCardLeader:
+    type: boolean
+
   leagueRank:
     type: string
   sportRank:

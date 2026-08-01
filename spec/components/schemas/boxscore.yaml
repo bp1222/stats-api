@@ -6,6 +6,8 @@ required:
   - teams
   - officials
 properties:
+  copyright:
+    type: string
   teams:
     title: BoxscoreTeams
     type: object

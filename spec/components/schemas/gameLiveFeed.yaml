@@ -8,6 +8,8 @@ required:
   - gameData
   - liveData
 properties:
+  copyright:
+    type: string
   gamePk:
     type: number
   link:
@@ -168,6 +170,31 @@ properties:
             type: object
             properties:
               used:
+                type: number
+              remaining:
+                type: number
+      absChallenges:
+        title: AbsChallenges
+        description: Automated Ball-Strike challenge tallies when ABS is in use.
+        type: object
+        properties:
+          hasChallenges:
+            type: boolean
+          away:
+            type: object
+            properties:
+              usedSuccessful:
+                type: number
+              usedFailed:
+                type: number
+              remaining:
+                type: number
+          home:
+            type: object
+            properties:
+              usedSuccessful:
+                type: number
+              usedFailed:
                 type: number
               remaining:
                 type: number

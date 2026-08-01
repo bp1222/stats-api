@@ -119,3 +119,20 @@ properties:
     type: string
   hitsPer9Inn:
     type: string
+  note:
+    type: string
+    description: >
+      Boxscore decision / situation marker for this pitcher's line
+      (e.g. "(W, 3-2)", "(H, 9)", "(L, 6-1)(BS, 2)").
+  holds:
+    type: number
+  blownSaves:
+    type: number
+  gamesFinished:
+    type: number
+  winPercentage:
+    type: string
+  strikeoutWalkRatio:
+    type: string
+  caughtStealingPercentage:
+    type: string

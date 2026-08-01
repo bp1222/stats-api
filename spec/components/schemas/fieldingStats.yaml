@@ -25,3 +25,5 @@ properties:
     type: number
   pickoffs:
     type: number
+  gamesStarted:
+    type: number

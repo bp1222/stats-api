@@ -16,9 +16,9 @@ x-enum-varnames:
   - Dome
   - Drizzle
   - Overcast
-  - Partly Cloudy
+  - PartlyCloudy
   - Rain
-  - Roof Closed
+  - RoofClosed
   - Snow
   - Sunny
 description: >

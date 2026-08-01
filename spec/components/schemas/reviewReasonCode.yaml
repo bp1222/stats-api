@@ -28,33 +28,33 @@ enum:
   - "Z"
   - "AA"
 x-enum-varnames:
-  - Tag play
-  - Close play at 1st
-  - Force play
-  - Home run
-  - Fair/foul in outfield
-  - Catch/drop in outfield
-  - Trap play in outfield
-  - Pitch result
-  - Hit by pitch
-  - Home-plate collision
-  - Slide interference
-  - Timing Play
-  - Tag-up play
-  - Touching a base
-  - Passing runners
-  - Runner placement
-  - Stadium boundary call
-  - Fan interference
-  - Catcher interference
-  - Rules check
-  - Record keeping
-  - Grounds rule
-  - Multiple issues
+  - TagPlay
+  - ClosePlayAt1st
+  - ForcePlay
+  - HomeRun
+  - FairFoulInOutfield
+  - CatchDropInOutfield
+  - TrapPlayInOutfield
+  - PitchResult
+  - HitByPitch
+  - HomePlateCollision
+  - SlideInterference
+  - TimingPlay
+  - TagUpPlay
+  - TouchingABase
+  - PassingRunners
+  - RunnerPlacement
+  - StadiumBoundaryCall
+  - FanInterference
+  - CatcherInterference
+  - RulesCheck
+  - RecordKeeping
+  - GroundsRule
+  - MultipleIssues
   - Other
-  - Defensive Shift
-  - Check Swing
-  - Runner Abandonment
+  - DefensiveShift
+  - CheckSwing
+  - RunnerAbandonment
 description: >
   Review reason code:
     * `A` - TagPlay

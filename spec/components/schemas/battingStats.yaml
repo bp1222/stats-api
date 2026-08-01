@@ -81,3 +81,8 @@ properties:
     type: number
   lineOuts:
     type: number
+  note:
+    type: string
+    description: >
+      Boxscore footnote marker for this player's batting line (e.g. "a-"),
+      when present under stats.batting rather than on the player root.

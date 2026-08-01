@@ -13,15 +13,15 @@ enum:
   - "Varies"
 x-enum-varnames:
   - Calm
-  - In From CF
-  - In From LF
-  - In From RF
-  - L To R
+  - InFromCF
+  - InFromLF
+  - InFromRF
+  - LToR
   - None
-  - Out To CF
-  - Out To LF
-  - Out To RF
-  - R To L
+  - OutToCF
+  - OutToLF
+  - OutToRF
+  - RToL
   - Varies
 description: >
   Wind direction code:

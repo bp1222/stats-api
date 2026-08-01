@@ -26,8 +26,8 @@ enum:
   - "NP"
 x-enum-varnames:
   - Fastball
-  - Four-seam FB
-  - Two-seam FB
+  - FourSeamFB
+  - TwoSeamFB
   - Cutter
   - Splitter
   - Forkball
@@ -35,20 +35,20 @@ x-enum-varnames:
   - Sweeper
   - Slider
   - Curveball
-  - Knuckle Curve
+  - KnuckleCurve
   - Screwball
   - Gyroball
   - Slurve
-  - Slow Curve
+  - SlowCurve
   - Changeup
   - Knuckleball
-  - Eephus Pitch
+  - EephusPitch
   - Unknown
-  - Intentional Ball
+  - IntentionalBall
   - Pitchout
-  - Automatic Ball
-  - Automatic Strike
-  - No Pitch
+  - AutomaticBall
+  - AutomaticStrike
+  - NoPitch
 description: >
   Pitch type code:
     * `FA` - Fastball

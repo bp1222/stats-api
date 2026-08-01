@@ -6,6 +6,8 @@ type: object
 required:
   - teams
 properties:
+  copyright:
+    type: string
   currentInning:
     type: number
   currentInningOrdinal:
