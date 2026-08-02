@@ -2,6 +2,7 @@ title: GameStatus
 description: >
   Full game status combination from GET /v1/gameStatus (abstract/coded/detailed).
   Distinct from GameStatusCode, which is the scalar codedGameState enum.
+  Schedule/live feeds may also include `reason` for delays (e.g. Rain).
 type: object
 properties:
   abstractGameState:
@@ -11,6 +12,11 @@ properties:
   detailedState:
     type: string
   statusCode:
+    type: string
+  startTimeTBD:
+    type: boolean
+  reason:
+    description: Delay/suspension reason when present (e.g. Rain). Often paired with statusCode IR.
     type: string
   abstractGameCode:
     type: string

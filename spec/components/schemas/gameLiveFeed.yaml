@@ -88,6 +88,9 @@ properties:
             type: string
           startTimeTBD:
             type: boolean
+          reason:
+            description: Delay/suspension reason when present (e.g. Rain). Often paired with statusCode IR.
+            type: string
           abstractGameCode:
             type: string
       teams:
